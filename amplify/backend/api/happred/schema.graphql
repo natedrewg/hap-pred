@@ -1,0 +1,26 @@
+type Days @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Game: Boolean!
+  Practice: Boolean!
+  Indo: Boolean!
+  Lift: Boolean!
+  WallBall: Boolean!
+  PT: Boolean!
+  Homewok: Boolean!
+  Nap: Boolean!
+  VideoGames: Boolean!
+  JessCall: Boolean!
+  Hangout: Boolean!
+  Parents: Boolean!
+  Stressed: Boolean!
+  GoodEvent: Boolean!
+  BadEvent: Boolean!
+  Classes: Boolean!
+  Satisfied: Boolean!
+  Meals: Int!
+  Sleep: Int!
+  Healthy: Int!
+  Happy: Int!
+  Description: String!
+}
+ 
