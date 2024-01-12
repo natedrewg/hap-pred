@@ -17,10 +17,11 @@ type Days @model @auth(rules: [{allow: public}]) {
   BadEvent: Boolean!
   Classes: Boolean!
   Satisfied: Boolean!
+  Day: Int!
   Meals: Int!
-  Sleep: Int!
   Healthy: Int!
   Happy: Int!
+  Sleep: Int!
   Description: String!
 }
  

@@ -39,10 +39,11 @@ export declare type DaysCreateFormInputValues = {
     BadEvent?: boolean;
     Classes?: boolean;
     Satisfied?: boolean;
+    Day?: number;
     Meals?: number;
-    Sleep?: number;
     Healthy?: number;
     Happy?: number;
+    Sleep?: number;
     Description?: string;
 };
 export declare type DaysCreateFormValidationValues = {
@@ -63,10 +64,11 @@ export declare type DaysCreateFormValidationValues = {
     BadEvent?: ValidationFunction<boolean>;
     Classes?: ValidationFunction<boolean>;
     Satisfied?: ValidationFunction<boolean>;
+    Day?: ValidationFunction<number>;
     Meals?: ValidationFunction<number>;
-    Sleep?: ValidationFunction<number>;
     Healthy?: ValidationFunction<number>;
     Happy?: ValidationFunction<number>;
+    Sleep?: ValidationFunction<number>;
     Description?: ValidationFunction<string>;
 };
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
@@ -89,10 +91,11 @@ export declare type DaysCreateFormOverridesProps = {
     BadEvent?: PrimitiveOverrideProps<SwitchFieldProps>;
     Classes?: PrimitiveOverrideProps<SwitchFieldProps>;
     Satisfied?: PrimitiveOverrideProps<SwitchFieldProps>;
+    Day?: PrimitiveOverrideProps<TextFieldProps>;
     Meals?: PrimitiveOverrideProps<TextFieldProps>;
-    Sleep?: PrimitiveOverrideProps<TextFieldProps>;
     Healthy?: PrimitiveOverrideProps<TextFieldProps>;
     Happy?: PrimitiveOverrideProps<TextFieldProps>;
+    Sleep?: PrimitiveOverrideProps<TextFieldProps>;
     Description?: PrimitiveOverrideProps<TextFieldProps>;
 } & EscapeHatchProps;
 export declare type DaysCreateFormProps = React.PropsWithChildren<{

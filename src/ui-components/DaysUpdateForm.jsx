@@ -48,10 +48,11 @@ export default function DaysUpdateForm(props) {
     BadEvent: false,
     Classes: false,
     Satisfied: false,
+    Day: "",
     Meals: "",
-    Sleep: "",
     Healthy: "",
     Happy: "",
+    Sleep: "",
     Description: "",
   };
   const [Game, setGame] = React.useState(initialValues.Game);
@@ -71,10 +72,11 @@ export default function DaysUpdateForm(props) {
   const [BadEvent, setBadEvent] = React.useState(initialValues.BadEvent);
   const [Classes, setClasses] = React.useState(initialValues.Classes);
   const [Satisfied, setSatisfied] = React.useState(initialValues.Satisfied);
+  const [Day, setDay] = React.useState(initialValues.Day);
   const [Meals, setMeals] = React.useState(initialValues.Meals);
-  const [Sleep, setSleep] = React.useState(initialValues.Sleep);
   const [Healthy, setHealthy] = React.useState(initialValues.Healthy);
   const [Happy, setHappy] = React.useState(initialValues.Happy);
+  const [Sleep, setSleep] = React.useState(initialValues.Sleep);
   const [Description, setDescription] = React.useState(
     initialValues.Description
   );
@@ -100,10 +102,11 @@ export default function DaysUpdateForm(props) {
     setBadEvent(cleanValues.BadEvent);
     setClasses(cleanValues.Classes);
     setSatisfied(cleanValues.Satisfied);
+    setDay(cleanValues.Day);
     setMeals(cleanValues.Meals);
-    setSleep(cleanValues.Sleep);
     setHealthy(cleanValues.Healthy);
     setHappy(cleanValues.Happy);
+    setSleep(cleanValues.Sleep);
     setDescription(cleanValues.Description);
     setErrors({});
   };
@@ -141,10 +144,11 @@ export default function DaysUpdateForm(props) {
     BadEvent: [{ type: "Required" }],
     Classes: [{ type: "Required" }],
     Satisfied: [{ type: "Required" }],
+    Day: [{ type: "Required" }],
     Meals: [{ type: "Required" }],
-    Sleep: [{ type: "Required" }],
     Healthy: [{ type: "Required" }],
     Happy: [{ type: "Required" }],
+    Sleep: [{ type: "Required" }],
     Description: [{ type: "Required" }],
   };
   const runValidationTasks = async (
@@ -190,10 +194,11 @@ export default function DaysUpdateForm(props) {
           BadEvent,
           Classes,
           Satisfied,
+          Day,
           Meals,
-          Sleep,
           Healthy,
           Happy,
+          Sleep,
           Description,
         };
         const validationResponses = await Promise.all(
@@ -272,10 +277,11 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
+              Day,
               Meals,
-              Sleep,
               Healthy,
               Happy,
+              Sleep,
               Description,
             };
             const result = onChange(modelFields);
@@ -317,10 +323,11 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
+              Day,
               Meals,
-              Sleep,
               Healthy,
               Happy,
+              Sleep,
               Description,
             };
             const result = onChange(modelFields);
@@ -362,10 +369,11 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
+              Day,
               Meals,
-              Sleep,
               Healthy,
               Happy,
+              Sleep,
               Description,
             };
             const result = onChange(modelFields);
@@ -407,10 +415,11 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
+              Day,
               Meals,
-              Sleep,
               Healthy,
               Happy,
+              Sleep,
               Description,
             };
             const result = onChange(modelFields);
@@ -452,10 +461,11 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
+              Day,
               Meals,
-              Sleep,
               Healthy,
               Happy,
+              Sleep,
               Description,
             };
             const result = onChange(modelFields);
@@ -497,10 +507,11 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
+              Day,
               Meals,
-              Sleep,
               Healthy,
               Happy,
+              Sleep,
               Description,
             };
             const result = onChange(modelFields);
@@ -542,10 +553,11 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
+              Day,
               Meals,
-              Sleep,
               Healthy,
               Happy,
+              Sleep,
               Description,
             };
             const result = onChange(modelFields);
@@ -587,10 +599,11 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
+              Day,
               Meals,
-              Sleep,
               Healthy,
               Happy,
+              Sleep,
               Description,
             };
             const result = onChange(modelFields);
@@ -632,10 +645,11 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
+              Day,
               Meals,
-              Sleep,
               Healthy,
               Happy,
+              Sleep,
               Description,
             };
             const result = onChange(modelFields);
@@ -677,10 +691,11 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
+              Day,
               Meals,
-              Sleep,
               Healthy,
               Happy,
+              Sleep,
               Description,
             };
             const result = onChange(modelFields);
@@ -722,10 +737,11 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
+              Day,
               Meals,
-              Sleep,
               Healthy,
               Happy,
+              Sleep,
               Description,
             };
             const result = onChange(modelFields);
@@ -767,10 +783,11 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
+              Day,
               Meals,
-              Sleep,
               Healthy,
               Happy,
+              Sleep,
               Description,
             };
             const result = onChange(modelFields);
@@ -812,10 +829,11 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
+              Day,
               Meals,
-              Sleep,
               Healthy,
               Happy,
+              Sleep,
               Description,
             };
             const result = onChange(modelFields);
@@ -857,10 +875,11 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
+              Day,
               Meals,
-              Sleep,
               Healthy,
               Happy,
+              Sleep,
               Description,
             };
             const result = onChange(modelFields);
@@ -902,10 +921,11 @@ export default function DaysUpdateForm(props) {
               BadEvent: value,
               Classes,
               Satisfied,
+              Day,
               Meals,
-              Sleep,
               Healthy,
               Happy,
+              Sleep,
               Description,
             };
             const result = onChange(modelFields);
@@ -947,10 +967,11 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes: value,
               Satisfied,
+              Day,
               Meals,
-              Sleep,
               Healthy,
               Happy,
+              Sleep,
               Description,
             };
             const result = onChange(modelFields);
@@ -992,10 +1013,11 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied: value,
+              Day,
               Meals,
-              Sleep,
               Healthy,
               Happy,
+              Sleep,
               Description,
             };
             const result = onChange(modelFields);
@@ -1011,6 +1033,56 @@ export default function DaysUpdateForm(props) {
         hasError={errors.Satisfied?.hasError}
         {...getOverrideProps(overrides, "Satisfied")}
       ></SwitchField>
+      <TextField
+        label="Day"
+        isRequired={true}
+        isReadOnly={false}
+        type="number"
+        step="any"
+        value={Day}
+        onChange={(e) => {
+          let value = isNaN(parseInt(e.target.value))
+            ? e.target.value
+            : parseInt(e.target.value);
+          if (onChange) {
+            const modelFields = {
+              Game,
+              Practice,
+              Indo,
+              Lift,
+              WallBall,
+              PT,
+              Homewok,
+              Nap,
+              VideoGames,
+              JessCall,
+              Hangout,
+              Parents,
+              Stressed,
+              GoodEvent,
+              BadEvent,
+              Classes,
+              Satisfied,
+              Day: value,
+              Meals,
+              Healthy,
+              Happy,
+              Sleep,
+              Description,
+            };
+            const result = onChange(modelFields);
+            value = result?.Day ?? value;
+          }
+          if (errors.Day?.hasError) {
+            runValidationTasks("Day", value);
+          }
+          setDay(value);
+        }}
+        onBlur={() => runValidationTasks("Day", Day)}
+        errorMessage={errors.Day?.errorMessage}
+        hasError={errors.Day?.hasError}
+        {...getOverrideProps(overrides, "Day")}
+      ></TextField>
       <TextField
         label="Meals"
         isRequired={true}
@@ -1041,10 +1113,11 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
+              Day,
               Meals: value,
-              Sleep,
               Healthy,
               Happy,
+              Sleep,
               Description,
             };
             const result = onChange(modelFields);
@@ -1059,55 +1132,6 @@ export default function DaysUpdateForm(props) {
         errorMessage={errors.Meals?.errorMessage}
         hasError={errors.Meals?.hasError}
         {...getOverrideProps(overrides, "Meals")}
-      ></TextField>
-      <TextField
-        label="Sleep"
-        isRequired={true}
-        isReadOnly={false}
-        type="number"
-        step="any"
-        value={Sleep}
-        onChange={(e) => {
-          let value = isNaN(parseInt(e.target.value))
-            ? e.target.value
-            : parseInt(e.target.value);
-          if (onChange) {
-            const modelFields = {
-              Game,
-              Practice,
-              Indo,
-              Lift,
-              WallBall,
-              PT,
-              Homewok,
-              Nap,
-              VideoGames,
-              JessCall,
-              Hangout,
-              Parents,
-              Stressed,
-              GoodEvent,
-              BadEvent,
-              Classes,
-              Satisfied,
-              Meals,
-              Sleep: value,
-              Healthy,
-              Happy,
-              Description,
-            };
-            const result = onChange(modelFields);
-            value = result?.Sleep ?? value;
-          }
-          if (errors.Sleep?.hasError) {
-            runValidationTasks("Sleep", value);
-          }
-          setSleep(value);
-        }}
-        onBlur={() => runValidationTasks("Sleep", Sleep)}
-        errorMessage={errors.Sleep?.errorMessage}
-        hasError={errors.Sleep?.hasError}
-        {...getOverrideProps(overrides, "Sleep")}
       ></TextField>
       <TextField
         label="Healthy"
@@ -1139,10 +1163,11 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
+              Day,
               Meals,
-              Sleep,
               Healthy: value,
               Happy,
+              Sleep,
               Description,
             };
             const result = onChange(modelFields);
@@ -1188,10 +1213,11 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
+              Day,
               Meals,
-              Sleep,
               Healthy,
               Happy: value,
+              Sleep,
               Description,
             };
             const result = onChange(modelFields);
@@ -1206,6 +1232,56 @@ export default function DaysUpdateForm(props) {
         errorMessage={errors.Happy?.errorMessage}
         hasError={errors.Happy?.hasError}
         {...getOverrideProps(overrides, "Happy")}
+      ></TextField>
+      <TextField
+        label="Sleep"
+        isRequired={true}
+        isReadOnly={false}
+        type="number"
+        step="any"
+        value={Sleep}
+        onChange={(e) => {
+          let value = isNaN(parseInt(e.target.value))
+            ? e.target.value
+            : parseInt(e.target.value);
+          if (onChange) {
+            const modelFields = {
+              Game,
+              Practice,
+              Indo,
+              Lift,
+              WallBall,
+              PT,
+              Homewok,
+              Nap,
+              VideoGames,
+              JessCall,
+              Hangout,
+              Parents,
+              Stressed,
+              GoodEvent,
+              BadEvent,
+              Classes,
+              Satisfied,
+              Day,
+              Meals,
+              Healthy,
+              Happy,
+              Sleep: value,
+              Description,
+            };
+            const result = onChange(modelFields);
+            value = result?.Sleep ?? value;
+          }
+          if (errors.Sleep?.hasError) {
+            runValidationTasks("Sleep", value);
+          }
+          setSleep(value);
+        }}
+        onBlur={() => runValidationTasks("Sleep", Sleep)}
+        errorMessage={errors.Sleep?.errorMessage}
+        hasError={errors.Sleep?.hasError}
+        {...getOverrideProps(overrides, "Sleep")}
       ></TextField>
       <TextField
         label="Description"
@@ -1233,10 +1309,11 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
+              Day,
               Meals,
-              Sleep,
               Healthy,
               Happy,
+              Sleep,
               Description: value,
             };
             const result = onChange(modelFields);
