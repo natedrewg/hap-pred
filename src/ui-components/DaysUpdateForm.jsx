@@ -48,7 +48,6 @@ export default function DaysUpdateForm(props) {
     BadEvent: false,
     Classes: false,
     Satisfied: false,
-    Day: "",
     Meals: "",
     Healthy: "",
     Happy: "",
@@ -72,7 +71,6 @@ export default function DaysUpdateForm(props) {
   const [BadEvent, setBadEvent] = React.useState(initialValues.BadEvent);
   const [Classes, setClasses] = React.useState(initialValues.Classes);
   const [Satisfied, setSatisfied] = React.useState(initialValues.Satisfied);
-  const [Day, setDay] = React.useState(initialValues.Day);
   const [Meals, setMeals] = React.useState(initialValues.Meals);
   const [Healthy, setHealthy] = React.useState(initialValues.Healthy);
   const [Happy, setHappy] = React.useState(initialValues.Happy);
@@ -102,7 +100,6 @@ export default function DaysUpdateForm(props) {
     setBadEvent(cleanValues.BadEvent);
     setClasses(cleanValues.Classes);
     setSatisfied(cleanValues.Satisfied);
-    setDay(cleanValues.Day);
     setMeals(cleanValues.Meals);
     setHealthy(cleanValues.Healthy);
     setHappy(cleanValues.Happy);
@@ -144,7 +141,6 @@ export default function DaysUpdateForm(props) {
     BadEvent: [{ type: "Required" }],
     Classes: [{ type: "Required" }],
     Satisfied: [{ type: "Required" }],
-    Day: [{ type: "Required" }],
     Meals: [{ type: "Required" }],
     Healthy: [{ type: "Required" }],
     Happy: [{ type: "Required" }],
@@ -194,7 +190,6 @@ export default function DaysUpdateForm(props) {
           BadEvent,
           Classes,
           Satisfied,
-          Day,
           Meals,
           Healthy,
           Happy,
@@ -277,7 +272,6 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -323,7 +317,6 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -369,7 +362,6 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -415,7 +407,6 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -461,7 +452,6 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -507,7 +497,6 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -553,7 +542,6 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -599,7 +587,6 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -645,7 +632,6 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -691,7 +677,6 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -737,7 +722,6 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -783,7 +767,6 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -829,7 +812,6 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -875,7 +857,6 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -921,7 +902,6 @@ export default function DaysUpdateForm(props) {
               BadEvent: value,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -967,7 +947,6 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes: value,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -1013,7 +992,6 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied: value,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -1033,56 +1011,6 @@ export default function DaysUpdateForm(props) {
         hasError={errors.Satisfied?.hasError}
         {...getOverrideProps(overrides, "Satisfied")}
       ></SwitchField>
-      <TextField
-        label="Day"
-        isRequired={true}
-        isReadOnly={false}
-        type="number"
-        step="any"
-        value={Day}
-        onChange={(e) => {
-          let value = isNaN(parseInt(e.target.value))
-            ? e.target.value
-            : parseInt(e.target.value);
-          if (onChange) {
-            const modelFields = {
-              Game,
-              Practice,
-              Indo,
-              Lift,
-              WallBall,
-              PT,
-              Homewok,
-              Nap,
-              VideoGames,
-              JessCall,
-              Hangout,
-              Parents,
-              Stressed,
-              GoodEvent,
-              BadEvent,
-              Classes,
-              Satisfied,
-              Day: value,
-              Meals,
-              Healthy,
-              Happy,
-              Sleep,
-              Description,
-            };
-            const result = onChange(modelFields);
-            value = result?.Day ?? value;
-          }
-          if (errors.Day?.hasError) {
-            runValidationTasks("Day", value);
-          }
-          setDay(value);
-        }}
-        onBlur={() => runValidationTasks("Day", Day)}
-        errorMessage={errors.Day?.errorMessage}
-        hasError={errors.Day?.hasError}
-        {...getOverrideProps(overrides, "Day")}
-      ></TextField>
       <TextField
         label="Meals"
         isRequired={true}
@@ -1113,7 +1041,6 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals: value,
               Healthy,
               Happy,
@@ -1163,7 +1090,6 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy: value,
               Happy,
@@ -1213,7 +1139,6 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy: value,
@@ -1263,7 +1188,6 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -1309,7 +1233,6 @@ export default function DaysUpdateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,

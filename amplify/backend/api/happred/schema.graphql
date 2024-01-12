@@ -17,7 +17,6 @@ type Days @model @auth(rules: [{allow: public}]) {
   BadEvent: Boolean!
   Classes: Boolean!
   Satisfied: Boolean!
-  Day: Int!
   Meals: Int!
   Healthy: Int!
   Happy: Int!

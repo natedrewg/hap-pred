@@ -39,7 +39,6 @@ export declare type DaysUpdateFormInputValues = {
     BadEvent?: boolean;
     Classes?: boolean;
     Satisfied?: boolean;
-    Day?: number;
     Meals?: number;
     Healthy?: number;
     Happy?: number;
@@ -64,7 +63,6 @@ export declare type DaysUpdateFormValidationValues = {
     BadEvent?: ValidationFunction<boolean>;
     Classes?: ValidationFunction<boolean>;
     Satisfied?: ValidationFunction<boolean>;
-    Day?: ValidationFunction<number>;
     Meals?: ValidationFunction<number>;
     Healthy?: ValidationFunction<number>;
     Happy?: ValidationFunction<number>;
@@ -91,7 +89,6 @@ export declare type DaysUpdateFormOverridesProps = {
     BadEvent?: PrimitiveOverrideProps<SwitchFieldProps>;
     Classes?: PrimitiveOverrideProps<SwitchFieldProps>;
     Satisfied?: PrimitiveOverrideProps<SwitchFieldProps>;
-    Day?: PrimitiveOverrideProps<TextFieldProps>;
     Meals?: PrimitiveOverrideProps<TextFieldProps>;
     Healthy?: PrimitiveOverrideProps<TextFieldProps>;
     Happy?: PrimitiveOverrideProps<TextFieldProps>;
