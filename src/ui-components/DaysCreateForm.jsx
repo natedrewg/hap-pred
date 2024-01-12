@@ -29,6 +29,7 @@ export default function DaysCreateForm(props) {
     ...rest
   } = props;
   const initialValues = {
+    id: "",
     Game: false,
     Practice: false,
     Indo: false,
@@ -46,13 +47,13 @@ export default function DaysCreateForm(props) {
     BadEvent: false,
     Classes: false,
     Satisfied: false,
-    Day: "",
     Meals: "",
     Healthy: "",
     Happy: "",
     Sleep: "",
     Description: "",
   };
+  const [id, setId] = React.useState(initialValues.id);
   const [Game, setGame] = React.useState(initialValues.Game);
   const [Practice, setPractice] = React.useState(initialValues.Practice);
   const [Indo, setIndo] = React.useState(initialValues.Indo);
@@ -70,7 +71,6 @@ export default function DaysCreateForm(props) {
   const [BadEvent, setBadEvent] = React.useState(initialValues.BadEvent);
   const [Classes, setClasses] = React.useState(initialValues.Classes);
   const [Satisfied, setSatisfied] = React.useState(initialValues.Satisfied);
-  const [Day, setDay] = React.useState(initialValues.Day);
   const [Meals, setMeals] = React.useState(initialValues.Meals);
   const [Healthy, setHealthy] = React.useState(initialValues.Healthy);
   const [Happy, setHappy] = React.useState(initialValues.Happy);
@@ -80,6 +80,7 @@ export default function DaysCreateForm(props) {
   );
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
+    setId(initialValues.id);
     setGame(initialValues.Game);
     setPractice(initialValues.Practice);
     setIndo(initialValues.Indo);
@@ -97,7 +98,6 @@ export default function DaysCreateForm(props) {
     setBadEvent(initialValues.BadEvent);
     setClasses(initialValues.Classes);
     setSatisfied(initialValues.Satisfied);
-    setDay(initialValues.Day);
     setMeals(initialValues.Meals);
     setHealthy(initialValues.Healthy);
     setHappy(initialValues.Happy);
@@ -106,6 +106,7 @@ export default function DaysCreateForm(props) {
     setErrors({});
   };
   const validations = {
+    id: [{ type: "Required" }],
     Game: [{ type: "Required" }],
     Practice: [{ type: "Required" }],
     Indo: [{ type: "Required" }],
@@ -123,7 +124,6 @@ export default function DaysCreateForm(props) {
     BadEvent: [{ type: "Required" }],
     Classes: [{ type: "Required" }],
     Satisfied: [{ type: "Required" }],
-    Day: [{ type: "Required" }],
     Meals: [{ type: "Required" }],
     Healthy: [{ type: "Required" }],
     Happy: [{ type: "Required" }],
@@ -156,6 +156,7 @@ export default function DaysCreateForm(props) {
       onSubmit={async (event) => {
         event.preventDefault();
         let modelFields = {
+          id,
           Game,
           Practice,
           Indo,
@@ -173,7 +174,6 @@ export default function DaysCreateForm(props) {
           BadEvent,
           Classes,
           Satisfied,
-          Day,
           Meals,
           Healthy,
           Happy,
@@ -232,6 +232,52 @@ export default function DaysCreateForm(props) {
       {...getOverrideProps(overrides, "DaysCreateForm")}
       {...rest}
     >
+      <TextField
+        label="Day"
+        isRequired={true}
+        isReadOnly={false}
+        value={id}
+        onChange={(e) => {
+          let { value } = e.target;
+          if (onChange) {
+            const modelFields = {
+              id: value,
+              Game,
+              Practice,
+              Indo,
+              Lift,
+              WallBall,
+              PT,
+              Homewok,
+              Nap,
+              VideoGames,
+              JessCall,
+              Hangout,
+              Parents,
+              Stressed,
+              GoodEvent,
+              BadEvent,
+              Classes,
+              Satisfied,
+              Meals,
+              Healthy,
+              Happy,
+              Sleep,
+              Description,
+            };
+            const result = onChange(modelFields);
+            value = result?.id ?? value;
+          }
+          if (errors.id?.hasError) {
+            runValidationTasks("id", value);
+          }
+          setId(value);
+        }}
+        onBlur={() => runValidationTasks("id", id)}
+        errorMessage={errors.id?.errorMessage}
+        hasError={errors.id?.hasError}
+        {...getOverrideProps(overrides, "id")}
+      ></TextField>
       <SwitchField
         label="Game"
         defaultChecked={false}
@@ -241,6 +287,7 @@ export default function DaysCreateForm(props) {
           let value = e.target.checked;
           if (onChange) {
             const modelFields = {
+              id,
               Game: value,
               Practice,
               Indo,
@@ -258,7 +305,6 @@ export default function DaysCreateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -287,6 +333,7 @@ export default function DaysCreateForm(props) {
           let value = e.target.checked;
           if (onChange) {
             const modelFields = {
+              id,
               Game,
               Practice: value,
               Indo,
@@ -304,7 +351,6 @@ export default function DaysCreateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -333,6 +379,7 @@ export default function DaysCreateForm(props) {
           let value = e.target.checked;
           if (onChange) {
             const modelFields = {
+              id,
               Game,
               Practice,
               Indo: value,
@@ -350,7 +397,6 @@ export default function DaysCreateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -379,6 +425,7 @@ export default function DaysCreateForm(props) {
           let value = e.target.checked;
           if (onChange) {
             const modelFields = {
+              id,
               Game,
               Practice,
               Indo,
@@ -396,7 +443,6 @@ export default function DaysCreateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -425,6 +471,7 @@ export default function DaysCreateForm(props) {
           let value = e.target.checked;
           if (onChange) {
             const modelFields = {
+              id,
               Game,
               Practice,
               Indo,
@@ -442,7 +489,6 @@ export default function DaysCreateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -471,6 +517,7 @@ export default function DaysCreateForm(props) {
           let value = e.target.checked;
           if (onChange) {
             const modelFields = {
+              id,
               Game,
               Practice,
               Indo,
@@ -488,7 +535,6 @@ export default function DaysCreateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -517,6 +563,7 @@ export default function DaysCreateForm(props) {
           let value = e.target.checked;
           if (onChange) {
             const modelFields = {
+              id,
               Game,
               Practice,
               Indo,
@@ -534,7 +581,6 @@ export default function DaysCreateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -563,6 +609,7 @@ export default function DaysCreateForm(props) {
           let value = e.target.checked;
           if (onChange) {
             const modelFields = {
+              id,
               Game,
               Practice,
               Indo,
@@ -580,7 +627,6 @@ export default function DaysCreateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -609,6 +655,7 @@ export default function DaysCreateForm(props) {
           let value = e.target.checked;
           if (onChange) {
             const modelFields = {
+              id,
               Game,
               Practice,
               Indo,
@@ -626,7 +673,6 @@ export default function DaysCreateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -655,6 +701,7 @@ export default function DaysCreateForm(props) {
           let value = e.target.checked;
           if (onChange) {
             const modelFields = {
+              id,
               Game,
               Practice,
               Indo,
@@ -672,7 +719,6 @@ export default function DaysCreateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -701,6 +747,7 @@ export default function DaysCreateForm(props) {
           let value = e.target.checked;
           if (onChange) {
             const modelFields = {
+              id,
               Game,
               Practice,
               Indo,
@@ -718,7 +765,6 @@ export default function DaysCreateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -747,6 +793,7 @@ export default function DaysCreateForm(props) {
           let value = e.target.checked;
           if (onChange) {
             const modelFields = {
+              id,
               Game,
               Practice,
               Indo,
@@ -764,7 +811,6 @@ export default function DaysCreateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -793,6 +839,7 @@ export default function DaysCreateForm(props) {
           let value = e.target.checked;
           if (onChange) {
             const modelFields = {
+              id,
               Game,
               Practice,
               Indo,
@@ -810,7 +857,6 @@ export default function DaysCreateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -839,6 +885,7 @@ export default function DaysCreateForm(props) {
           let value = e.target.checked;
           if (onChange) {
             const modelFields = {
+              id,
               Game,
               Practice,
               Indo,
@@ -856,7 +903,6 @@ export default function DaysCreateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -885,6 +931,7 @@ export default function DaysCreateForm(props) {
           let value = e.target.checked;
           if (onChange) {
             const modelFields = {
+              id,
               Game,
               Practice,
               Indo,
@@ -902,7 +949,6 @@ export default function DaysCreateForm(props) {
               BadEvent: value,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -931,6 +977,7 @@ export default function DaysCreateForm(props) {
           let value = e.target.checked;
           if (onChange) {
             const modelFields = {
+              id,
               Game,
               Practice,
               Indo,
@@ -948,7 +995,6 @@ export default function DaysCreateForm(props) {
               BadEvent,
               Classes: value,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -977,6 +1023,7 @@ export default function DaysCreateForm(props) {
           let value = e.target.checked;
           if (onChange) {
             const modelFields = {
+              id,
               Game,
               Practice,
               Indo,
@@ -994,7 +1041,6 @@ export default function DaysCreateForm(props) {
               BadEvent,
               Classes,
               Satisfied: value,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -1015,56 +1061,6 @@ export default function DaysCreateForm(props) {
         {...getOverrideProps(overrides, "Satisfied")}
       ></SwitchField>
       <TextField
-        label="Day"
-        isRequired={true}
-        isReadOnly={false}
-        type="number"
-        step="any"
-        value={Day}
-        onChange={(e) => {
-          let value = isNaN(parseInt(e.target.value))
-            ? e.target.value
-            : parseInt(e.target.value);
-          if (onChange) {
-            const modelFields = {
-              Game,
-              Practice,
-              Indo,
-              Lift,
-              WallBall,
-              PT,
-              Homewok,
-              Nap,
-              VideoGames,
-              JessCall,
-              Hangout,
-              Parents,
-              Stressed,
-              GoodEvent,
-              BadEvent,
-              Classes,
-              Satisfied,
-              Day: value,
-              Meals,
-              Healthy,
-              Happy,
-              Sleep,
-              Description,
-            };
-            const result = onChange(modelFields);
-            value = result?.Day ?? value;
-          }
-          if (errors.Day?.hasError) {
-            runValidationTasks("Day", value);
-          }
-          setDay(value);
-        }}
-        onBlur={() => runValidationTasks("Day", Day)}
-        errorMessage={errors.Day?.errorMessage}
-        hasError={errors.Day?.hasError}
-        {...getOverrideProps(overrides, "Day")}
-      ></TextField>
-      <TextField
         label="Meals"
         isRequired={true}
         isReadOnly={false}
@@ -1077,6 +1073,7 @@ export default function DaysCreateForm(props) {
             : parseInt(e.target.value);
           if (onChange) {
             const modelFields = {
+              id,
               Game,
               Practice,
               Indo,
@@ -1094,7 +1091,6 @@ export default function DaysCreateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals: value,
               Healthy,
               Happy,
@@ -1127,6 +1123,7 @@ export default function DaysCreateForm(props) {
             : parseInt(e.target.value);
           if (onChange) {
             const modelFields = {
+              id,
               Game,
               Practice,
               Indo,
@@ -1144,7 +1141,6 @@ export default function DaysCreateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy: value,
               Happy,
@@ -1177,6 +1173,7 @@ export default function DaysCreateForm(props) {
             : parseInt(e.target.value);
           if (onChange) {
             const modelFields = {
+              id,
               Game,
               Practice,
               Indo,
@@ -1194,7 +1191,6 @@ export default function DaysCreateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy: value,
@@ -1227,6 +1223,7 @@ export default function DaysCreateForm(props) {
             : parseInt(e.target.value);
           if (onChange) {
             const modelFields = {
+              id,
               Game,
               Practice,
               Indo,
@@ -1244,7 +1241,6 @@ export default function DaysCreateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,
@@ -1273,6 +1269,7 @@ export default function DaysCreateForm(props) {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
+              id,
               Game,
               Practice,
               Indo,
@@ -1290,7 +1287,6 @@ export default function DaysCreateForm(props) {
               BadEvent,
               Classes,
               Satisfied,
-              Day,
               Meals,
               Healthy,
               Happy,

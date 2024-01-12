@@ -22,6 +22,7 @@ export declare type ValidationResponse = {
 };
 export declare type ValidationFunction<T> = (value: T, validationResponse: ValidationResponse) => ValidationResponse | Promise<ValidationResponse>;
 export declare type DaysCreateFormInputValues = {
+    id?: string;
     Game?: boolean;
     Practice?: boolean;
     Indo?: boolean;
@@ -39,7 +40,6 @@ export declare type DaysCreateFormInputValues = {
     BadEvent?: boolean;
     Classes?: boolean;
     Satisfied?: boolean;
-    Day?: number;
     Meals?: number;
     Healthy?: number;
     Happy?: number;
@@ -47,6 +47,7 @@ export declare type DaysCreateFormInputValues = {
     Description?: string;
 };
 export declare type DaysCreateFormValidationValues = {
+    id?: ValidationFunction<string>;
     Game?: ValidationFunction<boolean>;
     Practice?: ValidationFunction<boolean>;
     Indo?: ValidationFunction<boolean>;
@@ -64,7 +65,6 @@ export declare type DaysCreateFormValidationValues = {
     BadEvent?: ValidationFunction<boolean>;
     Classes?: ValidationFunction<boolean>;
     Satisfied?: ValidationFunction<boolean>;
-    Day?: ValidationFunction<number>;
     Meals?: ValidationFunction<number>;
     Healthy?: ValidationFunction<number>;
     Happy?: ValidationFunction<number>;
@@ -74,6 +74,7 @@ export declare type DaysCreateFormValidationValues = {
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type DaysCreateFormOverridesProps = {
     DaysCreateFormGrid?: PrimitiveOverrideProps<GridProps>;
+    id?: PrimitiveOverrideProps<TextFieldProps>;
     Game?: PrimitiveOverrideProps<SwitchFieldProps>;
     Practice?: PrimitiveOverrideProps<SwitchFieldProps>;
     Indo?: PrimitiveOverrideProps<SwitchFieldProps>;
@@ -91,7 +92,6 @@ export declare type DaysCreateFormOverridesProps = {
     BadEvent?: PrimitiveOverrideProps<SwitchFieldProps>;
     Classes?: PrimitiveOverrideProps<SwitchFieldProps>;
     Satisfied?: PrimitiveOverrideProps<SwitchFieldProps>;
-    Day?: PrimitiveOverrideProps<TextFieldProps>;
     Meals?: PrimitiveOverrideProps<TextFieldProps>;
     Healthy?: PrimitiveOverrideProps<TextFieldProps>;
     Happy?: PrimitiveOverrideProps<TextFieldProps>;
