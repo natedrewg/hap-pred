@@ -29,8 +29,8 @@ export declare type DaysCreateFormInputValues = {
     Lift?: boolean;
     WallBall?: boolean;
     PT?: boolean;
-    Homewok?: string;
     Nap?: boolean;
+    Homework?: boolean;
     VideoGames?: boolean;
     JessCall?: boolean;
     Hangout?: boolean;
@@ -45,7 +45,6 @@ export declare type DaysCreateFormInputValues = {
     Happy?: number;
     Sleep?: number;
     Description?: string;
-    Homework?: boolean;
 };
 export declare type DaysCreateFormValidationValues = {
     id?: ValidationFunction<string>;
@@ -55,8 +54,8 @@ export declare type DaysCreateFormValidationValues = {
     Lift?: ValidationFunction<boolean>;
     WallBall?: ValidationFunction<boolean>;
     PT?: ValidationFunction<boolean>;
-    Homewok?: ValidationFunction<string>;
     Nap?: ValidationFunction<boolean>;
+    Homework?: ValidationFunction<boolean>;
     VideoGames?: ValidationFunction<boolean>;
     JessCall?: ValidationFunction<boolean>;
     Hangout?: ValidationFunction<boolean>;
@@ -71,7 +70,6 @@ export declare type DaysCreateFormValidationValues = {
     Happy?: ValidationFunction<number>;
     Sleep?: ValidationFunction<number>;
     Description?: ValidationFunction<string>;
-    Homework?: ValidationFunction<boolean>;
 };
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type DaysCreateFormOverridesProps = {
@@ -83,8 +81,8 @@ export declare type DaysCreateFormOverridesProps = {
     Lift?: PrimitiveOverrideProps<SwitchFieldProps>;
     WallBall?: PrimitiveOverrideProps<SwitchFieldProps>;
     PT?: PrimitiveOverrideProps<SwitchFieldProps>;
-    Homewok?: PrimitiveOverrideProps<TextFieldProps>;
     Nap?: PrimitiveOverrideProps<SwitchFieldProps>;
+    Homework?: PrimitiveOverrideProps<SwitchFieldProps>;
     VideoGames?: PrimitiveOverrideProps<SwitchFieldProps>;
     JessCall?: PrimitiveOverrideProps<SwitchFieldProps>;
     Hangout?: PrimitiveOverrideProps<SwitchFieldProps>;
@@ -99,7 +97,6 @@ export declare type DaysCreateFormOverridesProps = {
     Happy?: PrimitiveOverrideProps<TextFieldProps>;
     Sleep?: PrimitiveOverrideProps<TextFieldProps>;
     Description?: PrimitiveOverrideProps<TextFieldProps>;
-    Homework?: PrimitiveOverrideProps<SwitchFieldProps>;
 } & EscapeHatchProps;
 export declare type DaysCreateFormProps = React.PropsWithChildren<{
     overrides?: DaysCreateFormOverridesProps | undefined | null;

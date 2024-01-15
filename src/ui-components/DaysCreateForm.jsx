@@ -36,8 +36,8 @@ export default function DaysCreateForm(props) {
     Lift: false,
     WallBall: false,
     PT: false,
-    Homewok: "",
     Nap: false,
+    Homework: false,
     VideoGames: false,
     JessCall: false,
     Hangout: false,
@@ -52,7 +52,6 @@ export default function DaysCreateForm(props) {
     Happy: "",
     Sleep: "",
     Description: "",
-    Homework: false,
   };
   const [id, setId] = React.useState(initialValues.id);
   const [Game, setGame] = React.useState(initialValues.Game);
@@ -61,8 +60,8 @@ export default function DaysCreateForm(props) {
   const [Lift, setLift] = React.useState(initialValues.Lift);
   const [WallBall, setWallBall] = React.useState(initialValues.WallBall);
   const [PT, setPT] = React.useState(initialValues.PT);
-  const [Homewok, setHomewok] = React.useState(initialValues.Homewok);
   const [Nap, setNap] = React.useState(initialValues.Nap);
+  const [Homework, setHomework] = React.useState(initialValues.Homework);
   const [VideoGames, setVideoGames] = React.useState(initialValues.VideoGames);
   const [JessCall, setJessCall] = React.useState(initialValues.JessCall);
   const [Hangout, setHangout] = React.useState(initialValues.Hangout);
@@ -79,7 +78,6 @@ export default function DaysCreateForm(props) {
   const [Description, setDescription] = React.useState(
     initialValues.Description
   );
-  const [Homework, setHomework] = React.useState(initialValues.Homework);
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
     setId(initialValues.id);
@@ -89,8 +87,8 @@ export default function DaysCreateForm(props) {
     setLift(initialValues.Lift);
     setWallBall(initialValues.WallBall);
     setPT(initialValues.PT);
-    setHomewok(initialValues.Homewok);
     setNap(initialValues.Nap);
+    setHomework(initialValues.Homework);
     setVideoGames(initialValues.VideoGames);
     setJessCall(initialValues.JessCall);
     setHangout(initialValues.Hangout);
@@ -105,7 +103,6 @@ export default function DaysCreateForm(props) {
     setHappy(initialValues.Happy);
     setSleep(initialValues.Sleep);
     setDescription(initialValues.Description);
-    setHomework(initialValues.Homework);
     setErrors({});
   };
   const validations = {
@@ -116,8 +113,8 @@ export default function DaysCreateForm(props) {
     Lift: [{ type: "Required" }],
     WallBall: [{ type: "Required" }],
     PT: [{ type: "Required" }],
-    Homewok: [],
     Nap: [{ type: "Required" }],
+    Homework: [{ type: "Required" }],
     VideoGames: [{ type: "Required" }],
     JessCall: [{ type: "Required" }],
     Hangout: [{ type: "Required" }],
@@ -132,7 +129,6 @@ export default function DaysCreateForm(props) {
     Happy: [{ type: "Required" }],
     Sleep: [{ type: "Required" }],
     Description: [{ type: "Required" }],
-    Homework: [{ type: "Required" }],
   };
   const runValidationTasks = async (
     fieldName,
@@ -167,8 +163,8 @@ export default function DaysCreateForm(props) {
           Lift,
           WallBall,
           PT,
-          Homewok,
           Nap,
+          Homework,
           VideoGames,
           JessCall,
           Hangout,
@@ -183,7 +179,6 @@ export default function DaysCreateForm(props) {
           Happy,
           Sleep,
           Description,
-          Homework,
         };
         const validationResponses = await Promise.all(
           Object.keys(validations).reduce((promises, fieldName) => {
@@ -213,36 +208,11 @@ export default function DaysCreateForm(props) {
               modelFields[key] = null;
             }
           });
-          const modelFieldsToSave = {
-            id: modelFields.id,
-            Game: modelFields.Game,
-            Practice: modelFields.Practice,
-            Indo: modelFields.Indo,
-            Lift: modelFields.Lift,
-            WallBall: modelFields.WallBall,
-            PT: modelFields.PT,
-            Nap: modelFields.Nap,
-            VideoGames: modelFields.VideoGames,
-            JessCall: modelFields.JessCall,
-            Hangout: modelFields.Hangout,
-            Parents: modelFields.Parents,
-            Stressed: modelFields.Stressed,
-            GoodEvent: modelFields.GoodEvent,
-            BadEvent: modelFields.BadEvent,
-            Classes: modelFields.Classes,
-            Satisfied: modelFields.Satisfied,
-            Meals: modelFields.Meals,
-            Healthy: modelFields.Healthy,
-            Happy: modelFields.Happy,
-            Sleep: modelFields.Sleep,
-            Description: modelFields.Description,
-            Homework: modelFields.Homework,
-          };
           await client.graphql({
             query: createDays.replaceAll("__typename", ""),
             variables: {
               input: {
-                ...modelFieldsToSave,
+                ...modelFields,
               },
             },
           });
@@ -278,8 +248,8 @@ export default function DaysCreateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
               Nap,
+              Homework,
               VideoGames,
               JessCall,
               Hangout,
@@ -294,7 +264,6 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
-              Homework,
             };
             const result = onChange(modelFields);
             value = result?.id ?? value;
@@ -325,8 +294,8 @@ export default function DaysCreateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
               Nap,
+              Homework,
               VideoGames,
               JessCall,
               Hangout,
@@ -341,7 +310,6 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
-              Homework,
             };
             const result = onChange(modelFields);
             value = result?.Game ?? value;
@@ -372,8 +340,8 @@ export default function DaysCreateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
               Nap,
+              Homework,
               VideoGames,
               JessCall,
               Hangout,
@@ -388,7 +356,6 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
-              Homework,
             };
             const result = onChange(modelFields);
             value = result?.Practice ?? value;
@@ -419,8 +386,8 @@ export default function DaysCreateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
               Nap,
+              Homework,
               VideoGames,
               JessCall,
               Hangout,
@@ -435,7 +402,6 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
-              Homework,
             };
             const result = onChange(modelFields);
             value = result?.Indo ?? value;
@@ -466,8 +432,8 @@ export default function DaysCreateForm(props) {
               Lift: value,
               WallBall,
               PT,
-              Homewok,
               Nap,
+              Homework,
               VideoGames,
               JessCall,
               Hangout,
@@ -482,7 +448,6 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
-              Homework,
             };
             const result = onChange(modelFields);
             value = result?.Lift ?? value;
@@ -513,8 +478,8 @@ export default function DaysCreateForm(props) {
               Lift,
               WallBall: value,
               PT,
-              Homewok,
               Nap,
+              Homework,
               VideoGames,
               JessCall,
               Hangout,
@@ -529,7 +494,6 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
-              Homework,
             };
             const result = onChange(modelFields);
             value = result?.WallBall ?? value;
@@ -560,8 +524,8 @@ export default function DaysCreateForm(props) {
               Lift,
               WallBall,
               PT: value,
-              Homewok,
               Nap,
+              Homework,
               VideoGames,
               JessCall,
               Hangout,
@@ -576,7 +540,6 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
-              Homework,
             };
             const result = onChange(modelFields);
             value = result?.PT ?? value;
@@ -591,51 +554,6 @@ export default function DaysCreateForm(props) {
         hasError={errors.PT?.hasError}
         {...getOverrideProps(overrides, "PT")}
       ></SwitchField>
-      <TextField
-        label="Label"
-        value={Homewok}
-        onChange={(e) => {
-          let { value } = e.target;
-          if (onChange) {
-            const modelFields = {
-              id,
-              Game,
-              Practice,
-              Indo,
-              Lift,
-              WallBall,
-              PT,
-              Homewok: value,
-              Nap,
-              VideoGames,
-              JessCall,
-              Hangout,
-              Parents,
-              Stressed,
-              GoodEvent,
-              BadEvent,
-              Classes,
-              Satisfied,
-              Meals,
-              Healthy,
-              Happy,
-              Sleep,
-              Description,
-              Homework,
-            };
-            const result = onChange(modelFields);
-            value = result?.Homewok ?? value;
-          }
-          if (errors.Homewok?.hasError) {
-            runValidationTasks("Homewok", value);
-          }
-          setHomewok(value);
-        }}
-        onBlur={() => runValidationTasks("Homewok", Homewok)}
-        errorMessage={errors.Homewok?.errorMessage}
-        hasError={errors.Homewok?.hasError}
-        {...getOverrideProps(overrides, "Homewok")}
-      ></TextField>
       <SwitchField
         label="Nap"
         defaultChecked={false}
@@ -652,8 +570,8 @@ export default function DaysCreateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
               Nap: value,
+              Homework,
               VideoGames,
               JessCall,
               Hangout,
@@ -668,7 +586,6 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
-              Homework,
             };
             const result = onChange(modelFields);
             value = result?.Nap ?? value;
@@ -682,6 +599,52 @@ export default function DaysCreateForm(props) {
         errorMessage={errors.Nap?.errorMessage}
         hasError={errors.Nap?.hasError}
         {...getOverrideProps(overrides, "Nap")}
+      ></SwitchField>
+      <SwitchField
+        label="Homework"
+        defaultChecked={false}
+        isDisabled={false}
+        isChecked={Homework}
+        onChange={(e) => {
+          let value = e.target.checked;
+          if (onChange) {
+            const modelFields = {
+              id,
+              Game,
+              Practice,
+              Indo,
+              Lift,
+              WallBall,
+              PT,
+              Nap,
+              Homework: value,
+              VideoGames,
+              JessCall,
+              Hangout,
+              Parents,
+              Stressed,
+              GoodEvent,
+              BadEvent,
+              Classes,
+              Satisfied,
+              Meals,
+              Healthy,
+              Happy,
+              Sleep,
+              Description,
+            };
+            const result = onChange(modelFields);
+            value = result?.Homework ?? value;
+          }
+          if (errors.Homework?.hasError) {
+            runValidationTasks("Homework", value);
+          }
+          setHomework(value);
+        }}
+        onBlur={() => runValidationTasks("Homework", Homework)}
+        errorMessage={errors.Homework?.errorMessage}
+        hasError={errors.Homework?.hasError}
+        {...getOverrideProps(overrides, "Homework")}
       ></SwitchField>
       <SwitchField
         label="Video games"
@@ -699,8 +662,8 @@ export default function DaysCreateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
               Nap,
+              Homework,
               VideoGames: value,
               JessCall,
               Hangout,
@@ -715,7 +678,6 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
-              Homework,
             };
             const result = onChange(modelFields);
             value = result?.VideoGames ?? value;
@@ -746,8 +708,8 @@ export default function DaysCreateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
               Nap,
+              Homework,
               VideoGames,
               JessCall: value,
               Hangout,
@@ -762,7 +724,6 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
-              Homework,
             };
             const result = onChange(modelFields);
             value = result?.JessCall ?? value;
@@ -793,8 +754,8 @@ export default function DaysCreateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
               Nap,
+              Homework,
               VideoGames,
               JessCall,
               Hangout: value,
@@ -809,7 +770,6 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
-              Homework,
             };
             const result = onChange(modelFields);
             value = result?.Hangout ?? value;
@@ -840,8 +800,8 @@ export default function DaysCreateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
               Nap,
+              Homework,
               VideoGames,
               JessCall,
               Hangout,
@@ -856,7 +816,6 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
-              Homework,
             };
             const result = onChange(modelFields);
             value = result?.Parents ?? value;
@@ -887,8 +846,8 @@ export default function DaysCreateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
               Nap,
+              Homework,
               VideoGames,
               JessCall,
               Hangout,
@@ -903,7 +862,6 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
-              Homework,
             };
             const result = onChange(modelFields);
             value = result?.Stressed ?? value;
@@ -934,8 +892,8 @@ export default function DaysCreateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
               Nap,
+              Homework,
               VideoGames,
               JessCall,
               Hangout,
@@ -950,7 +908,6 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
-              Homework,
             };
             const result = onChange(modelFields);
             value = result?.GoodEvent ?? value;
@@ -981,8 +938,8 @@ export default function DaysCreateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
               Nap,
+              Homework,
               VideoGames,
               JessCall,
               Hangout,
@@ -997,7 +954,6 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
-              Homework,
             };
             const result = onChange(modelFields);
             value = result?.BadEvent ?? value;
@@ -1028,8 +984,8 @@ export default function DaysCreateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
               Nap,
+              Homework,
               VideoGames,
               JessCall,
               Hangout,
@@ -1044,7 +1000,6 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
-              Homework,
             };
             const result = onChange(modelFields);
             value = result?.Classes ?? value;
@@ -1075,8 +1030,8 @@ export default function DaysCreateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
               Nap,
+              Homework,
               VideoGames,
               JessCall,
               Hangout,
@@ -1091,7 +1046,6 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
-              Homework,
             };
             const result = onChange(modelFields);
             value = result?.Satisfied ?? value;
@@ -1126,8 +1080,8 @@ export default function DaysCreateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
               Nap,
+              Homework,
               VideoGames,
               JessCall,
               Hangout,
@@ -1142,7 +1096,6 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
-              Homework,
             };
             const result = onChange(modelFields);
             value = result?.Meals ?? value;
@@ -1177,8 +1130,8 @@ export default function DaysCreateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
               Nap,
+              Homework,
               VideoGames,
               JessCall,
               Hangout,
@@ -1193,7 +1146,6 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
-              Homework,
             };
             const result = onChange(modelFields);
             value = result?.Healthy ?? value;
@@ -1228,8 +1180,8 @@ export default function DaysCreateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
               Nap,
+              Homework,
               VideoGames,
               JessCall,
               Hangout,
@@ -1244,7 +1196,6 @@ export default function DaysCreateForm(props) {
               Happy: value,
               Sleep,
               Description,
-              Homework,
             };
             const result = onChange(modelFields);
             value = result?.Happy ?? value;
@@ -1279,8 +1230,8 @@ export default function DaysCreateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
               Nap,
+              Homework,
               VideoGames,
               JessCall,
               Hangout,
@@ -1295,7 +1246,6 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep: value,
               Description,
-              Homework,
             };
             const result = onChange(modelFields);
             value = result?.Sleep ?? value;
@@ -1326,8 +1276,8 @@ export default function DaysCreateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
               Nap,
+              Homework,
               VideoGames,
               JessCall,
               Hangout,
@@ -1342,7 +1292,6 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description: value,
-              Homework,
             };
             const result = onChange(modelFields);
             value = result?.Description ?? value;
@@ -1357,53 +1306,6 @@ export default function DaysCreateForm(props) {
         hasError={errors.Description?.hasError}
         {...getOverrideProps(overrides, "Description")}
       ></TextField>
-      <SwitchField
-        label="Homework"
-        defaultChecked={false}
-        isDisabled={false}
-        isChecked={Homework}
-        onChange={(e) => {
-          let value = e.target.checked;
-          if (onChange) {
-            const modelFields = {
-              id,
-              Game,
-              Practice,
-              Indo,
-              Lift,
-              WallBall,
-              PT,
-              Homewok,
-              Nap,
-              VideoGames,
-              JessCall,
-              Hangout,
-              Parents,
-              Stressed,
-              GoodEvent,
-              BadEvent,
-              Classes,
-              Satisfied,
-              Meals,
-              Healthy,
-              Happy,
-              Sleep,
-              Description,
-              Homework: value,
-            };
-            const result = onChange(modelFields);
-            value = result?.Homework ?? value;
-          }
-          if (errors.Homework?.hasError) {
-            runValidationTasks("Homework", value);
-          }
-          setHomework(value);
-        }}
-        onBlur={() => runValidationTasks("Homework", Homework)}
-        errorMessage={errors.Homework?.errorMessage}
-        hasError={errors.Homework?.hasError}
-        {...getOverrideProps(overrides, "Homework")}
-      ></SwitchField>
       <Flex
         justifyContent="space-between"
         {...getOverrideProps(overrides, "CTAFlex")}
