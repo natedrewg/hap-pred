@@ -28,7 +28,7 @@ export declare type DaysUpdateFormInputValues = {
     Lift?: boolean;
     WallBall?: boolean;
     PT?: boolean;
-    Homewok?: boolean;
+    Homework?: boolean;
     Nap?: boolean;
     VideoGames?: boolean;
     JessCall?: boolean;
@@ -52,7 +52,7 @@ export declare type DaysUpdateFormValidationValues = {
     Lift?: ValidationFunction<boolean>;
     WallBall?: ValidationFunction<boolean>;
     PT?: ValidationFunction<boolean>;
-    Homewok?: ValidationFunction<boolean>;
+    Homework?: ValidationFunction<boolean>;
     Nap?: ValidationFunction<boolean>;
     VideoGames?: ValidationFunction<boolean>;
     JessCall?: ValidationFunction<boolean>;
@@ -78,7 +78,7 @@ export declare type DaysUpdateFormOverridesProps = {
     Lift?: PrimitiveOverrideProps<SwitchFieldProps>;
     WallBall?: PrimitiveOverrideProps<SwitchFieldProps>;
     PT?: PrimitiveOverrideProps<SwitchFieldProps>;
-    Homewok?: PrimitiveOverrideProps<SwitchFieldProps>;
+    Homework?: PrimitiveOverrideProps<SwitchFieldProps>;
     Nap?: PrimitiveOverrideProps<SwitchFieldProps>;
     VideoGames?: PrimitiveOverrideProps<SwitchFieldProps>;
     JessCall?: PrimitiveOverrideProps<SwitchFieldProps>;

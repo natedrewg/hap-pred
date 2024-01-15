@@ -37,7 +37,7 @@ export default function DaysUpdateForm(props) {
     Lift: false,
     WallBall: false,
     PT: false,
-    Homewok: false,
+    Homework: false,
     Nap: false,
     VideoGames: false,
     JessCall: false,
@@ -60,7 +60,7 @@ export default function DaysUpdateForm(props) {
   const [Lift, setLift] = React.useState(initialValues.Lift);
   const [WallBall, setWallBall] = React.useState(initialValues.WallBall);
   const [PT, setPT] = React.useState(initialValues.PT);
-  const [Homewok, setHomewok] = React.useState(initialValues.Homewok);
+  const [Homework, setHomework] = React.useState(initialValues.Homework);
   const [Nap, setNap] = React.useState(initialValues.Nap);
   const [VideoGames, setVideoGames] = React.useState(initialValues.VideoGames);
   const [JessCall, setJessCall] = React.useState(initialValues.JessCall);
@@ -89,7 +89,7 @@ export default function DaysUpdateForm(props) {
     setLift(cleanValues.Lift);
     setWallBall(cleanValues.WallBall);
     setPT(cleanValues.PT);
-    setHomewok(cleanValues.Homewok);
+    setHomework(cleanValues.Homework);
     setNap(cleanValues.Nap);
     setVideoGames(cleanValues.VideoGames);
     setJessCall(cleanValues.JessCall);
@@ -130,7 +130,7 @@ export default function DaysUpdateForm(props) {
     Lift: [{ type: "Required" }],
     WallBall: [{ type: "Required" }],
     PT: [{ type: "Required" }],
-    Homewok: [{ type: "Required" }],
+    Homework: [{ type: "Required" }],
     Nap: [{ type: "Required" }],
     VideoGames: [{ type: "Required" }],
     JessCall: [{ type: "Required" }],
@@ -179,7 +179,7 @@ export default function DaysUpdateForm(props) {
           Lift,
           WallBall,
           PT,
-          Homewok,
+          Homework,
           Nap,
           VideoGames,
           JessCall,
@@ -261,7 +261,7 @@ export default function DaysUpdateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
+              Homework,
               Nap,
               VideoGames,
               JessCall,
@@ -306,7 +306,7 @@ export default function DaysUpdateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
+              Homework,
               Nap,
               VideoGames,
               JessCall,
@@ -351,7 +351,7 @@ export default function DaysUpdateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
+              Homework,
               Nap,
               VideoGames,
               JessCall,
@@ -396,7 +396,7 @@ export default function DaysUpdateForm(props) {
               Lift: value,
               WallBall,
               PT,
-              Homewok,
+              Homework,
               Nap,
               VideoGames,
               JessCall,
@@ -441,7 +441,7 @@ export default function DaysUpdateForm(props) {
               Lift,
               WallBall: value,
               PT,
-              Homewok,
+              Homework,
               Nap,
               VideoGames,
               JessCall,
@@ -486,7 +486,7 @@ export default function DaysUpdateForm(props) {
               Lift,
               WallBall,
               PT: value,
-              Homewok,
+              Homework,
               Nap,
               VideoGames,
               JessCall,
@@ -517,10 +517,10 @@ export default function DaysUpdateForm(props) {
         {...getOverrideProps(overrides, "PT")}
       ></SwitchField>
       <SwitchField
-        label="Homewok"
+        label="Homework"
         defaultChecked={false}
         isDisabled={false}
-        isChecked={Homewok}
+        isChecked={Homework}
         onChange={(e) => {
           let value = e.target.checked;
           if (onChange) {
@@ -531,7 +531,7 @@ export default function DaysUpdateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok: value,
+              Homework: value,
               Nap,
               VideoGames,
               JessCall,
@@ -549,17 +549,17 @@ export default function DaysUpdateForm(props) {
               Description,
             };
             const result = onChange(modelFields);
-            value = result?.Homewok ?? value;
+            value = result?.Homework ?? value;
           }
-          if (errors.Homewok?.hasError) {
-            runValidationTasks("Homewok", value);
+          if (errors.Homework?.hasError) {
+            runValidationTasks("Homework", value);
           }
-          setHomewok(value);
+          setHomework(value);
         }}
-        onBlur={() => runValidationTasks("Homewok", Homewok)}
-        errorMessage={errors.Homewok?.errorMessage}
-        hasError={errors.Homewok?.hasError}
-        {...getOverrideProps(overrides, "Homewok")}
+        onBlur={() => runValidationTasks("Homework", Homework)}
+        errorMessage={errors.Homework?.errorMessage}
+        hasError={errors.Homework?.hasError}
+        {...getOverrideProps(overrides, "Homework")}
       ></SwitchField>
       <SwitchField
         label="Nap"
@@ -576,7 +576,7 @@ export default function DaysUpdateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
+              Homework,
               Nap: value,
               VideoGames,
               JessCall,
@@ -621,7 +621,7 @@ export default function DaysUpdateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
+              Homework,
               Nap,
               VideoGames: value,
               JessCall,
@@ -666,7 +666,7 @@ export default function DaysUpdateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
+              Homework,
               Nap,
               VideoGames,
               JessCall: value,
@@ -711,7 +711,7 @@ export default function DaysUpdateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
+              Homework,
               Nap,
               VideoGames,
               JessCall,
@@ -756,7 +756,7 @@ export default function DaysUpdateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
+              Homework,
               Nap,
               VideoGames,
               JessCall,
@@ -801,7 +801,7 @@ export default function DaysUpdateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
+              Homework,
               Nap,
               VideoGames,
               JessCall,
@@ -846,7 +846,7 @@ export default function DaysUpdateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
+              Homework,
               Nap,
               VideoGames,
               JessCall,
@@ -891,7 +891,7 @@ export default function DaysUpdateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
+              Homework,
               Nap,
               VideoGames,
               JessCall,
@@ -936,7 +936,7 @@ export default function DaysUpdateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
+              Homework,
               Nap,
               VideoGames,
               JessCall,
@@ -981,7 +981,7 @@ export default function DaysUpdateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
+              Homework,
               Nap,
               VideoGames,
               JessCall,
@@ -1030,7 +1030,7 @@ export default function DaysUpdateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
+              Homework,
               Nap,
               VideoGames,
               JessCall,
@@ -1079,7 +1079,7 @@ export default function DaysUpdateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
+              Homework,
               Nap,
               VideoGames,
               JessCall,
@@ -1128,7 +1128,7 @@ export default function DaysUpdateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
+              Homework,
               Nap,
               VideoGames,
               JessCall,
@@ -1177,7 +1177,7 @@ export default function DaysUpdateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
+              Homework,
               Nap,
               VideoGames,
               JessCall,
@@ -1222,7 +1222,7 @@ export default function DaysUpdateForm(props) {
               Lift,
               WallBall,
               PT,
-              Homewok,
+              Homework,
               Nap,
               VideoGames,
               JessCall,

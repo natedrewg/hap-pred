@@ -6,7 +6,7 @@ type Days @model @auth(rules: [{allow: public}]) {
   Lift: Boolean!
   WallBall: Boolean!
   PT: Boolean!
-  Homewok: Boolean!
+  Homework: Boolean!
   Nap: Boolean!
   VideoGames: Boolean!
   JessCall: Boolean!
