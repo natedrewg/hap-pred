@@ -45,7 +45,6 @@ export declare type DaysCreateFormInputValues = {
     Happy?: number;
     Sleep?: number;
     Description?: string;
-    Homewok?: boolean;
 };
 export declare type DaysCreateFormValidationValues = {
     id?: ValidationFunction<string>;
@@ -71,7 +70,6 @@ export declare type DaysCreateFormValidationValues = {
     Happy?: ValidationFunction<number>;
     Sleep?: ValidationFunction<number>;
     Description?: ValidationFunction<string>;
-    Homewok?: ValidationFunction<boolean>;
 };
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type DaysCreateFormOverridesProps = {
@@ -99,7 +97,6 @@ export declare type DaysCreateFormOverridesProps = {
     Happy?: PrimitiveOverrideProps<TextFieldProps>;
     Sleep?: PrimitiveOverrideProps<TextFieldProps>;
     Description?: PrimitiveOverrideProps<TextFieldProps>;
-    Homewok?: PrimitiveOverrideProps<SwitchFieldProps>;
 } & EscapeHatchProps;
 export declare type DaysCreateFormProps = React.PropsWithChildren<{
     overrides?: DaysCreateFormOverridesProps | undefined | null;
