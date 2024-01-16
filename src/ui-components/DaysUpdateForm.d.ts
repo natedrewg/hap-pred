@@ -44,6 +44,7 @@ export declare type DaysUpdateFormInputValues = {
     Happy?: number;
     Sleep?: number;
     Description?: string;
+    Homewok?: boolean;
 };
 export declare type DaysUpdateFormValidationValues = {
     Game?: ValidationFunction<boolean>;
@@ -68,6 +69,7 @@ export declare type DaysUpdateFormValidationValues = {
     Happy?: ValidationFunction<number>;
     Sleep?: ValidationFunction<number>;
     Description?: ValidationFunction<string>;
+    Homewok?: ValidationFunction<boolean>;
 };
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type DaysUpdateFormOverridesProps = {
@@ -94,6 +96,7 @@ export declare type DaysUpdateFormOverridesProps = {
     Happy?: PrimitiveOverrideProps<TextFieldProps>;
     Sleep?: PrimitiveOverrideProps<TextFieldProps>;
     Description?: PrimitiveOverrideProps<TextFieldProps>;
+    Homewok?: PrimitiveOverrideProps<SwitchFieldProps>;
 } & EscapeHatchProps;
 export declare type DaysUpdateFormProps = React.PropsWithChildren<{
     overrides?: DaysUpdateFormOverridesProps | undefined | null;

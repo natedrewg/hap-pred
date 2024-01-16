@@ -52,6 +52,7 @@ export default function DaysCreateForm(props) {
     Happy: "",
     Sleep: "",
     Description: "",
+    Homewok: false,
   };
   const [id, setId] = React.useState(initialValues.id);
   const [Game, setGame] = React.useState(initialValues.Game);
@@ -78,6 +79,7 @@ export default function DaysCreateForm(props) {
   const [Description, setDescription] = React.useState(
     initialValues.Description
   );
+  const [Homewok, setHomewok] = React.useState(initialValues.Homewok);
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
     setId(initialValues.id);
@@ -103,6 +105,7 @@ export default function DaysCreateForm(props) {
     setHappy(initialValues.Happy);
     setSleep(initialValues.Sleep);
     setDescription(initialValues.Description);
+    setHomewok(initialValues.Homewok);
     setErrors({});
   };
   const validations = {
@@ -129,6 +132,7 @@ export default function DaysCreateForm(props) {
     Happy: [{ type: "Required" }],
     Sleep: [{ type: "Required" }],
     Description: [{ type: "Required" }],
+    Homewok: [],
   };
   const runValidationTasks = async (
     fieldName,
@@ -179,6 +183,7 @@ export default function DaysCreateForm(props) {
           Happy,
           Sleep,
           Description,
+          Homewok,
         };
         const validationResponses = await Promise.all(
           Object.keys(validations).reduce((promises, fieldName) => {
@@ -264,6 +269,7 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.id ?? value;
@@ -310,6 +316,7 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.Game ?? value;
@@ -356,6 +363,7 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.Practice ?? value;
@@ -402,6 +410,7 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.Indo ?? value;
@@ -448,6 +457,7 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.Lift ?? value;
@@ -494,6 +504,7 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.WallBall ?? value;
@@ -540,6 +551,7 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.PT ?? value;
@@ -586,6 +598,7 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.Nap ?? value;
@@ -632,6 +645,7 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.Homework ?? value;
@@ -678,6 +692,7 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.VideoGames ?? value;
@@ -724,6 +739,7 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.JessCall ?? value;
@@ -770,6 +786,7 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.Hangout ?? value;
@@ -816,6 +833,7 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.Parents ?? value;
@@ -862,6 +880,7 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.Stressed ?? value;
@@ -908,6 +927,7 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.GoodEvent ?? value;
@@ -954,6 +974,7 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.BadEvent ?? value;
@@ -1000,6 +1021,7 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.Classes ?? value;
@@ -1046,6 +1068,7 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.Satisfied ?? value;
@@ -1096,6 +1119,7 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.Meals ?? value;
@@ -1146,6 +1170,7 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.Healthy ?? value;
@@ -1196,6 +1221,7 @@ export default function DaysCreateForm(props) {
               Happy: value,
               Sleep,
               Description,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.Happy ?? value;
@@ -1246,6 +1272,7 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep: value,
               Description,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.Sleep ?? value;
@@ -1292,6 +1319,7 @@ export default function DaysCreateForm(props) {
               Happy,
               Sleep,
               Description: value,
+              Homewok,
             };
             const result = onChange(modelFields);
             value = result?.Description ?? value;
@@ -1306,6 +1334,53 @@ export default function DaysCreateForm(props) {
         hasError={errors.Description?.hasError}
         {...getOverrideProps(overrides, "Description")}
       ></TextField>
+      <SwitchField
+        label="Homewok"
+        defaultChecked={false}
+        isDisabled={false}
+        isChecked={Homewok}
+        onChange={(e) => {
+          let value = e.target.checked;
+          if (onChange) {
+            const modelFields = {
+              id,
+              Game,
+              Practice,
+              Indo,
+              Lift,
+              WallBall,
+              PT,
+              Nap,
+              Homework,
+              VideoGames,
+              JessCall,
+              Hangout,
+              Parents,
+              Stressed,
+              GoodEvent,
+              BadEvent,
+              Classes,
+              Satisfied,
+              Meals,
+              Healthy,
+              Happy,
+              Sleep,
+              Description,
+              Homewok: value,
+            };
+            const result = onChange(modelFields);
+            value = result?.Homewok ?? value;
+          }
+          if (errors.Homewok?.hasError) {
+            runValidationTasks("Homewok", value);
+          }
+          setHomewok(value);
+        }}
+        onBlur={() => runValidationTasks("Homewok", Homewok)}
+        errorMessage={errors.Homewok?.errorMessage}
+        hasError={errors.Homewok?.hasError}
+        {...getOverrideProps(overrides, "Homewok")}
+      ></SwitchField>
       <Flex
         justifyContent="space-between"
         {...getOverrideProps(overrides, "CTAFlex")}
