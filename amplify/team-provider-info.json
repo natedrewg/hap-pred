@@ -10,6 +10,11 @@
       "StackName": "amplify-happred-staging-30804",
       "StackId": "arn:aws:cloudformation:us-east-1:885158540860:stack/amplify-happred-staging-30804/a3647cc0-b02e-11ee-a17d-0a660a84b731",
       "AmplifyAppId": "djq840a7sn3lm"
+    },
+    "categories": {
+      "auth": {
+        "happred": {}
+      }
     }
   }
 }

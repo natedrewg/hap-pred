@@ -38,11 +38,11 @@
 }
 
 body {
-  margin-top: 30px;
-  padding-left:30%;
-  padding-right:30%;
+  padding-left:23%;
+  padding-right:23%;
 }
 
 html {
-  background-color: #fff7ed;
+  background-color: #595f39;
+  font-size:calc(6.5px + .77vw);
 }
