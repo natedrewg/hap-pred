@@ -8,7 +8,7 @@ const allDays = await client.graphql({ query: queries.listDays });
 export const Diary = () => {
   return (
     <div class= "bg-ivory">
-      <allDays />
+
     </div>
   );
 }
