@@ -133,12 +133,12 @@ export default function DaysCreateForm(props) {
     GoodEvent: [{ type: "Required" }],
     BadEvent: [{ type: "Required" }],
     Classes: [{ type: "Required" }],
-    BibleTime: [{ type: "Required" }],
-    BibleStudy: [{ type: "Required" }],
-    Prayed: [{ type: "Required" }],
+    BibleTime: [],
+    BibleStudy: [],
+    Prayed: [],
     Satisfied: [{ type: "Required" }],
     Meals: [{ type: "Required" }],
-    StressedOut: [{ type: "Required" }],
+    StressedOut: [],
     Healthy: [{ type: "Required" }],
     Happy: [{ type: "Required" }],
     Sleep: [{ type: "Required" }],
@@ -1284,7 +1284,7 @@ export default function DaysCreateForm(props) {
       ></TextField>
       <TextField
         label="Stressed out"
-        isRequired={true}
+        isRequired={false}
         isReadOnly={false}
         type="number"
         step="any"

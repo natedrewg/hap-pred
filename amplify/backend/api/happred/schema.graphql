@@ -14,13 +14,13 @@ type Days @model @auth(rules: [{allow: public}]) {
   Parents: Boolean!
   GoodEvent: Boolean!
   BadEvent: Boolean!
-  BibleTime: Boolean!
+  BibleTime: Boolean
   Classes: Boolean!
-  BibleStudy: Boolean!
+  BibleStudy: Boolean
   Satisfied: Boolean!
-  Prayed: Boolean!
+  Prayed: Boolean
   Meals: Int!
-  StressedOut: Int!
+  StressedOut: Int
   Healthy: Int!
   Happy: Int!
   Sleep: Int!
