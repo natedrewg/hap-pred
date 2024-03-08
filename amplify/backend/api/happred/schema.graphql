@@ -12,16 +12,20 @@ type Days @model @auth(rules: [{allow: public}]) {
   JessCall: Boolean!
   Hangout: Boolean!
   Parents: Boolean!
-  Stressed: Boolean!
   GoodEvent: Boolean!
   BadEvent: Boolean!
+  BibleTime: Boolean!
   Classes: Boolean!
+  BibleStudy: Boolean!
   Satisfied: Boolean!
+  Prayed: Boolean!
   Meals: Int!
+  StressedOut: Int!
   Healthy: Int!
   Happy: Int!
   Sleep: Int!
   Description: String!
   Homewok: Boolean
+  Stressed: Boolean
 }
  

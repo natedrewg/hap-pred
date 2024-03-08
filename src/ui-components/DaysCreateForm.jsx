@@ -46,8 +46,12 @@ export default function DaysCreateForm(props) {
     GoodEvent: false,
     BadEvent: false,
     Classes: false,
+    BibleTime: false,
+    BibleStudy: false,
+    Prayed: false,
     Satisfied: false,
     Meals: "",
+    StressedOut: "",
     Healthy: "",
     Happy: "",
     Sleep: "",
@@ -70,8 +74,14 @@ export default function DaysCreateForm(props) {
   const [GoodEvent, setGoodEvent] = React.useState(initialValues.GoodEvent);
   const [BadEvent, setBadEvent] = React.useState(initialValues.BadEvent);
   const [Classes, setClasses] = React.useState(initialValues.Classes);
+  const [BibleTime, setBibleTime] = React.useState(initialValues.BibleTime);
+  const [BibleStudy, setBibleStudy] = React.useState(initialValues.BibleStudy);
+  const [Prayed, setPrayed] = React.useState(initialValues.Prayed);
   const [Satisfied, setSatisfied] = React.useState(initialValues.Satisfied);
   const [Meals, setMeals] = React.useState(initialValues.Meals);
+  const [StressedOut, setStressedOut] = React.useState(
+    initialValues.StressedOut
+  );
   const [Healthy, setHealthy] = React.useState(initialValues.Healthy);
   const [Happy, setHappy] = React.useState(initialValues.Happy);
   const [Sleep, setSleep] = React.useState(initialValues.Sleep);
@@ -97,8 +107,12 @@ export default function DaysCreateForm(props) {
     setGoodEvent(initialValues.GoodEvent);
     setBadEvent(initialValues.BadEvent);
     setClasses(initialValues.Classes);
+    setBibleTime(initialValues.BibleTime);
+    setBibleStudy(initialValues.BibleStudy);
+    setPrayed(initialValues.Prayed);
     setSatisfied(initialValues.Satisfied);
     setMeals(initialValues.Meals);
+    setStressedOut(initialValues.StressedOut);
     setHealthy(initialValues.Healthy);
     setHappy(initialValues.Happy);
     setSleep(initialValues.Sleep);
@@ -119,12 +133,16 @@ export default function DaysCreateForm(props) {
     JessCall: [{ type: "Required" }],
     Hangout: [{ type: "Required" }],
     Parents: [{ type: "Required" }],
-    Stressed: [{ type: "Required" }],
+    Stressed: [],
     GoodEvent: [{ type: "Required" }],
     BadEvent: [{ type: "Required" }],
     Classes: [{ type: "Required" }],
+    BibleTime: [{ type: "Required" }],
+    BibleStudy: [{ type: "Required" }],
+    Prayed: [{ type: "Required" }],
     Satisfied: [{ type: "Required" }],
     Meals: [{ type: "Required" }],
+    StressedOut: [{ type: "Required" }],
     Healthy: [{ type: "Required" }],
     Happy: [{ type: "Required" }],
     Sleep: [{ type: "Required" }],
@@ -173,8 +191,12 @@ export default function DaysCreateForm(props) {
           GoodEvent,
           BadEvent,
           Classes,
+          BibleTime,
+          BibleStudy,
+          Prayed,
           Satisfied,
           Meals,
+          StressedOut,
           Healthy,
           Happy,
           Sleep,
@@ -258,8 +280,12 @@ export default function DaysCreateForm(props) {
               GoodEvent,
               BadEvent,
               Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
@@ -304,8 +330,12 @@ export default function DaysCreateForm(props) {
               GoodEvent,
               BadEvent,
               Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
@@ -350,8 +380,12 @@ export default function DaysCreateForm(props) {
               GoodEvent,
               BadEvent,
               Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
@@ -396,8 +430,12 @@ export default function DaysCreateForm(props) {
               GoodEvent,
               BadEvent,
               Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
@@ -442,8 +480,12 @@ export default function DaysCreateForm(props) {
               GoodEvent,
               BadEvent,
               Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
@@ -488,8 +530,12 @@ export default function DaysCreateForm(props) {
               GoodEvent,
               BadEvent,
               Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
@@ -534,8 +580,12 @@ export default function DaysCreateForm(props) {
               GoodEvent,
               BadEvent,
               Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
@@ -580,8 +630,12 @@ export default function DaysCreateForm(props) {
               GoodEvent,
               BadEvent,
               Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
@@ -626,8 +680,12 @@ export default function DaysCreateForm(props) {
               GoodEvent,
               BadEvent,
               Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
@@ -672,8 +730,12 @@ export default function DaysCreateForm(props) {
               GoodEvent,
               BadEvent,
               Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
@@ -718,8 +780,12 @@ export default function DaysCreateForm(props) {
               GoodEvent,
               BadEvent,
               Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
@@ -764,8 +830,12 @@ export default function DaysCreateForm(props) {
               GoodEvent,
               BadEvent,
               Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
@@ -810,8 +880,12 @@ export default function DaysCreateForm(props) {
               GoodEvent,
               BadEvent,
               Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
@@ -856,8 +930,12 @@ export default function DaysCreateForm(props) {
               GoodEvent,
               BadEvent,
               Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
@@ -902,8 +980,12 @@ export default function DaysCreateForm(props) {
               GoodEvent: value,
               BadEvent,
               Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
@@ -948,8 +1030,12 @@ export default function DaysCreateForm(props) {
               GoodEvent,
               BadEvent: value,
               Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
@@ -994,8 +1080,12 @@ export default function DaysCreateForm(props) {
               GoodEvent,
               BadEvent,
               Classes: value,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
@@ -1013,6 +1103,156 @@ export default function DaysCreateForm(props) {
         errorMessage={errors.Classes?.errorMessage}
         hasError={errors.Classes?.hasError}
         {...getOverrideProps(overrides, "Classes")}
+      ></SwitchField>
+      <SwitchField
+        label="Bible time"
+        defaultChecked={false}
+        isDisabled={false}
+        isChecked={BibleTime}
+        onChange={(e) => {
+          let value = e.target.checked;
+          if (onChange) {
+            const modelFields = {
+              id,
+              Game,
+              Practice,
+              Indo,
+              Lift,
+              WallBall,
+              PT,
+              Nap,
+              Homework,
+              VideoGames,
+              JessCall,
+              Hangout,
+              Parents,
+              Stressed,
+              GoodEvent,
+              BadEvent,
+              Classes,
+              BibleTime: value,
+              BibleStudy,
+              Prayed,
+              Satisfied,
+              Meals,
+              StressedOut,
+              Healthy,
+              Happy,
+              Sleep,
+              Description,
+            };
+            const result = onChange(modelFields);
+            value = result?.BibleTime ?? value;
+          }
+          if (errors.BibleTime?.hasError) {
+            runValidationTasks("BibleTime", value);
+          }
+          setBibleTime(value);
+        }}
+        onBlur={() => runValidationTasks("BibleTime", BibleTime)}
+        errorMessage={errors.BibleTime?.errorMessage}
+        hasError={errors.BibleTime?.hasError}
+        {...getOverrideProps(overrides, "BibleTime")}
+      ></SwitchField>
+      <SwitchField
+        label="Bible study"
+        defaultChecked={false}
+        isDisabled={false}
+        isChecked={BibleStudy}
+        onChange={(e) => {
+          let value = e.target.checked;
+          if (onChange) {
+            const modelFields = {
+              id,
+              Game,
+              Practice,
+              Indo,
+              Lift,
+              WallBall,
+              PT,
+              Nap,
+              Homework,
+              VideoGames,
+              JessCall,
+              Hangout,
+              Parents,
+              Stressed,
+              GoodEvent,
+              BadEvent,
+              Classes,
+              BibleTime,
+              BibleStudy: value,
+              Prayed,
+              Satisfied,
+              Meals,
+              StressedOut,
+              Healthy,
+              Happy,
+              Sleep,
+              Description,
+            };
+            const result = onChange(modelFields);
+            value = result?.BibleStudy ?? value;
+          }
+          if (errors.BibleStudy?.hasError) {
+            runValidationTasks("BibleStudy", value);
+          }
+          setBibleStudy(value);
+        }}
+        onBlur={() => runValidationTasks("BibleStudy", BibleStudy)}
+        errorMessage={errors.BibleStudy?.errorMessage}
+        hasError={errors.BibleStudy?.hasError}
+        {...getOverrideProps(overrides, "BibleStudy")}
+      ></SwitchField>
+      <SwitchField
+        label="Prayed"
+        defaultChecked={false}
+        isDisabled={false}
+        isChecked={Prayed}
+        onChange={(e) => {
+          let value = e.target.checked;
+          if (onChange) {
+            const modelFields = {
+              id,
+              Game,
+              Practice,
+              Indo,
+              Lift,
+              WallBall,
+              PT,
+              Nap,
+              Homework,
+              VideoGames,
+              JessCall,
+              Hangout,
+              Parents,
+              Stressed,
+              GoodEvent,
+              BadEvent,
+              Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed: value,
+              Satisfied,
+              Meals,
+              StressedOut,
+              Healthy,
+              Happy,
+              Sleep,
+              Description,
+            };
+            const result = onChange(modelFields);
+            value = result?.Prayed ?? value;
+          }
+          if (errors.Prayed?.hasError) {
+            runValidationTasks("Prayed", value);
+          }
+          setPrayed(value);
+        }}
+        onBlur={() => runValidationTasks("Prayed", Prayed)}
+        errorMessage={errors.Prayed?.errorMessage}
+        hasError={errors.Prayed?.hasError}
+        {...getOverrideProps(overrides, "Prayed")}
       ></SwitchField>
       <SwitchField
         label="Satisfied"
@@ -1040,8 +1280,12 @@ export default function DaysCreateForm(props) {
               GoodEvent,
               BadEvent,
               Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied: value,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
@@ -1090,8 +1334,12 @@ export default function DaysCreateForm(props) {
               GoodEvent,
               BadEvent,
               Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied,
               Meals: value,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
@@ -1109,6 +1357,60 @@ export default function DaysCreateForm(props) {
         errorMessage={errors.Meals?.errorMessage}
         hasError={errors.Meals?.hasError}
         {...getOverrideProps(overrides, "Meals")}
+      ></TextField>
+      <TextField
+        label="Stressed out"
+        isRequired={true}
+        isReadOnly={false}
+        type="number"
+        step="any"
+        value={StressedOut}
+        onChange={(e) => {
+          let value = isNaN(parseInt(e.target.value))
+            ? e.target.value
+            : parseInt(e.target.value);
+          if (onChange) {
+            const modelFields = {
+              id,
+              Game,
+              Practice,
+              Indo,
+              Lift,
+              WallBall,
+              PT,
+              Nap,
+              Homework,
+              VideoGames,
+              JessCall,
+              Hangout,
+              Parents,
+              Stressed,
+              GoodEvent,
+              BadEvent,
+              Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
+              Satisfied,
+              Meals,
+              StressedOut: value,
+              Healthy,
+              Happy,
+              Sleep,
+              Description,
+            };
+            const result = onChange(modelFields);
+            value = result?.StressedOut ?? value;
+          }
+          if (errors.StressedOut?.hasError) {
+            runValidationTasks("StressedOut", value);
+          }
+          setStressedOut(value);
+        }}
+        onBlur={() => runValidationTasks("StressedOut", StressedOut)}
+        errorMessage={errors.StressedOut?.errorMessage}
+        hasError={errors.StressedOut?.hasError}
+        {...getOverrideProps(overrides, "StressedOut")}
       ></TextField>
       <TextField
         label="Healthy"
@@ -1140,8 +1442,12 @@ export default function DaysCreateForm(props) {
               GoodEvent,
               BadEvent,
               Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied,
               Meals,
+              StressedOut,
               Healthy: value,
               Happy,
               Sleep,
@@ -1190,8 +1496,12 @@ export default function DaysCreateForm(props) {
               GoodEvent,
               BadEvent,
               Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied,
               Meals,
+              StressedOut,
               Healthy,
               Happy: value,
               Sleep,
@@ -1240,8 +1550,12 @@ export default function DaysCreateForm(props) {
               GoodEvent,
               BadEvent,
               Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep: value,
@@ -1286,8 +1600,12 @@ export default function DaysCreateForm(props) {
               GoodEvent,
               BadEvent,
               Classes,
+              BibleTime,
+              BibleStudy,
+              Prayed,
               Satisfied,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,

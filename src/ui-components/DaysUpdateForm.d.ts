@@ -34,17 +34,21 @@ export declare type DaysUpdateFormInputValues = {
     JessCall?: boolean;
     Hangout?: boolean;
     Parents?: boolean;
-    Stressed?: boolean;
     GoodEvent?: boolean;
     BadEvent?: boolean;
+    BibleTime?: boolean;
     Classes?: boolean;
+    BibleStudy?: boolean;
     Satisfied?: boolean;
+    Prayed?: boolean;
     Meals?: number;
+    StressedOut?: number;
     Healthy?: number;
     Happy?: number;
     Sleep?: number;
     Description?: string;
     Homewok?: boolean;
+    Stressed?: boolean;
 };
 export declare type DaysUpdateFormValidationValues = {
     Game?: ValidationFunction<boolean>;
@@ -59,17 +63,21 @@ export declare type DaysUpdateFormValidationValues = {
     JessCall?: ValidationFunction<boolean>;
     Hangout?: ValidationFunction<boolean>;
     Parents?: ValidationFunction<boolean>;
-    Stressed?: ValidationFunction<boolean>;
     GoodEvent?: ValidationFunction<boolean>;
     BadEvent?: ValidationFunction<boolean>;
+    BibleTime?: ValidationFunction<boolean>;
     Classes?: ValidationFunction<boolean>;
+    BibleStudy?: ValidationFunction<boolean>;
     Satisfied?: ValidationFunction<boolean>;
+    Prayed?: ValidationFunction<boolean>;
     Meals?: ValidationFunction<number>;
+    StressedOut?: ValidationFunction<number>;
     Healthy?: ValidationFunction<number>;
     Happy?: ValidationFunction<number>;
     Sleep?: ValidationFunction<number>;
     Description?: ValidationFunction<string>;
     Homewok?: ValidationFunction<boolean>;
+    Stressed?: ValidationFunction<boolean>;
 };
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type DaysUpdateFormOverridesProps = {
@@ -86,17 +94,21 @@ export declare type DaysUpdateFormOverridesProps = {
     JessCall?: PrimitiveOverrideProps<SwitchFieldProps>;
     Hangout?: PrimitiveOverrideProps<SwitchFieldProps>;
     Parents?: PrimitiveOverrideProps<SwitchFieldProps>;
-    Stressed?: PrimitiveOverrideProps<SwitchFieldProps>;
     GoodEvent?: PrimitiveOverrideProps<SwitchFieldProps>;
     BadEvent?: PrimitiveOverrideProps<SwitchFieldProps>;
+    BibleTime?: PrimitiveOverrideProps<SwitchFieldProps>;
     Classes?: PrimitiveOverrideProps<SwitchFieldProps>;
+    BibleStudy?: PrimitiveOverrideProps<SwitchFieldProps>;
     Satisfied?: PrimitiveOverrideProps<SwitchFieldProps>;
+    Prayed?: PrimitiveOverrideProps<SwitchFieldProps>;
     Meals?: PrimitiveOverrideProps<TextFieldProps>;
+    StressedOut?: PrimitiveOverrideProps<TextFieldProps>;
     Healthy?: PrimitiveOverrideProps<TextFieldProps>;
     Happy?: PrimitiveOverrideProps<TextFieldProps>;
     Sleep?: PrimitiveOverrideProps<TextFieldProps>;
     Description?: PrimitiveOverrideProps<TextFieldProps>;
     Homewok?: PrimitiveOverrideProps<SwitchFieldProps>;
+    Stressed?: PrimitiveOverrideProps<SwitchFieldProps>;
 } & EscapeHatchProps;
 export declare type DaysUpdateFormProps = React.PropsWithChildren<{
     overrides?: DaysUpdateFormOverridesProps | undefined | null;

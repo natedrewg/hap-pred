@@ -43,17 +43,21 @@ export default function DaysUpdateForm(props) {
     JessCall: false,
     Hangout: false,
     Parents: false,
-    Stressed: false,
     GoodEvent: false,
     BadEvent: false,
+    BibleTime: false,
     Classes: false,
+    BibleStudy: false,
     Satisfied: false,
+    Prayed: false,
     Meals: "",
+    StressedOut: "",
     Healthy: "",
     Happy: "",
     Sleep: "",
     Description: "",
     Homewok: false,
+    Stressed: false,
   };
   const [Game, setGame] = React.useState(initialValues.Game);
   const [Practice, setPractice] = React.useState(initialValues.Practice);
@@ -67,12 +71,17 @@ export default function DaysUpdateForm(props) {
   const [JessCall, setJessCall] = React.useState(initialValues.JessCall);
   const [Hangout, setHangout] = React.useState(initialValues.Hangout);
   const [Parents, setParents] = React.useState(initialValues.Parents);
-  const [Stressed, setStressed] = React.useState(initialValues.Stressed);
   const [GoodEvent, setGoodEvent] = React.useState(initialValues.GoodEvent);
   const [BadEvent, setBadEvent] = React.useState(initialValues.BadEvent);
+  const [BibleTime, setBibleTime] = React.useState(initialValues.BibleTime);
   const [Classes, setClasses] = React.useState(initialValues.Classes);
+  const [BibleStudy, setBibleStudy] = React.useState(initialValues.BibleStudy);
   const [Satisfied, setSatisfied] = React.useState(initialValues.Satisfied);
+  const [Prayed, setPrayed] = React.useState(initialValues.Prayed);
   const [Meals, setMeals] = React.useState(initialValues.Meals);
+  const [StressedOut, setStressedOut] = React.useState(
+    initialValues.StressedOut
+  );
   const [Healthy, setHealthy] = React.useState(initialValues.Healthy);
   const [Happy, setHappy] = React.useState(initialValues.Happy);
   const [Sleep, setSleep] = React.useState(initialValues.Sleep);
@@ -80,6 +89,7 @@ export default function DaysUpdateForm(props) {
     initialValues.Description
   );
   const [Homewok, setHomewok] = React.useState(initialValues.Homewok);
+  const [Stressed, setStressed] = React.useState(initialValues.Stressed);
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
     const cleanValues = daysRecord
@@ -97,17 +107,21 @@ export default function DaysUpdateForm(props) {
     setJessCall(cleanValues.JessCall);
     setHangout(cleanValues.Hangout);
     setParents(cleanValues.Parents);
-    setStressed(cleanValues.Stressed);
     setGoodEvent(cleanValues.GoodEvent);
     setBadEvent(cleanValues.BadEvent);
+    setBibleTime(cleanValues.BibleTime);
     setClasses(cleanValues.Classes);
+    setBibleStudy(cleanValues.BibleStudy);
     setSatisfied(cleanValues.Satisfied);
+    setPrayed(cleanValues.Prayed);
     setMeals(cleanValues.Meals);
+    setStressedOut(cleanValues.StressedOut);
     setHealthy(cleanValues.Healthy);
     setHappy(cleanValues.Happy);
     setSleep(cleanValues.Sleep);
     setDescription(cleanValues.Description);
     setHomewok(cleanValues.Homewok);
+    setStressed(cleanValues.Stressed);
     setErrors({});
   };
   const [daysRecord, setDaysRecord] = React.useState(daysModelProp);
@@ -139,17 +153,21 @@ export default function DaysUpdateForm(props) {
     JessCall: [{ type: "Required" }],
     Hangout: [{ type: "Required" }],
     Parents: [{ type: "Required" }],
-    Stressed: [{ type: "Required" }],
     GoodEvent: [{ type: "Required" }],
     BadEvent: [{ type: "Required" }],
+    BibleTime: [{ type: "Required" }],
     Classes: [{ type: "Required" }],
+    BibleStudy: [{ type: "Required" }],
     Satisfied: [{ type: "Required" }],
+    Prayed: [{ type: "Required" }],
     Meals: [{ type: "Required" }],
+    StressedOut: [{ type: "Required" }],
     Healthy: [{ type: "Required" }],
     Happy: [{ type: "Required" }],
     Sleep: [{ type: "Required" }],
     Description: [{ type: "Required" }],
     Homewok: [],
+    Stressed: [],
   };
   const runValidationTasks = async (
     fieldName,
@@ -189,17 +207,21 @@ export default function DaysUpdateForm(props) {
           JessCall,
           Hangout,
           Parents,
-          Stressed,
           GoodEvent,
           BadEvent,
+          BibleTime,
           Classes,
+          BibleStudy,
           Satisfied,
+          Prayed,
           Meals,
+          StressedOut,
           Healthy,
           Happy,
           Sleep,
           Description,
           Homewok: Homewok ?? null,
+          Stressed: Stressed ?? null,
         };
         const validationResponses = await Promise.all(
           Object.keys(validations).reduce((promises, fieldName) => {
@@ -272,17 +294,21 @@ export default function DaysUpdateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
+              BibleTime,
               Classes,
+              BibleStudy,
               Satisfied,
+              Prayed,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
               Description,
               Homewok,
+              Stressed,
             };
             const result = onChange(modelFields);
             value = result?.Game ?? value;
@@ -318,17 +344,21 @@ export default function DaysUpdateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
+              BibleTime,
               Classes,
+              BibleStudy,
               Satisfied,
+              Prayed,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
               Description,
               Homewok,
+              Stressed,
             };
             const result = onChange(modelFields);
             value = result?.Practice ?? value;
@@ -364,17 +394,21 @@ export default function DaysUpdateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
+              BibleTime,
               Classes,
+              BibleStudy,
               Satisfied,
+              Prayed,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
               Description,
               Homewok,
+              Stressed,
             };
             const result = onChange(modelFields);
             value = result?.Indo ?? value;
@@ -410,17 +444,21 @@ export default function DaysUpdateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
+              BibleTime,
               Classes,
+              BibleStudy,
               Satisfied,
+              Prayed,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
               Description,
               Homewok,
+              Stressed,
             };
             const result = onChange(modelFields);
             value = result?.Lift ?? value;
@@ -456,17 +494,21 @@ export default function DaysUpdateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
+              BibleTime,
               Classes,
+              BibleStudy,
               Satisfied,
+              Prayed,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
               Description,
               Homewok,
+              Stressed,
             };
             const result = onChange(modelFields);
             value = result?.WallBall ?? value;
@@ -502,17 +544,21 @@ export default function DaysUpdateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
+              BibleTime,
               Classes,
+              BibleStudy,
               Satisfied,
+              Prayed,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
               Description,
               Homewok,
+              Stressed,
             };
             const result = onChange(modelFields);
             value = result?.PT ?? value;
@@ -548,17 +594,21 @@ export default function DaysUpdateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
+              BibleTime,
               Classes,
+              BibleStudy,
               Satisfied,
+              Prayed,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
               Description,
               Homewok,
+              Stressed,
             };
             const result = onChange(modelFields);
             value = result?.Homework ?? value;
@@ -594,17 +644,21 @@ export default function DaysUpdateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
+              BibleTime,
               Classes,
+              BibleStudy,
               Satisfied,
+              Prayed,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
               Description,
               Homewok,
+              Stressed,
             };
             const result = onChange(modelFields);
             value = result?.Nap ?? value;
@@ -640,17 +694,21 @@ export default function DaysUpdateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
+              BibleTime,
               Classes,
+              BibleStudy,
               Satisfied,
+              Prayed,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
               Description,
               Homewok,
+              Stressed,
             };
             const result = onChange(modelFields);
             value = result?.VideoGames ?? value;
@@ -686,17 +744,21 @@ export default function DaysUpdateForm(props) {
               JessCall: value,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
+              BibleTime,
               Classes,
+              BibleStudy,
               Satisfied,
+              Prayed,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
               Description,
               Homewok,
+              Stressed,
             };
             const result = onChange(modelFields);
             value = result?.JessCall ?? value;
@@ -732,17 +794,21 @@ export default function DaysUpdateForm(props) {
               JessCall,
               Hangout: value,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
+              BibleTime,
               Classes,
+              BibleStudy,
               Satisfied,
+              Prayed,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
               Description,
               Homewok,
+              Stressed,
             };
             const result = onChange(modelFields);
             value = result?.Hangout ?? value;
@@ -778,17 +844,21 @@ export default function DaysUpdateForm(props) {
               JessCall,
               Hangout,
               Parents: value,
-              Stressed,
               GoodEvent,
               BadEvent,
+              BibleTime,
               Classes,
+              BibleStudy,
               Satisfied,
+              Prayed,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
               Description,
               Homewok,
+              Stressed,
             };
             const result = onChange(modelFields);
             value = result?.Parents ?? value;
@@ -802,52 +872,6 @@ export default function DaysUpdateForm(props) {
         errorMessage={errors.Parents?.errorMessage}
         hasError={errors.Parents?.hasError}
         {...getOverrideProps(overrides, "Parents")}
-      ></SwitchField>
-      <SwitchField
-        label="Stressed"
-        defaultChecked={false}
-        isDisabled={false}
-        isChecked={Stressed}
-        onChange={(e) => {
-          let value = e.target.checked;
-          if (onChange) {
-            const modelFields = {
-              Game,
-              Practice,
-              Indo,
-              Lift,
-              WallBall,
-              PT,
-              Homework,
-              Nap,
-              VideoGames,
-              JessCall,
-              Hangout,
-              Parents,
-              Stressed: value,
-              GoodEvent,
-              BadEvent,
-              Classes,
-              Satisfied,
-              Meals,
-              Healthy,
-              Happy,
-              Sleep,
-              Description,
-              Homewok,
-            };
-            const result = onChange(modelFields);
-            value = result?.Stressed ?? value;
-          }
-          if (errors.Stressed?.hasError) {
-            runValidationTasks("Stressed", value);
-          }
-          setStressed(value);
-        }}
-        onBlur={() => runValidationTasks("Stressed", Stressed)}
-        errorMessage={errors.Stressed?.errorMessage}
-        hasError={errors.Stressed?.hasError}
-        {...getOverrideProps(overrides, "Stressed")}
       ></SwitchField>
       <SwitchField
         label="Good event"
@@ -870,17 +894,21 @@ export default function DaysUpdateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent: value,
               BadEvent,
+              BibleTime,
               Classes,
+              BibleStudy,
               Satisfied,
+              Prayed,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
               Description,
               Homewok,
+              Stressed,
             };
             const result = onChange(modelFields);
             value = result?.GoodEvent ?? value;
@@ -916,17 +944,21 @@ export default function DaysUpdateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent: value,
+              BibleTime,
               Classes,
+              BibleStudy,
               Satisfied,
+              Prayed,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
               Description,
               Homewok,
+              Stressed,
             };
             const result = onChange(modelFields);
             value = result?.BadEvent ?? value;
@@ -940,6 +972,56 @@ export default function DaysUpdateForm(props) {
         errorMessage={errors.BadEvent?.errorMessage}
         hasError={errors.BadEvent?.hasError}
         {...getOverrideProps(overrides, "BadEvent")}
+      ></SwitchField>
+      <SwitchField
+        label="Bible time"
+        defaultChecked={false}
+        isDisabled={false}
+        isChecked={BibleTime}
+        onChange={(e) => {
+          let value = e.target.checked;
+          if (onChange) {
+            const modelFields = {
+              Game,
+              Practice,
+              Indo,
+              Lift,
+              WallBall,
+              PT,
+              Homework,
+              Nap,
+              VideoGames,
+              JessCall,
+              Hangout,
+              Parents,
+              GoodEvent,
+              BadEvent,
+              BibleTime: value,
+              Classes,
+              BibleStudy,
+              Satisfied,
+              Prayed,
+              Meals,
+              StressedOut,
+              Healthy,
+              Happy,
+              Sleep,
+              Description,
+              Homewok,
+              Stressed,
+            };
+            const result = onChange(modelFields);
+            value = result?.BibleTime ?? value;
+          }
+          if (errors.BibleTime?.hasError) {
+            runValidationTasks("BibleTime", value);
+          }
+          setBibleTime(value);
+        }}
+        onBlur={() => runValidationTasks("BibleTime", BibleTime)}
+        errorMessage={errors.BibleTime?.errorMessage}
+        hasError={errors.BibleTime?.hasError}
+        {...getOverrideProps(overrides, "BibleTime")}
       ></SwitchField>
       <SwitchField
         label="Classes"
@@ -962,17 +1044,21 @@ export default function DaysUpdateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
+              BibleTime,
               Classes: value,
+              BibleStudy,
               Satisfied,
+              Prayed,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
               Description,
               Homewok,
+              Stressed,
             };
             const result = onChange(modelFields);
             value = result?.Classes ?? value;
@@ -986,6 +1072,56 @@ export default function DaysUpdateForm(props) {
         errorMessage={errors.Classes?.errorMessage}
         hasError={errors.Classes?.hasError}
         {...getOverrideProps(overrides, "Classes")}
+      ></SwitchField>
+      <SwitchField
+        label="Bible study"
+        defaultChecked={false}
+        isDisabled={false}
+        isChecked={BibleStudy}
+        onChange={(e) => {
+          let value = e.target.checked;
+          if (onChange) {
+            const modelFields = {
+              Game,
+              Practice,
+              Indo,
+              Lift,
+              WallBall,
+              PT,
+              Homework,
+              Nap,
+              VideoGames,
+              JessCall,
+              Hangout,
+              Parents,
+              GoodEvent,
+              BadEvent,
+              BibleTime,
+              Classes,
+              BibleStudy: value,
+              Satisfied,
+              Prayed,
+              Meals,
+              StressedOut,
+              Healthy,
+              Happy,
+              Sleep,
+              Description,
+              Homewok,
+              Stressed,
+            };
+            const result = onChange(modelFields);
+            value = result?.BibleStudy ?? value;
+          }
+          if (errors.BibleStudy?.hasError) {
+            runValidationTasks("BibleStudy", value);
+          }
+          setBibleStudy(value);
+        }}
+        onBlur={() => runValidationTasks("BibleStudy", BibleStudy)}
+        errorMessage={errors.BibleStudy?.errorMessage}
+        hasError={errors.BibleStudy?.hasError}
+        {...getOverrideProps(overrides, "BibleStudy")}
       ></SwitchField>
       <SwitchField
         label="Satisfied"
@@ -1008,17 +1144,21 @@ export default function DaysUpdateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
+              BibleTime,
               Classes,
+              BibleStudy,
               Satisfied: value,
+              Prayed,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
               Description,
               Homewok,
+              Stressed,
             };
             const result = onChange(modelFields);
             value = result?.Satisfied ?? value;
@@ -1032,6 +1172,56 @@ export default function DaysUpdateForm(props) {
         errorMessage={errors.Satisfied?.errorMessage}
         hasError={errors.Satisfied?.hasError}
         {...getOverrideProps(overrides, "Satisfied")}
+      ></SwitchField>
+      <SwitchField
+        label="Prayed"
+        defaultChecked={false}
+        isDisabled={false}
+        isChecked={Prayed}
+        onChange={(e) => {
+          let value = e.target.checked;
+          if (onChange) {
+            const modelFields = {
+              Game,
+              Practice,
+              Indo,
+              Lift,
+              WallBall,
+              PT,
+              Homework,
+              Nap,
+              VideoGames,
+              JessCall,
+              Hangout,
+              Parents,
+              GoodEvent,
+              BadEvent,
+              BibleTime,
+              Classes,
+              BibleStudy,
+              Satisfied,
+              Prayed: value,
+              Meals,
+              StressedOut,
+              Healthy,
+              Happy,
+              Sleep,
+              Description,
+              Homewok,
+              Stressed,
+            };
+            const result = onChange(modelFields);
+            value = result?.Prayed ?? value;
+          }
+          if (errors.Prayed?.hasError) {
+            runValidationTasks("Prayed", value);
+          }
+          setPrayed(value);
+        }}
+        onBlur={() => runValidationTasks("Prayed", Prayed)}
+        errorMessage={errors.Prayed?.errorMessage}
+        hasError={errors.Prayed?.hasError}
+        {...getOverrideProps(overrides, "Prayed")}
       ></SwitchField>
       <TextField
         label="Meals"
@@ -1058,17 +1248,21 @@ export default function DaysUpdateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
+              BibleTime,
               Classes,
+              BibleStudy,
               Satisfied,
+              Prayed,
               Meals: value,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
               Description,
               Homewok,
+              Stressed,
             };
             const result = onChange(modelFields);
             value = result?.Meals ?? value;
@@ -1082,6 +1276,60 @@ export default function DaysUpdateForm(props) {
         errorMessage={errors.Meals?.errorMessage}
         hasError={errors.Meals?.hasError}
         {...getOverrideProps(overrides, "Meals")}
+      ></TextField>
+      <TextField
+        label="Stressed out"
+        isRequired={true}
+        isReadOnly={false}
+        type="number"
+        step="any"
+        value={StressedOut}
+        onChange={(e) => {
+          let value = isNaN(parseInt(e.target.value))
+            ? e.target.value
+            : parseInt(e.target.value);
+          if (onChange) {
+            const modelFields = {
+              Game,
+              Practice,
+              Indo,
+              Lift,
+              WallBall,
+              PT,
+              Homework,
+              Nap,
+              VideoGames,
+              JessCall,
+              Hangout,
+              Parents,
+              GoodEvent,
+              BadEvent,
+              BibleTime,
+              Classes,
+              BibleStudy,
+              Satisfied,
+              Prayed,
+              Meals,
+              StressedOut: value,
+              Healthy,
+              Happy,
+              Sleep,
+              Description,
+              Homewok,
+              Stressed,
+            };
+            const result = onChange(modelFields);
+            value = result?.StressedOut ?? value;
+          }
+          if (errors.StressedOut?.hasError) {
+            runValidationTasks("StressedOut", value);
+          }
+          setStressedOut(value);
+        }}
+        onBlur={() => runValidationTasks("StressedOut", StressedOut)}
+        errorMessage={errors.StressedOut?.errorMessage}
+        hasError={errors.StressedOut?.hasError}
+        {...getOverrideProps(overrides, "StressedOut")}
       ></TextField>
       <TextField
         label="Healthy"
@@ -1108,17 +1356,21 @@ export default function DaysUpdateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
+              BibleTime,
               Classes,
+              BibleStudy,
               Satisfied,
+              Prayed,
               Meals,
+              StressedOut,
               Healthy: value,
               Happy,
               Sleep,
               Description,
               Homewok,
+              Stressed,
             };
             const result = onChange(modelFields);
             value = result?.Healthy ?? value;
@@ -1158,17 +1410,21 @@ export default function DaysUpdateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
+              BibleTime,
               Classes,
+              BibleStudy,
               Satisfied,
+              Prayed,
               Meals,
+              StressedOut,
               Healthy,
               Happy: value,
               Sleep,
               Description,
               Homewok,
+              Stressed,
             };
             const result = onChange(modelFields);
             value = result?.Happy ?? value;
@@ -1208,17 +1464,21 @@ export default function DaysUpdateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
+              BibleTime,
               Classes,
+              BibleStudy,
               Satisfied,
+              Prayed,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep: value,
               Description,
               Homewok,
+              Stressed,
             };
             const result = onChange(modelFields);
             value = result?.Sleep ?? value;
@@ -1254,17 +1514,21 @@ export default function DaysUpdateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
+              BibleTime,
               Classes,
+              BibleStudy,
               Satisfied,
+              Prayed,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
               Description: value,
               Homewok,
+              Stressed,
             };
             const result = onChange(modelFields);
             value = result?.Description ?? value;
@@ -1300,17 +1564,21 @@ export default function DaysUpdateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
+              BibleTime,
               Classes,
+              BibleStudy,
               Satisfied,
+              Prayed,
               Meals,
+              StressedOut,
               Healthy,
               Happy,
               Sleep,
               Description,
               Homewok: value,
+              Stressed,
             };
             const result = onChange(modelFields);
             value = result?.Homewok ?? value;
@@ -1324,6 +1592,56 @@ export default function DaysUpdateForm(props) {
         errorMessage={errors.Homewok?.errorMessage}
         hasError={errors.Homewok?.hasError}
         {...getOverrideProps(overrides, "Homewok")}
+      ></SwitchField>
+      <SwitchField
+        label="Stressed"
+        defaultChecked={false}
+        isDisabled={false}
+        isChecked={Stressed}
+        onChange={(e) => {
+          let value = e.target.checked;
+          if (onChange) {
+            const modelFields = {
+              Game,
+              Practice,
+              Indo,
+              Lift,
+              WallBall,
+              PT,
+              Homework,
+              Nap,
+              VideoGames,
+              JessCall,
+              Hangout,
+              Parents,
+              GoodEvent,
+              BadEvent,
+              BibleTime,
+              Classes,
+              BibleStudy,
+              Satisfied,
+              Prayed,
+              Meals,
+              StressedOut,
+              Healthy,
+              Happy,
+              Sleep,
+              Description,
+              Homewok,
+              Stressed: value,
+            };
+            const result = onChange(modelFields);
+            value = result?.Stressed ?? value;
+          }
+          if (errors.Stressed?.hasError) {
+            runValidationTasks("Stressed", value);
+          }
+          setStressed(value);
+        }}
+        onBlur={() => runValidationTasks("Stressed", Stressed)}
+        errorMessage={errors.Stressed?.errorMessage}
+        hasError={errors.Stressed?.hasError}
+        {...getOverrideProps(overrides, "Stressed")}
       ></SwitchField>
       <Flex
         justifyContent="space-between"

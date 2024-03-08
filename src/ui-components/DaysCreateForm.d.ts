@@ -39,8 +39,12 @@ export declare type DaysCreateFormInputValues = {
     GoodEvent?: boolean;
     BadEvent?: boolean;
     Classes?: boolean;
+    BibleTime?: boolean;
+    BibleStudy?: boolean;
+    Prayed?: boolean;
     Satisfied?: boolean;
     Meals?: number;
+    StressedOut?: number;
     Healthy?: number;
     Happy?: number;
     Sleep?: number;
@@ -64,8 +68,12 @@ export declare type DaysCreateFormValidationValues = {
     GoodEvent?: ValidationFunction<boolean>;
     BadEvent?: ValidationFunction<boolean>;
     Classes?: ValidationFunction<boolean>;
+    BibleTime?: ValidationFunction<boolean>;
+    BibleStudy?: ValidationFunction<boolean>;
+    Prayed?: ValidationFunction<boolean>;
     Satisfied?: ValidationFunction<boolean>;
     Meals?: ValidationFunction<number>;
+    StressedOut?: ValidationFunction<number>;
     Healthy?: ValidationFunction<number>;
     Happy?: ValidationFunction<number>;
     Sleep?: ValidationFunction<number>;
@@ -91,8 +99,12 @@ export declare type DaysCreateFormOverridesProps = {
     GoodEvent?: PrimitiveOverrideProps<SwitchFieldProps>;
     BadEvent?: PrimitiveOverrideProps<SwitchFieldProps>;
     Classes?: PrimitiveOverrideProps<SwitchFieldProps>;
+    BibleTime?: PrimitiveOverrideProps<SwitchFieldProps>;
+    BibleStudy?: PrimitiveOverrideProps<SwitchFieldProps>;
+    Prayed?: PrimitiveOverrideProps<SwitchFieldProps>;
     Satisfied?: PrimitiveOverrideProps<SwitchFieldProps>;
     Meals?: PrimitiveOverrideProps<TextFieldProps>;
+    StressedOut?: PrimitiveOverrideProps<TextFieldProps>;
     Healthy?: PrimitiveOverrideProps<TextFieldProps>;
     Happy?: PrimitiveOverrideProps<TextFieldProps>;
     Sleep?: PrimitiveOverrideProps<TextFieldProps>;
