@@ -42,7 +42,6 @@ export default function DaysCreateForm(props) {
     JessCall: false,
     Hangout: false,
     Parents: false,
-    Stressed: false,
     GoodEvent: false,
     BadEvent: false,
     Classes: false,
@@ -70,7 +69,6 @@ export default function DaysCreateForm(props) {
   const [JessCall, setJessCall] = React.useState(initialValues.JessCall);
   const [Hangout, setHangout] = React.useState(initialValues.Hangout);
   const [Parents, setParents] = React.useState(initialValues.Parents);
-  const [Stressed, setStressed] = React.useState(initialValues.Stressed);
   const [GoodEvent, setGoodEvent] = React.useState(initialValues.GoodEvent);
   const [BadEvent, setBadEvent] = React.useState(initialValues.BadEvent);
   const [Classes, setClasses] = React.useState(initialValues.Classes);
@@ -103,7 +101,6 @@ export default function DaysCreateForm(props) {
     setJessCall(initialValues.JessCall);
     setHangout(initialValues.Hangout);
     setParents(initialValues.Parents);
-    setStressed(initialValues.Stressed);
     setGoodEvent(initialValues.GoodEvent);
     setBadEvent(initialValues.BadEvent);
     setClasses(initialValues.Classes);
@@ -133,7 +130,6 @@ export default function DaysCreateForm(props) {
     JessCall: [{ type: "Required" }],
     Hangout: [{ type: "Required" }],
     Parents: [{ type: "Required" }],
-    Stressed: [],
     GoodEvent: [{ type: "Required" }],
     BadEvent: [{ type: "Required" }],
     Classes: [{ type: "Required" }],
@@ -187,7 +183,6 @@ export default function DaysCreateForm(props) {
           JessCall,
           Hangout,
           Parents,
-          Stressed,
           GoodEvent,
           BadEvent,
           Classes,
@@ -276,7 +271,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,
@@ -326,7 +320,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,
@@ -376,7 +369,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,
@@ -426,7 +418,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,
@@ -476,7 +467,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,
@@ -526,7 +516,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,
@@ -576,7 +565,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,
@@ -626,7 +614,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,
@@ -676,7 +663,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,
@@ -726,7 +712,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,
@@ -776,7 +761,6 @@ export default function DaysCreateForm(props) {
               JessCall: value,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,
@@ -826,7 +810,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout: value,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,
@@ -876,7 +859,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents: value,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,
@@ -905,56 +887,6 @@ export default function DaysCreateForm(props) {
         {...getOverrideProps(overrides, "Parents")}
       ></SwitchField>
       <SwitchField
-        label="Stressed"
-        defaultChecked={false}
-        isDisabled={false}
-        isChecked={Stressed}
-        onChange={(e) => {
-          let value = e.target.checked;
-          if (onChange) {
-            const modelFields = {
-              id,
-              Game,
-              Practice,
-              Indo,
-              Lift,
-              WallBall,
-              PT,
-              Nap,
-              Homework,
-              VideoGames,
-              JessCall,
-              Hangout,
-              Parents,
-              Stressed: value,
-              GoodEvent,
-              BadEvent,
-              Classes,
-              BibleTime,
-              BibleStudy,
-              Prayed,
-              Satisfied,
-              Meals,
-              StressedOut,
-              Healthy,
-              Happy,
-              Sleep,
-              Description,
-            };
-            const result = onChange(modelFields);
-            value = result?.Stressed ?? value;
-          }
-          if (errors.Stressed?.hasError) {
-            runValidationTasks("Stressed", value);
-          }
-          setStressed(value);
-        }}
-        onBlur={() => runValidationTasks("Stressed", Stressed)}
-        errorMessage={errors.Stressed?.errorMessage}
-        hasError={errors.Stressed?.hasError}
-        {...getOverrideProps(overrides, "Stressed")}
-      ></SwitchField>
-      <SwitchField
         label="Good event"
         defaultChecked={false}
         isDisabled={false}
@@ -976,7 +908,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent: value,
               BadEvent,
               Classes,
@@ -1026,7 +957,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent: value,
               Classes,
@@ -1076,7 +1006,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes: value,
@@ -1126,7 +1055,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,
@@ -1176,7 +1104,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,
@@ -1226,7 +1153,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,
@@ -1276,7 +1202,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,
@@ -1330,7 +1255,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,
@@ -1384,7 +1308,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,
@@ -1438,7 +1361,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,
@@ -1492,7 +1414,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,
@@ -1546,7 +1467,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,
@@ -1596,7 +1516,6 @@ export default function DaysCreateForm(props) {
               JessCall,
               Hangout,
               Parents,
-              Stressed,
               GoodEvent,
               BadEvent,
               Classes,

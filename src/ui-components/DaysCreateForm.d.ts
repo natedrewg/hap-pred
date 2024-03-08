@@ -35,7 +35,6 @@ export declare type DaysCreateFormInputValues = {
     JessCall?: boolean;
     Hangout?: boolean;
     Parents?: boolean;
-    Stressed?: boolean;
     GoodEvent?: boolean;
     BadEvent?: boolean;
     Classes?: boolean;
@@ -64,7 +63,6 @@ export declare type DaysCreateFormValidationValues = {
     JessCall?: ValidationFunction<boolean>;
     Hangout?: ValidationFunction<boolean>;
     Parents?: ValidationFunction<boolean>;
-    Stressed?: ValidationFunction<boolean>;
     GoodEvent?: ValidationFunction<boolean>;
     BadEvent?: ValidationFunction<boolean>;
     Classes?: ValidationFunction<boolean>;
@@ -95,7 +93,6 @@ export declare type DaysCreateFormOverridesProps = {
     JessCall?: PrimitiveOverrideProps<SwitchFieldProps>;
     Hangout?: PrimitiveOverrideProps<SwitchFieldProps>;
     Parents?: PrimitiveOverrideProps<SwitchFieldProps>;
-    Stressed?: PrimitiveOverrideProps<SwitchFieldProps>;
     GoodEvent?: PrimitiveOverrideProps<SwitchFieldProps>;
     BadEvent?: PrimitiveOverrideProps<SwitchFieldProps>;
     Classes?: PrimitiveOverrideProps<SwitchFieldProps>;
