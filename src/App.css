@@ -37,9 +37,15 @@
   }
 }
 
-body {
-  padding-left:23%;
-  padding-right:23%;
+body.padding {
+  padding-left: 33%;
+  padding-right: 33%;
+}
+
+.showHide { display: none; }
+
+@media screen and (min-width: 768px) {
+  .showHide { display: block; }
 }
 
 html {

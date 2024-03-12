@@ -1,5 +1,9 @@
 export const Home = () => {
   return (
-    <h1></h1>
+  <div class= "bg-ivory">
+    <body class= "padding">
+      
+    </body>
+  </div>
   );
 }
