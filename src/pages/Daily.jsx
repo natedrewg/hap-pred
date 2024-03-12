@@ -14,7 +14,7 @@ export const Daily = () => {
         </div>
       </body>
 
-      <body>
+      <body class = "noPadding">
         <div class = "flow-root visible sm:visible md:invisible lg:invisible xl:invisible">
           <div class = "bg-sage float-center text-3xl bg-orange-50 p-4">
             <h1>Welcome to my daily form!</h1>
