@@ -27,7 +27,7 @@ export function App({ signOut, user }) {
         <Link to="/daily">Daily Form</Link>
 
         <Link to="/diary">Diary</Link>
-        
+        <h1>Hello {user.username} </h1>
         <Button onClick={signOut}>Sign out</Button> 
     </div>
   </nav>
