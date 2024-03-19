@@ -28,6 +28,7 @@ export function App({ signOut, user }) {
 
         <Link to="/diary">Diary</Link>
         
+        <Button onClick={signOut}>Sign out</Button> 
     </div>
   </nav>
     <Routes>
