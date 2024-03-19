@@ -6,8 +6,6 @@ import { Diary } from "./pages/diary";
 import { Amplify } from 'aws-amplify';
 import awsconfig from './aws-exports';
 import awsExports from './aws-exports';
-Amplify.configure(awsconfig);
-Amplify.configure(awsExports);
 
 import { withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
@@ -15,6 +13,8 @@ import config from './amplifyconfiguration.json';
 
 import * as queries from './graphql/queries';
 
+Amplify.configure(awsconfig);
+Amplify.configure(awsExports);
 export function App({ signOut, user }) {
   return (
   <>
