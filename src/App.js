@@ -7,7 +7,7 @@ import { Amplify } from 'aws-amplify';
 import awsconfig from './aws-exports';
 import awsExports from './aws-exports';
 
-import { withAuthenticator } from '@aws-amplify/ui-react';
+import { withAuthenticator, Button } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import config from './amplifyconfiguration.json';
 
