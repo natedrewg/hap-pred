@@ -9,7 +9,13 @@ import awsExports from './aws-exports';
 Amplify.configure(awsconfig);
 Amplify.configure(awsExports);
 
-function App() {
+import { withAuthenticator } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
+import config from './amplifyconfiguration.json';
+
+import * as queries from './graphql/queries';
+
+export function App({ signOut, user }) {
   return (
   <>
   <nav class="border-gray-200 px-2 mb-10 bg-ivory p-4 pl-6 pr-6 text-2xl font-light">
@@ -34,4 +40,4 @@ function App() {
   );
 }
 
-export default App;
+export default withAuthenticator(App);
