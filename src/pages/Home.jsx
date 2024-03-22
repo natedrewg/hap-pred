@@ -16,7 +16,7 @@ export const Home = () => {
     <div class= "bg-ivory">
       <body>
         <>
-          {result && result.Days.map((Days) => (
+          {result.Days?.map((Days) => (
             <div key={Days.id}>
               <span>{Days.id}</span>
             </div>
