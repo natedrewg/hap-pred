@@ -16,9 +16,9 @@ export const Home = () => {
     <div class= "bg-ivory">
       <body>
         <>
-          {result.listDays.items.map((items) => (
-            <div key={items}>
-              <span>{items.id}</span>
+          {result.listDays.map((Days) => (
+            <div key={Days.id}>
+              <span>{Days.id}</span>
             </div>
           ))}
         
