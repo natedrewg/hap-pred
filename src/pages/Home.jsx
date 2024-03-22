@@ -15,7 +15,9 @@ export const Home = () => {
   return (
     <div class= "bg-ivory">
       <body class= "padding">
-        {result}
+        <>
+          <span>{result}</span>
+        </>
       </body>
     </div>
   );
