@@ -9,18 +9,20 @@ import awsExports from './aws-exports';
 
 import { withAuthenticator, Button } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
+
 import config from './amplifyconfiguration.json';
 
-import * as queries from './graphql/queries';
-
+Amplify.configure(config);
 Amplify.configure(awsconfig);
 Amplify.configure(awsExports);
+
+
 export function App({ signOut, user }) {
   return (
   <>
   <nav class="border-gray-200 px-2 mb-10 bg-ivory p-4 pl-6 pr-6 text-2xl font-light">
     <div class="container mx-auto flex flex-wrap items-center justify-between">
-        <h1 class="font-bold">Self-Index</h1><h6></h6>
+        <h1 class="font-bold">Self-Index</h1>
         
         <Link to="/">Home</Link>
 
