@@ -14,10 +14,15 @@ export const Home = () => {
   
   return (
     <div class= "bg-ivory">
-      <body class= "padding">
-        <div>
-          {JSON.stringify(result)}
-        </div>
+      <body>
+        <>
+          {result.listDays.items.map((items) => (
+            <div key={items}>
+              <span>{items.id}</span>
+            </div>
+          ))}
+        
+        </>
       </body>
     </div>
   );
