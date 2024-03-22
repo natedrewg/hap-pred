@@ -15,9 +15,9 @@ export const Home = () => {
   return (
     <div class= "bg-ivory">
       <body class= "padding">
-        <>
-          <span>{result}</span>
-        </>
+        <div>
+          {JSON.stringify(result)}
+        </div>
       </body>
     </div>
   );
