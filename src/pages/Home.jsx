@@ -15,14 +15,9 @@ export const Home = () => {
   return (
     <div class= "bg-ivory">
       <body>
-        <>
-          {result.Days?.map((Days) => (
-            <div key={Days.id}>
-              <span>{Days.id}</span>
-            </div>
-          ))}
-        
-        </>
+        <div>
+          {JSON.stringify(result)}
+        </div>
       </body>
     </div>
   );
