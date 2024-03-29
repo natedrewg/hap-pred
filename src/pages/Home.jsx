@@ -7,16 +7,18 @@ Amplify.configure(config);
 const client = generateClient();
 
 const result = await client.graphql({ query: listDays });
-console.log(result);
+
+const oneDay = await client.graphql({
+  query: queries.getDay,
+  variables: { id: '3' }
+});
 
 export const Home = () => {
-
-  
   return (
     <div class= "bg-ivory">
       <body>
         <div>
-          {JSON.stringify(result)}
+          {JSON.stringify(oneDay)}
         </div>
       </body>
     </div>
