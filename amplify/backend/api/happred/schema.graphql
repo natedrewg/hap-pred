@@ -23,7 +23,7 @@ type Days @model @auth(rules: [{allow: public}]) {
   StressedOut: Int
   Healthy: Int!
   Happy: Int!
-  Sleep: Int!
+  Sleep: Float!
   Description: String!
   Homewok: Boolean
   Stressed: Boolean

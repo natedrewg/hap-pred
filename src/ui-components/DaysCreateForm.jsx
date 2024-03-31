@@ -1449,9 +1449,9 @@ export default function DaysCreateForm(props) {
         step="any"
         value={Sleep}
         onChange={(e) => {
-          let value = isNaN(parseInt(e.target.value))
+          let value = isNaN(parseFloat(e.target.value))
             ? e.target.value
-            : parseInt(e.target.value);
+            : parseFloat(e.target.value);
           if (onChange) {
             const modelFields = {
               id,
