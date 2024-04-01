@@ -25,6 +25,7 @@ export const Home = () => {
       console.log('error on fetching days', error)
     }
   }
+  
 return (
     <div class= "bg-ivory">
       <body>
