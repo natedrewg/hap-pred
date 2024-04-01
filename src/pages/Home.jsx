@@ -1,8 +1,8 @@
-import { listDays, getDays } from '../graphql/queries';
+import { listDays } from '../graphql/queries';
 import config from '../amplifyconfiguration.json';
 import { Amplify } from 'aws-amplify';
 import { generateClient } from 'aws-amplify/api';
-import { Paper, Button} from '@mui/material'
+import { Paper } from '@mui/material'
 import React, { useState, useEffect } from 'react';
 Amplify.configure(config);
 
