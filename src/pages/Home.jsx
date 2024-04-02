@@ -26,6 +26,21 @@ export const Home = () => {
     }
   }
 
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+
 return (
     <div class= "bg-ivory">
       <body class= 'cards'>
@@ -37,8 +52,11 @@ return (
                   
                   <b><div className="dayId"><p>Day:</p>{Days.id}</div></b>
                   <br/>
-                  
-                  <div className="dayHappy"><p>Happy:</p>{Days.Happy}</div>
+                  <button type="button" class ="collapsible" >
+                    More
+                  </button>
+                  <div class= "content">
+                    <div className="dayHappy"><p>Happy:</p>{Days.Happy}</div>
                   <br/>
                   
                   <div className="daySleep"><p>Sleep:</p>{Days.Sleep}</div>
@@ -51,6 +69,8 @@ return (
                   <br/>
                   
                   <div className="dayDesc"><p>My short description of the day:</p>{Days.Description}</div>
+                  </div>
+                  
                 </div>
               </Paper>
 
