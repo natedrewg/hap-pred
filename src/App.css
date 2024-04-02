@@ -67,26 +67,3 @@ body.cards {
   padding: 5px
 }
 
-.collapsible {
-  background-color: #555;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: calc(6.5px + 1vw);
-}
-
-.active,
-.collapsible:hover {
-  background-color: #777;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
