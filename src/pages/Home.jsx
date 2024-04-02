@@ -79,7 +79,7 @@ return (
                   
                   <div className="dayMeals"><p>Meals:</p>{Days.Meals}</div>
 
-                  <Button onClick={() => setIsShown(true)}>Full Day</Button>
+                  <button onClick={() => setIsShown(true)}>Full Day</button>
                   <popUp open={isShown} onClose={() => setIsShown(false)} />
                   </div>
                   
