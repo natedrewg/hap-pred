@@ -28,7 +28,7 @@ export const Home = () => {
 
 return (
     <div class= "bg-ivory">
-      <body class = "padding">
+      <body>
         <div className="daysList">
           { Days.map(Days => {
             return(
@@ -36,14 +36,19 @@ return (
                 <div className="dayCard">
                   <p>The day:</p>
                   <b><div className="dayId">{Days.id}</div></b>
+                  <br/>
                   <p>How happy I was out of 6 this day:</p>
                   <div className="dayHappy">{Days.Happy}</div>
+                  <br/>
                   <p>How much sleep I got the day before:</p>
                   <div className="daySleep">{Days.Sleep}</div>
+                  <br/>
                   <p>How healthy I felt at the end of the day:</p>
                   <div className="dayHealthy">{Days.Healthy}</div>
+                  <br/>
                   <p>How many meals I had this day:</p>
                   <div className="dayMeals">{Days.Meals}</div>
+                  <br/>
                   <p>My short description of the day:</p>
                   <div className="dayDesc">{Days.Description}</div>
                 </div>
