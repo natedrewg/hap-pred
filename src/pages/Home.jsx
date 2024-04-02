@@ -28,7 +28,7 @@ export const Home = () => {
 
 return (
     <div class= "bg-ivory">
-      <body>
+      <body class= 'cards'>
         <div className="daysList">
           { Days.map(Days => {
             return(
