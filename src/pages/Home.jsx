@@ -49,11 +49,8 @@ return (
             return(
               <Paper variant="outlined" elevation={2} >
                 <div className="dayCard">
-                  
-                  <b><div className="dayId"><p>Day:</p>{Days.id}</div></b>
-                  <br/>
                   <button type="button" class ="collapsible" >
-                    More
+                   <b><div className="dayId"><p>Day:</p>{Days.id}</div></b> 
                   </button>
                   <div class= "content">
                     <div className="dayHappy"><p>Happy:</p>{Days.Happy}</div>
