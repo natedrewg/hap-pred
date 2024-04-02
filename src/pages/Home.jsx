@@ -53,7 +53,7 @@ return (
                    <b><div className="dayId"><p>Day:</p>{Days.id}</div></b> 
                   </button>
                   <div class= "content">
-                    <div className="dayHappy"><p>Happy:</p>{Days.Happy}</div>
+                    <p><div className="dayHappy"><p>Happy:</p>{Days.Happy}</div></p>
                   <br/>
                   
                   <div className="daySleep"><p>Sleep:</p>{Days.Sleep}</div>
