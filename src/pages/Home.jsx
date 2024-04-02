@@ -16,6 +16,22 @@ export const Home = () => {
     fetchDays()
   }, [])
 
+    const popUp = ({open, onClose}) => {
+      if(!open) return null
+      return(
+        <div>
+          <div className='overlay'>
+            <div className='daysContainer'>
+              <p onClick={onClose} className='closeButton'>X</p>
+              <div className='content'>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
   const fetchDays = async () => {
     try{
       const result = await client.graphql({ query: listDays });
@@ -42,10 +58,6 @@ export const Home = () => {
       });
     }
 
-    const handleClick = event => {
-      setIsShown(current => !current);
-    }
-
 return (
     <div class= "bg-ivory">
       <body class= 'cards padding'>
@@ -67,15 +79,8 @@ return (
                   
                   <div className="dayMeals"><p>Meals:</p>{Days.Meals}</div>
 
-                  <Button onClick={handleClick}>Full Day</Button>
-                  {isShown && (
-                    Days.map((Days, index) => (
-                      <div key={Days.id ? Days.id : index} style={styles.Days}>
-                        <p style={styles.DaysId}>{Days.id}</p>
-                        <p style={styles.DaysDesc}>{JSON.stringify(Days.Desc)}</p>
-                      </div>
-                    ))
-                  )}
+                  <Button onClick={() => setIsShown(true)}>Full Day</Button>
+                  <popUp open={isShown} onClose={() => setIsShown(false)} />
                   </div>
                   
               </Paper>
@@ -86,10 +91,4 @@ return (
       </body>
     </div>
   );
-}
-const styles = {
-  input: { border: 'none', backgroundColor: '#ddd', marginBottom: 10, padding: 8, fontSize: 18 },
-  DaysId: { fontSize: 15, fontWeight: 'bold' },
-  DaysDesc: { marginBottom: 0 },
-  button: { backgroundColor: 'black', color: 'white', outline: 'none', fontSize: 18, padding: '12px 0px' }
 }
