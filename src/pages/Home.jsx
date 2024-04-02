@@ -43,7 +43,7 @@ export const Home = () => {
 
 return (
     <div class= "bg-ivory">
-      <body class= 'cards'>
+      <body class= 'cards padding'>
         <div className="daysList">
           { Days.map(Days => {
             return(
