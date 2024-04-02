@@ -56,3 +56,9 @@ html {
 body.noPadding {
   font-size:calc(6.5px + .95vw);
 }
+
+.dayCard {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px
+}

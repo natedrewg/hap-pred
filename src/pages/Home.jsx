@@ -33,7 +33,7 @@ return (
           { Days.map(Days => {
             return(
               <Paper variant="outlined" elevation={2} >
-                <div className="dayCard" class="flex">
+                <div className="dayCard">
                   <div className="dayId">{Days.id}</div>
                 </div>
               </Paper>
