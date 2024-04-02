@@ -35,7 +35,7 @@ return (
               <Paper variant="outlined" elevation={2} >
                 <div className="dayCard">
                   
-                  <b><div className="dayId"><p>The day:</p>{Days.id}</div></b>
+                  <b><div className="dayId"><p>Day:</p>{Days.id}</div></b>
                   <br/>
                   
                   <div className="dayHappy"><p>Happy:</p>{Days.Happy}</div>
