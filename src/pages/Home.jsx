@@ -25,7 +25,7 @@ export const Home = () => {
       console.log('error on fetching days', error)
     }
   }
-  
+
 return (
     <div class= "bg-ivory">
       <body>
@@ -33,7 +33,7 @@ return (
           { Days.map(Days => {
             return(
               <Paper variant="outlined" elevation={2} >
-                <div className="dayCard">
+                <div className="dayCard" class="flex">
                   <div className="dayId">{Days.id}</div>
                 </div>
               </Paper>
