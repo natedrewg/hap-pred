@@ -21,7 +21,7 @@ export const Home = () => {
       const result = await client.graphql({ query: listDays });
       const allDays = result.data.listDays.items;
       console.log("List of Days", allDays);
-      setDays(allDays);
+      setDays(allDays || []);
     } catch (error) {
       console.log("error on fetching days", error);
     }
