@@ -49,7 +49,7 @@ return (
                   
                   <div className="dayMeals"><p>Meals:</p>{Days.Meals}</div>
 
-                  <Modal />
+                  <Modal state={Days}/>
                   </div>
                   
               </Paper>
