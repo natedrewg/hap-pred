@@ -139,11 +139,12 @@ const Modal = ({ days }) => {
                   <p>The Description of the day: </p>
                   {day.Description}
                 </div>
-                <button className="close-modal" onClick={toggleModal}>
-                  Close
-                </button>
+                
               </div>
             ))}
+            <button className="close-modal" onClick={toggleModal}>
+                  Close
+                </button>
         </div>
       )}
     </>
