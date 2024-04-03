@@ -31,47 +31,48 @@ export const Home = () => {
     <div class="bg-ivory">
       <body class="cards padding">
         <div className="daysList">
-          {Days.map((Days) => {
-            return (
-              <Paper variant="outlined" elevation={2}>
-                <div className="dayCard">
-                  <b>
-                    <div className="dayId">
-                      <p>Day:</p>
-                      {Days.id}
+          {Days &&
+            Days.map((Days) => {
+              return (
+                <Paper variant="outlined" elevation={2}>
+                  <div className="dayCard">
+                    <b>
+                      <div className="dayId">
+                        <p>Day:</p>
+                        {Days.id}
+                      </div>
+                    </b>
+
+                    <p>
+                      <div className="dayHappy">
+                        <p>Happy:</p>
+                        {Days.Happy}
+                      </div>
+                    </p>
+                    <br />
+
+                    <div className="daySleep">
+                      <p>Sleep:</p>
+                      {Days.Sleep}
                     </div>
-                  </b>
+                    <br />
 
-                  <p>
-                    <div className="dayHappy">
-                      <p>Happy:</p>
-                      {Days.Happy}
+                    <div className="dayHealthy">
+                      <p>Healthy:</p>
+                      {Days.Healthy}
                     </div>
-                  </p>
-                  <br />
+                    <br />
 
-                  <div className="daySleep">
-                    <p>Sleep:</p>
-                    {Days.Sleep}
+                    <div className="dayMeals">
+                      <p>Meals:</p>
+                      {Days.Meals}
+                    </div>
+
+                    <Modal state={Days} />
                   </div>
-                  <br />
-
-                  <div className="dayHealthy">
-                    <p>Healthy:</p>
-                    {Days.Healthy}
-                  </div>
-                  <br />
-
-                  <div className="dayMeals">
-                    <p>Meals:</p>
-                    {Days.Meals}
-                  </div>
-
-                  <Modal state={Days} />
-                </div>
-              </Paper>
-            );
-          })}
+                </Paper>
+              );
+            })}
         </div>
       </body>
     </div>
