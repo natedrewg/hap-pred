@@ -23,7 +23,7 @@ const Modal = ({ Days }) => {
       {modal && (
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
-          {days.map((day, index) => (
+          {Days.map((Days, index) => (
             <div key={index} className="modal-content">
               <h2>
                 <b>Full Day</b>
