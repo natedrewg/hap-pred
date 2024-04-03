@@ -5,12 +5,12 @@ import { generateClient } from "aws-amplify/api";
 import { Paper } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import Modal from "../ui-components/Modal/Modal";
-Amplify.configure(config);
 
+Amplify.configure(config);
 const client = generateClient();
 
 export const Home = () => {
-  const [Days, setDays] = useState([]);
+  const [days, setDays] = useState([]);
 
   useEffect(() => {
     fetchDays();
@@ -28,51 +28,45 @@ export const Home = () => {
   };
 
   return (
-    <div class="bg-ivory">
-      <body class="cards padding">
+    <div className="bg-ivory">
+      <body className="cards padding">
         <div className="daysList">
-          {Days &&
-            Days.map((Days) => {
-              return (
-                <Paper variant="outlined" elevation={2}>
-                  <div className="dayCard">
-                    <b>
-                      <div className="dayId">
-                        <p>Day:</p>
-                        {Days.id}
-                      </div>
-                    </b>
-
-                    <p>
-                      <div className="dayHappy">
-                        <p>Happy:</p>
-                        {Days.Happy}
-                      </div>
-                    </p>
-                    <br />
-
-                    <div className="daySleep">
-                      <p>Sleep:</p>
-                      {Days.Sleep}
+          {days.map((day) => {
+            return (
+              <Paper key={day.id} variant="outlined" elevation={2}>
+                <div className="dayCard">
+                  <b>
+                    <div className="dayId">
+                      <p>Day:</p>
+                      {day.id}
                     </div>
-                    <br />
+                  </b>
 
-                    <div className="dayHealthy">
-                      <p>Healthy:</p>
-                      {Days.Healthy}
-                    </div>
-                    <br />
-
-                    <div className="dayMeals">
-                      <p>Meals:</p>
-                      {Days.Meals}
-                    </div>
-
-                    <Modal state={Days} />
+                  <div className="dayHappy">
+                    <p>Happy:</p>
+                    {day.Happy}
                   </div>
-                </Paper>
-              );
-            })}
+
+                  <div className="daySleep">
+                    <p>Sleep:</p>
+                    {day.Sleep}
+                  </div>
+
+                  <div className="dayHealthy">
+                    <p>Healthy:</p>
+                    {day.Healthy}
+                  </div>
+
+                  <div className="dayMeals">
+                    <p>Meals:</p>
+                    {day.Meals}
+                  </div>
+
+                  <Modal state={day} />
+                </div>
+              </Paper>
+            );
+          })}
         </div>
       </body>
     </div>

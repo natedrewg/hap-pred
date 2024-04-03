@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Modal.css";
 
-const Modal = ({ Days }) => {
+const Modal = ({ days }) => {
   const [modal, setModal] = useState(false);
 
   const toggleModal = () => {
@@ -23,8 +23,8 @@ const Modal = ({ Days }) => {
       {modal && (
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
-          {Days &&
-            Days.map((Days, index) => (
+          {days &&
+            days.map((day, index) => (
               <div key={index} className="modal-content">
                 <h2>
                   <b>Full Day</b>
