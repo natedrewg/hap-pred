@@ -2,35 +2,21 @@ import { listDays } from '../graphql/queries';
 import config from '../amplifyconfiguration.json';
 import { Amplify } from 'aws-amplify';
 import { generateClient } from 'aws-amplify/api';
-import { Paper, Button} from '@mui/material'
-import React, { useState, useEffect } from 'react';
+import { Paper } from '@mui/material'
+import React, { useState } from 'react';
+import Modal from '../ui-components/Modal/Modal'
+
 Amplify.configure(config);
 
 const client = generateClient();
 
 export const Home = () => {
   const [Days, setDays] = useState([]);
-  const [isShown, setIsShown] = useState(false);
 
   useEffect(() => {
     fetchDays()
   }, [])
 
-    const popUp = ({open, onClose}) => {
-      if(!open) return null
-      return(
-        <div>
-          <div className='overlay'>
-            <div className='daysContainer'>
-              <p onClick={onClose} className='closeButton'>X</p>
-              <div className='content'>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      )
-    }
 
   const fetchDays = async () => {
     try{
@@ -42,21 +28,6 @@ export const Home = () => {
       console.log('error on fetching days', error)
     }
   }
-
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      });
-    }
 
 return (
     <div class= "bg-ivory">
@@ -79,8 +50,7 @@ return (
                   
                   <div className="dayMeals"><p>Meals:</p>{Days.Meals}</div>
 
-                  <button onClick={() => setIsShown(true)}>Full Day</button>
-                  <popUp open={isShown} onClose={() => setIsShown(false)} />
+                  <Modal />
                   </div>
                   
               </Paper>
