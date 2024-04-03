@@ -28,7 +28,7 @@ export default function Modal({Days}) {
       <div onClick={toggleModal} className="overlay"></div>
       <div className="modal-content">
         <h2><b>Full Day</b></h2>
-
+        <b><div className="dayId"><p>Day:</p>{Days.id}</div></b> 
         <button
         className="close-modal"
         onClick={toggleModal}>
