@@ -62,7 +62,7 @@ export const Home = () => {
                     {day.Meals}
                   </div>
 
-                  <Modal state={day} />
+                  <Modal days={day} />
                 </div>
               </Paper>
             );

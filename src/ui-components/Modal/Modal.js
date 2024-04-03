@@ -29,6 +29,9 @@ const Modal = ({ days }) => {
                 <h2>
                   <b>Full Day</b>
                 </h2>
+                <p>
+                  
+                </p>
                 <b>
                   <div className="dayId">
                     <p>Day:</p>
