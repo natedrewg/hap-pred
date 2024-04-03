@@ -38,100 +38,100 @@ const Modal = ({ days }) => {
                   
                 </div>
                 <div className="dayIndo">
-                  <p>Individual Work: </p>
-                  {days.Indo ? "Yes" : "No"}
+                  <p>Individual Work: {days.Indo ? "Yes" : "No"}</p>
+                  
                 </div>
                 <div className="dayLift">
-                  <p>Lift: </p>
-                  {days.Lift ? "Yes" : "No"}
+                  <p>Lift: {days.Lift ? "Yes" : "No"}</p>
+                  
                 </div>
                 <div className="dayWallball">
-                  <p>Wallball: </p>
-                  {days.WallBall ? "Yes" : "No"}
+                  <p>Wallball: {days.WallBall ? "Yes" : "No"}</p>
+                  
                 </div>
                 <div className="dayPT">
-                  <p>PT: </p>
-                  {days.PT ? "Yes" : "No"}
+                  <p>PT: {days.PT ? "Yes" : "No"}</p>
+                  
                 </div>
                 <div className="dayGameday">
-                  <p>Gameday: </p>
-                  {days.Game ? "Yes" : "No"}
+                  <p>Gameday: {days.Game ? "Yes" : "No"}</p>
+                  
                 </div>
                 <div className="dayNap">
-                  <p>Nap: </p>
-                  {days.Nap ? "Yes" : "No"}
+                  <p>Nap: {days.Nap ? "Yes" : "No"}</p>
+                  
                 </div>
                 <div className="dayHomework">
-                  <p>Homework: </p>
-                  {days.Homework ? "Yes" : "No"}
+                  <p>Homework: {days.Homework ? "Yes" : "No"}</p>
+                  
                 </div>
                 <div className="dayVideoGame">
-                  <p>Videogames: </p>
-                  {days.VideoGames ? "Yes" : "No"}
+                  <p>Videogames: {days.VideoGames ? "Yes" : "No"}</p>
+                  
                 </div>
                 <div className="dayJessCall">
-                  <p>Call or hangout with Jess: </p>
-                  {days.JessCall ? "Yes" : "No"}
+                  <p>Call or hangout with Jess: {days.JessCall ? "Yes" : "No"}</p>
+                  
                 </div>
                 <div className="dayHangout">
-                  <p>Hangout with friends: </p>
-                  {days.Hangout ? "Yes" : "No"}
+                  <p>Hangout with friends: {days.Hangout ? "Yes" : "No"}</p>
+                  
                 </div>
                 <div className="dayParents">
-                  <p>Call or hangout with parents: </p>
-                  {days.Parents ? "Yes" : "No"}
+                  <p>Call or hangout with parents: {days.Parents ? "Yes" : "No"}</p>
+                  
                 </div>
                 <div className="dayClasses">
-                  <p>Classes: </p>
-                  {days.Classes ? "Yes" : "No"}
+                  <p>Classes: {days.Classes ? "Yes" : "No"}</p>
+                  
                 </div>
                 <div className="dayPrayed">
-                  <p>Prayed: </p>
-                  {days.Prayed ? "Yes" : "No"}
+                  <p>Prayed: {days.Prayed ? "Yes" : "No"}</p>
+                  
                 </div>
                 <div className="dayBibleTime">
-                  <p>Read the Bible: </p>
-                  {days.BibleTime ? "Yes" : "No"}
+                  <p>Read the Bible: {days.BibleTime ? "Yes" : "No"}</p>
+                  
                 </div>
                 <div className="dayBibleStudy">
-                  <p>Have Biblestudy: </p>
-                  {days.BibleStudy ? "Yes" : "No"}
+                  <p>Have Biblestudy: {days.BibleStudy ? "Yes" : "No"}</p>
+                  
                 </div>
                 <div className="daySatisfied">
-                  <p>Satisfied with the day: </p>
-                  {days.Satisfied ? "Yes" : "No"}
+                  <p>Satisfied with the day: {days.Satisfied ? "Yes" : "No"}</p>
+                  
                 </div>
                 <div className="dayStressed">
-                  <p>Stressed out: </p>
-                  {days.Stressed ? "Yes" : "No"}
+                  <p>Stressed out: {days.Stressed ? "Yes" : "No"}</p>
+                  
                 </div>
                 <div className="dayGoodEvent">
-                  <p>Good Event: </p>
-                  {days.GoodEvent ? "Yes" : "No"}
+                  <p>Good Event: {days.GoodEvent ? "Yes" : "No"}</p>
+                  
                 </div>
                 <div className="dayBadEvent">
-                  <p>Bad Event: </p>
-                  {days.BadEvent ? "Yes" : "No"}
+                  <p>Bad Event: {days.BadEvent ? "Yes" : "No"}</p>
+                  
                 </div>
                 <div className="dayMeals">
-                  <p>Amount of meals: </p>
-                  {days.Meals}
+                  <p>Amount of meals: {days.Meals}</p>
+                  
                 </div>
                 <div className="dayStressedOut">
-                  <p>Stressed out level: </p>
-                  {days.StressedOut}
+                  <p>Stressed out level: {days.StressedOut}</p>
+                  
                 </div>
                 <div className="dayHealthy">
-                  <p>How healthy: </p>
-                  {days.Healthy}
+                  <p>How healthy: {days.Healthy}</p>
+                  
                 </div>
                 <div className="daySleep">
-                  <p>How much sleep: </p>
-                  {days.Sleep}
+                  <p>How much sleep: {days.Sleep}</p>
+                  
                 </div>
                 <div className="dayHappy">
-                  <p>How happy: </p>
-                  {days.Happy}
+                  <p>How happy: {days.Happy}</p>
+                  
                 </div>
                 <div className="dayDescription">
                   <p>The Description of the day: </p>
