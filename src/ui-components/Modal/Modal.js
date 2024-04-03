@@ -22,11 +22,11 @@ const Modal = ({ days }) => {
 
       {modal && (
         <div className="modal">
-          <div onClick={toggleModal} className="overlay"></div>
-          <h1> Hello </h1>
+          <div onClick={toggleModal} className="overlay"><h1> Hello </h1>
             <button className="close-modal" onClick={toggleModal}>
                   Close
-                </button>
+                </button></div>
+          
         </div>
       )}
     </>
