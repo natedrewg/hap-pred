@@ -32,112 +32,112 @@ const Modal = ({ days }) => {
                 <b>
                   <div className="dayId">
                     <p>Day:</p>
-                    {Days.id}
+                    {day.id}
                   </div>
                 </b>
                 <div className="dayPractice">
                   <p>Practice: </p>
-                  {Days.Practice}
+                  {day.Practice}
                 </div>
                 <div className="dayIndo">
                   <p>Individual Work: </p>
-                  {Days.Indo}
+                  {day.Indo}
                 </div>
                 <div className="dayLift">
                   <p>Lift: </p>
-                  {Days.Lift}
+                  {day.Lift}
                 </div>
                 <div className="dayWallball">
                   <p>Wallball: </p>
-                  {Days.WallBall}
+                  {day.WallBall}
                 </div>
                 <div className="dayPT">
                   <p>PT: </p>
-                  {Days.PT}
+                  {day.PT}
                 </div>
                 <div className="dayGameday">
                   <p>Gameday: </p>
-                  {Days.Game}
+                  {day.Game}
                 </div>
                 <div className="dayNap">
                   <p>Nap: </p>
-                  {Days.Nap}
+                  {day.Nap}
                 </div>
                 <div className="dayHomework">
                   <p>Homework: </p>
-                  {Days.Homework}
+                  {day.Homework}
                 </div>
                 <div className="dayVideoGame">
                   <p>Videogames: </p>
-                  {Days.VideoGames}
+                  {day.VideoGames}
                 </div>
                 <div className="dayJessCall">
                   <p>Call or hangout with Jess: </p>
-                  {Days.JessCall}
+                  {day.JessCall}
                 </div>
                 <div className="dayHangout">
                   <p>Hangout with friends: </p>
-                  {Days.Hangout}
+                  {day.Hangout}
                 </div>
                 <div className="dayParents">
                   <p>Call or hangout with parents: </p>
-                  {Days.Parents}
+                  {day.Parents}
                 </div>
                 <div className="dayClasses">
                   <p>Classes: </p>
-                  {Days.Classes}
+                  {day.Classes}
                 </div>
                 <div className="dayPrayed">
                   <p>Prayed: </p>
-                  {Days.Prayed}
+                  {day.Prayed}
                 </div>
                 <div className="dayBibleTime">
                   <p>Read the Bible: </p>
-                  {Days.BibleTime}
+                  {day.BibleTime}
                 </div>
                 <div className="dayBibleStudy">
                   <p>Have Biblestudy: </p>
-                  {Days.BibleStudy}
+                  {day.BibleStudy}
                 </div>
                 <div className="daySatisfied">
                   <p>Satisfied with the day: </p>
-                  {Days.Satisfied}
+                  {day.Satisfied}
                 </div>
                 <div className="dayStressed">
                   <p>Stressed out: </p>
-                  {Days.Stressed}
+                  {day.Stressed}
                 </div>
                 <div className="dayGoodEvent">
                   <p>Good Event: </p>
-                  {Days.GoodEvent}
+                  {day.GoodEvent}
                 </div>
                 <div className="dayBadEvent">
                   <p>Bad Event: </p>
-                  {Days.BadEvent}
+                  {day.BadEvent}
                 </div>
                 <div className="dayMeals">
                   <p>Amount of meals: </p>
-                  {Days.Meals}
+                  {day.Meals}
                 </div>
                 <div className="dayStressedOut">
                   <p>Stressed out level: </p>
-                  {Days.StressedOut}
+                  {day.StressedOut}
                 </div>
                 <div className="dayHealthy">
                   <p>How healthy: </p>
-                  {Days.Healthy}
+                  {day.Healthy}
                 </div>
                 <div className="daySleep">
                   <p>How much sleep: </p>
-                  {Days.Sleep}
+                  {day.Sleep}
                 </div>
                 <div className="dayHappy">
                   <p>How happy: </p>
-                  {Days.Happy}
+                  {day.Happy}
                 </div>
                 <div className="dayDescription">
                   <p>The Description of the day: </p>
-                  {Days.Description}
+                  {day.Description}
                 </div>
                 <button className="close-modal" onClick={toggleModal}>
                   Close
