@@ -23,131 +23,126 @@ const Modal = ({ days }) => {
       {modal && (
         <div className="modal">
           <div onClick={toggleModal} className="overlay">
-          {days &&
-            days.map((day, index) => (
-              <div key={index} className="modal-content">
+              <div className="modal-content">
                 <h2>
                   <b>Full Day</b>
                 </h2>
-                <p>
-                  
-                </p>
                 <b>
                   <div className="dayId">
                     <p>Day:</p>
-                    {day.id}
+                    {days.id}
                   </div>
                 </b>
                 <div className="dayPractice">
                   <p>Practice: </p>
-                  {day.Practice}
+                  {days.Practice}
                 </div>
                 <div className="dayIndo">
                   <p>Individual Work: </p>
-                  {day.Indo}
+                  {days.Indo}
                 </div>
                 <div className="dayLift">
                   <p>Lift: </p>
-                  {day.Lift}
+                  {days.Lift}
                 </div>
                 <div className="dayWallball">
                   <p>Wallball: </p>
-                  {day.WallBall}
+                  {days.WallBall}
                 </div>
                 <div className="dayPT">
                   <p>PT: </p>
-                  {day.PT}
+                  {days.PT}
                 </div>
                 <div className="dayGameday">
                   <p>Gameday: </p>
-                  {day.Game}
+                  {days.Game}
                 </div>
                 <div className="dayNap">
                   <p>Nap: </p>
-                  {day.Nap}
+                  {days.Nap}
                 </div>
                 <div className="dayHomework">
                   <p>Homework: </p>
-                  {day.Homework}
+                  {days.Homework}
                 </div>
                 <div className="dayVideoGame">
                   <p>Videogames: </p>
-                  {day.VideoGames}
+                  {days.VideoGames}
                 </div>
                 <div className="dayJessCall">
                   <p>Call or hangout with Jess: </p>
-                  {day.JessCall}
+                  {days.JessCall}
                 </div>
                 <div className="dayHangout">
                   <p>Hangout with friends: </p>
-                  {day.Hangout}
+                  {days.Hangout}
                 </div>
                 <div className="dayParents">
                   <p>Call or hangout with parents: </p>
-                  {day.Parents}
+                  {days.Parents}
                 </div>
                 <div className="dayClasses">
                   <p>Classes: </p>
-                  {day.Classes}
+                  {days.Classes}
                 </div>
                 <div className="dayPrayed">
                   <p>Prayed: </p>
-                  {day.Prayed}
+                  {days.Prayed}
                 </div>
                 <div className="dayBibleTime">
                   <p>Read the Bible: </p>
-                  {day.BibleTime}
+                  {days.BibleTime}
                 </div>
                 <div className="dayBibleStudy">
                   <p>Have Biblestudy: </p>
-                  {day.BibleStudy}
+                  {days.BibleStudy}
                 </div>
                 <div className="daySatisfied">
                   <p>Satisfied with the day: </p>
-                  {day.Satisfied}
+                  {days.Satisfied}
                 </div>
                 <div className="dayStressed">
                   <p>Stressed out: </p>
-                  {day.Stressed}
+                  {days.Stressed}
                 </div>
                 <div className="dayGoodEvent">
                   <p>Good Event: </p>
-                  {day.GoodEvent}
+                  {days.GoodEvent}
                 </div>
                 <div className="dayBadEvent">
                   <p>Bad Event: </p>
-                  {day.BadEvent}
+                  {days.BadEvent}
                 </div>
                 <div className="dayMeals">
                   <p>Amount of meals: </p>
-                  {day.Meals}
+                  {days.Meals}
                 </div>
                 <div className="dayStressedOut">
                   <p>Stressed out level: </p>
-                  {day.StressedOut}
+                  {days.StressedOut}
                 </div>
                 <div className="dayHealthy">
                   <p>How healthy: </p>
-                  {day.Healthy}
+                  {days.Healthy}
                 </div>
                 <div className="daySleep">
                   <p>How much sleep: </p>
-                  {day.Sleep}
+                  {days.Sleep}
                 </div>
                 <div className="dayHappy">
                   <p>How happy: </p>
-                  {day.Happy}
+                  {days.Happy}
                 </div>
                 <div className="dayDescription">
                   <p>The Description of the day: </p>
-                  {day.Description}
+                  {days.Description}
                 </div>
-                
-              </div>
-            ))}
-            <button className="close-modal" onClick={toggleModal}>
+                <button className="close-modal" onClick={toggleModal}>
                   Close
                 </button></div>
+              </div>
+            ))
+            
           
         </div>
       )}
