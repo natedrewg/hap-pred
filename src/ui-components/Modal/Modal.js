@@ -34,8 +34,8 @@ const Modal = ({ days }) => {
                   </div>
                 </b>
                 <div className="dayPractice">
-                  <p>Practice: </p>
-                  {days.Practice ? "Yes" : "No"}
+                  <p>Practice: {days.Practice ? "Yes" : "No"}</p>
+                  
                 </div>
                 <div className="dayIndo">
                   <p>Individual Work: </p>
