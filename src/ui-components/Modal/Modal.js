@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Modal.css";
 
-export default function Modal({ Days }) {
+const Modal = ({ Days }) => {
   const [modal, setModal] = useState(false);
 
   const toggleModal = () => {
@@ -145,4 +145,5 @@ export default function Modal({ Days }) {
       )}
     </>
   );
-}
+};
+export default Modal;
