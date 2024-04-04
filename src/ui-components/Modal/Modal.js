@@ -117,10 +117,6 @@ const Modal = ({ days }) => {
                   <p>Amount of meals: {days.Meals}</p>
                   
                 </div>
-                <div className="dayStressedOut">
-                  <p>Stressed out level: {days.StressedOut}</p>
-                  
-                </div>
                 <div className="dayHealthy">
                   <p>How healthy: {days.Healthy}</p>
                   
