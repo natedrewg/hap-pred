@@ -20,6 +20,7 @@ export const Home = () => {
     try {
       const result = await client.graphql({ query: listDays });
       const allDays = result.data.listDays.items;
+
       console.log("List of Days", allDays);
       setDays(allDays || []);
     } catch (error) {
@@ -27,11 +28,15 @@ export const Home = () => {
     }
   };
 
+  const sortedDays = days.slice().sort((a, b) => {
+    return a.id - b.id;
+  });
+
   return (
     <div className="bg-ivory">
       <body className="cards padding">
         <div className="daysList">
-          {days.map((day) => {
+          {sortedDays.map((day) => {
             return (
               <Paper key={day.id} variant="outlined" elevation={2}>
                 <div className="dayCard">

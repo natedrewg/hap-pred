@@ -25,7 +25,7 @@ const Modal = ({ days }) => {
           <div onClick={toggleModal} className="overlay">
               <div className="modal-content">
                 <h2>
-                  <b>Full Day</b>
+                  <b>All of the data points for this day:</b>
                 </h2>
                 <b>
                   <div className="dayId">
