@@ -33,7 +33,7 @@ export const Diary = () => {
   });
 
   return (
-    <div className="bg-ivory">
+    <div className="bg-sage">
       <body className="cards padding">
         <div className="daysList">
           {sortedDays.map((day) => {
