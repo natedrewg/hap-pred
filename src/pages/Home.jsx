@@ -37,8 +37,7 @@ export const Home = () => {
                 <div className="dayCard">
                   <b>
                     <div className="dayId">
-                      <p>Day:</p>
-                      {day.id}
+                      <p>Day: {day.id}</p>
                     </div>
                   </b>
 
