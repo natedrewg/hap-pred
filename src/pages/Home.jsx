@@ -4,7 +4,6 @@ import { Amplify } from "aws-amplify";
 import { generateClient } from "aws-amplify/api";
 import { Paper } from "@mui/material";
 import React, { useState, useEffect } from "react";
-import Modal from "../ui-components/Modal/Modal";
 
 Amplify.configure(config);
 const client = generateClient();
@@ -44,7 +43,7 @@ export const Home = () => {
       <body class = "padding">
         <Paper>
           <p>Number of Days: {countDays()}</p>
-          <p>Average Happiness: {calculateAverage('days.Happy')}</p>
+          <p>Average Happiness: {calculateAverage('allDays.Happy')}</p>
         </Paper>
       </body>
     </div>
