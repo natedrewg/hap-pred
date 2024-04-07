@@ -1,14 +1,14 @@
 .container {
   margin: auto;
   padding: 20px;
-  background-color: #fff; /* White background */
+  background-color: #fff; 
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 .heading {
   text-align: center;
-  color: #333; /* Dark gray text color */
+  color: #333; 
   margin-bottom: 20px;
 }
 
@@ -18,5 +18,5 @@
 
 .data p {
   margin: 5px 0;
-  color: #666; /* Gray text color */
+  color: #666; 
 }

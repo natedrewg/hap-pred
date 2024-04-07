@@ -38,6 +38,16 @@ export const Home = () => {
     return average.toFixed(1);
   };
 
+  const calculateTotalTrue = (binaryKey) => {
+    let totalTrue = 0;
+    days.forEach(day => {
+      if (day[binaryKey] === true) {
+        totalTrue++;
+      }
+    });
+    return totalTrue;
+  };
+
   return (
     <div className="bg-sage">
       <body className="padding">
@@ -49,6 +59,16 @@ export const Home = () => {
             <p>Average Health: {calculateAverage('Healthy')}</p>
             <p>Average Sleep: {calculateAverage('Sleep')}</p>
             <p>Average Meals: {calculateAverage('Meals')}</p>
+            <br/>
+            <h3>How many days I did certain things:</h3>
+            <p>Called or hungout with Jess: {calculateTotalTrue('JessCall')} / {countDays()}</p>
+            <p>Called or hungout with friends: {calculateTotalTrue('Hangout')} / {countDays()}</p>
+            <p>Called or hungout with my parents: {calculateTotalTrue('Parents')} / {countDays()}</p>
+            <p>Did homework: {calculateTotalTrue('Homework')} / {countDays()}</p>
+            <p>Played videogames: {calculateTotalTrue('VideoGames')} / {countDays()}</p>
+            <p>Took a nap: {calculateTotalTrue('Nap')} / {countDays()}</p>
+            <p>Had practice: {calculateTotalTrue('Practice')} / {countDays()}</p>
+            <p>Had a game: {calculateTotalTrue('Game')} / {countDays()}</p>
           </div>
         </Paper>
       </body>
