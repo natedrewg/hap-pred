@@ -1,16 +1,3 @@
-/* Home.css */
-.bg-sage {
-  background-color: #f0f0f0; /* Light gray background */
-  height: 100vh; /* Full height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.padding {
-  padding: 20px;
-}
-
 .container {
   max-width: 400px;
   margin: auto;
