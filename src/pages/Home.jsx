@@ -35,7 +35,8 @@ export const Home = () => {
 
   const calculateAverage = (valueKey) => {
     const total = days.reduce((accumulator, day) => accumulator + day[valueKey], 0);
-    return total / days.length;
+    const average = total / days.length;
+    return average.toFixed(1);
   };
 
   return (
@@ -44,6 +45,9 @@ export const Home = () => {
         <Paper>
           <p>Number of Days: {countDays()}</p>
           <p>Average Happiness: {calculateAverage('Happy')}</p>
+          <p>Average Health: {calculateAverage('Healthy')}</p>
+          <p>Average Sleep: {calculateAverage('Sleep')}</p>
+          <p>Average Meals: {calculateAverage('Meals')}</p>
         </Paper>
       </body>
     </div>
