@@ -4,11 +4,10 @@ import { Amplify } from "aws-amplify";
 import { generateClient } from "aws-amplify/api";
 import { Paper } from "@mui/material";
 import React, { useState, useEffect } from "react";
+import "./Home.css";
 
 Amplify.configure(config);
 const client = generateClient();
-
-
 
 export const Home = () => {
   const [days, setDays] = useState([]);
@@ -41,13 +40,16 @@ export const Home = () => {
 
   return (
     <div className="bg-sage">
-      <body class = "padding">
-        <Paper>
-          <p>Number of Days: {countDays()}</p>
-          <p>Average Happiness: {calculateAverage('Happy')}</p>
-          <p>Average Health: {calculateAverage('Healthy')}</p>
-          <p>Average Sleep: {calculateAverage('Sleep')}</p>
-          <p>Average Meals: {calculateAverage('Meals')}</p>
+      <body className="padding">
+        <Paper className="container">
+          <h1 className="heading">Visualizations</h1>
+          <div className="data">
+            <p>Number of Days: {countDays()}</p>
+            <p>Average Happiness: {calculateAverage('Happy')}</p>
+            <p>Average Health: {calculateAverage('Healthy')}</p>
+            <p>Average Sleep: {calculateAverage('Sleep')}</p>
+            <p>Average Meals: {calculateAverage('Meals')}</p>
+          </div>
         </Paper>
       </body>
     </div>
