@@ -65,7 +65,7 @@ export const Home = () => {
             <p>Called or hungout with Jess: {calculateTotalTrue('JessCall')} / {countDays()}</p>
             <p>Called or hungout with friends: {calculateTotalTrue('Hangout')} / {countDays()}</p>
             <p>Called or hungout with my parents: {calculateTotalTrue('Parents')} / {countDays()}</p>
-            <p>Did homework: {calculateTotalTrue('Homewok')} / {countDays()}</p>
+            <p>Did homework: {calculateTotalTrue('Homework')} / {countDays()}</p>
             <p>Played videogames: {calculateTotalTrue('VideoGames')} / {countDays()}</p>
             <p>Took a nap: {calculateTotalTrue('Nap')} / {countDays()}</p>
             <p>Had practice: {calculateTotalTrue('Practice')} / {countDays()}</p>
