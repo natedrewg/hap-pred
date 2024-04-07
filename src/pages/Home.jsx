@@ -41,7 +41,7 @@ export const Home = () => {
   const calculateTotalTrue = (binaryKey) => {
     let totalTrue = 0;
     days.forEach(day => {
-      if (day[binaryKey] === true) {
+      if (day[binaryKey]) {
         totalTrue++;
       }
     });
@@ -52,7 +52,7 @@ export const Home = () => {
     <div className="bg-sage">
       <body className="padding">
         <Paper className="container">
-          <h1 className="heading">Visualizations</h1>
+          <h1 className="heading"><b>Visualizations</b></h1>
           <div className="data">
             <h2>Averages: </h2>
             <p>Number of Days: {countDays()}</p>
