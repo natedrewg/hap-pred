@@ -54,6 +54,7 @@ export const Home = () => {
         <Paper className="container">
           <h1 className="heading">Visualizations</h1>
           <div className="data">
+            <h2>Averages: </h2>
             <p>Number of Days: {countDays()}</p>
             <p>Average Happiness: {calculateAverage('Happy')}</p>
             <p>Average Health: {calculateAverage('Healthy')}</p>
