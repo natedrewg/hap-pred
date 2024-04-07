@@ -40,7 +40,7 @@ export const Daily = () => {
             <h1>Welcome to my daily form!</h1>
           </div>
           <div class = "bg-sage justify-center pl-4 pr-4 flex">
-            <DaysCreateForm id = {countDays()}/>
+            <DaysCreateForm id = {countDays() + 1}/>
           </div>
         </div>
       </body>
