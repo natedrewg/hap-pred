@@ -34,13 +34,17 @@ export const Home = () => {
     return days.length;
   };
 
- 
+  const calculateAverage = (valueKey) => {
+    const total = days.reduce((accumulator, day) => accumulator + day[valueKey], 0);
+    return total / days.length;
+  };
 
   return (
     <div className="bg-sage">
-      <body class = "padding justify-center">
+      <body class = "padding">
         <Paper>
           <p>Number of Days: {countDays()}</p>
+          <p>Average Happiness: {calculateAverage('happy')}</p>
         </Paper>
       </body>
     </div>
