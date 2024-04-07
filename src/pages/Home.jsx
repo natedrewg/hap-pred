@@ -56,8 +56,8 @@ export const Home = () => {
           <div className="data">
             <h2>Averages: </h2>
             <p>Number of Days: {countDays()}</p>
-            <p>Average Happiness: {calculateAverage('Happy')}</p>
-            <p>Average Health: {calculateAverage('Healthy')}</p>
+            <p>Average Happiness: {calculateAverage('Happy')} / 6</p>
+            <p>Average Health: {calculateAverage('Healthy')} / 6</p>
             <p>Average Sleep: {calculateAverage('Sleep')}</p>
             <p>Average Meals: {calculateAverage('Meals')}</p>
             <br/>
@@ -65,7 +65,7 @@ export const Home = () => {
             <p>Called or hungout with Jess: {calculateTotalTrue('JessCall')} / {countDays()}</p>
             <p>Called or hungout with friends: {calculateTotalTrue('Hangout')} / {countDays()}</p>
             <p>Called or hungout with my parents: {calculateTotalTrue('Parents')} / {countDays()}</p>
-            <p>Did homework: {calculateTotalTrue('Homework')} / {countDays()}</p>
+            <p>Did homework: {calculateTotalTrue('Homewok')} / {countDays()}</p>
             <p>Played videogames: {calculateTotalTrue('VideoGames')} / {countDays()}</p>
             <p>Took a nap: {calculateTotalTrue('Nap')} / {countDays()}</p>
             <p>Had practice: {calculateTotalTrue('Practice')} / {countDays()}</p>
