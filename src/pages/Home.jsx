@@ -43,7 +43,7 @@ export const Home = () => {
       <body class = "padding">
         <Paper>
           <p>Number of Days: {countDays()}</p>
-          <p>Average Happiness: {calculateAverage('allDays.Happy')}</p>
+          <p>Average Happiness: {calculateAverage('Happy')}</p>
         </Paper>
       </body>
     </div>
