@@ -39,7 +39,9 @@ export const Home = () => {
   return (
     <div className="bg-sage">
       <body class = "padding justify-center">
-        <p>Number of Days: {countDays()}</p>
+        <Paper>
+          <p>Number of Days: {countDays()}</p>
+        </Paper>
       </body>
     </div>
   );
