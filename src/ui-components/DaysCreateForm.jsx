@@ -125,7 +125,7 @@ export default function DaysCreateForm(props) {
     WallBall: [{ type: "Required" }],
     PT: [{ type: "Required" }],
     Nap: [{ type: "Required" }],
-    Homework: [],
+    Homework: [{ type: "Required" }],
     VideoGames: [{ type: "Required" }],
     JessCall: [{ type: "Required" }],
     Hangout: [{ type: "Required" }],
