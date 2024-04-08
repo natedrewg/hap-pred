@@ -50,7 +50,7 @@ export const Home = () => {
 
   return (
     <div className="bg-sage">
-      <body className="padding">
+      <body className="padding bg-orange-50">
         <div className="spacing"></div>
       <Paper className="container">
           <h1 className="heading"><b>Introduction</b></h1>
