@@ -35,12 +35,12 @@ export const Diary = () => {
   return (
     <div className="bg-sage">
       <body className="cards padding">
-        <div className="spacing"></div>
         <div className="daysList bg-orange-50">
           {sortedDays.map((day) => {
             return (
-              <Paper key={day.id} variant="outlined" elevation={2} className="spacerSmall">
+              <Paper key={day.id} variant="outlined" elevation={2}>
                 <div className="dayCard">
+                  <div className="spacingSmall"></div>
                   <b>
                     <div className="dayId">
                       <p>Day: {day.id}</p>
@@ -70,7 +70,6 @@ export const Diary = () => {
                   <Modal days={day} />
                 </div>
               </Paper>
-              
             );
           })}
         </div>
