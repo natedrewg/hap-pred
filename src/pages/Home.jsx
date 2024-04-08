@@ -51,6 +51,7 @@ export const Home = () => {
   return (
     <div className="bg-sage">
       <body className="padding">
+        <div className="spacing"></div>
       <Paper className="container">
           <h1 className="heading"><b>Introduction</b></h1>
           <div className="data">
