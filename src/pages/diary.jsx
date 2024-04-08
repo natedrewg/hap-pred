@@ -72,7 +72,6 @@ export const Diary = () => {
               </Paper>
             );
           })}
-          <div className="spacingSmall"> </div>
         </div>
       </body>
     </div>
