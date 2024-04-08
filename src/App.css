@@ -41,6 +41,7 @@ body.padding {
   padding-left: 33%;
   padding-right: 33%;
   font-size:calc(6.5px + .77vw);
+  background-color:#595f39;
 }
 
 .showHide { display: none; }
