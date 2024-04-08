@@ -41,7 +41,6 @@ export const Diary = () => {
             return (
               <Paper key={day.id} variant="outlined" elevation={2}>
                 <div className="dayCard">
-                  <div className="spacingSmall"></div>
                   <b>
                     <div className="dayId">
                       <p>Day: {day.id}</p>
@@ -73,6 +72,7 @@ export const Diary = () => {
               </Paper>
             );
           })}
+          <div className="spacingSmall"> </div>
         </div>
       </body>
     </div>
