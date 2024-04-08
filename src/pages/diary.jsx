@@ -39,7 +39,7 @@ export const Diary = () => {
         <div className="daysList bg-orange-50">
           {sortedDays.map((day) => {
             return (
-              <Paper key={day.id} variant="outlined" elevation={2}>
+              <Paper key={day.id} variant="outlined" elevation={2} className="spacerSmall">
                 <div className="dayCard">
                   <b>
                     <div className="dayId">
@@ -70,6 +70,7 @@ export const Diary = () => {
                   <Modal days={day} />
                 </div>
               </Paper>
+              
             );
           })}
         </div>
