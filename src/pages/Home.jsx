@@ -51,6 +51,12 @@ export const Home = () => {
   return (
     <div className="bg-sage">
       <body className="padding">
+      <Paper className="container">
+          <h1 className="heading"><b>Introduction</b></h1>
+          <div className="data">
+            <p>This website tracks a senior lacrosse student athlete at Eastern University named Nathan Gilbert. Below you will be able to see insights about what he did everyday. The daily form tab is to add to the database. The diary tab is to show a summary of what everyday was like, as well as showing the entirety of the day with a description through a modal. </p>
+          </div>
+        </Paper>
         <Paper className="container">
           <h1 className="heading"><b>Visualizations</b></h1>
           <div className="data">
