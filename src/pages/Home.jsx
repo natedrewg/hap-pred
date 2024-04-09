@@ -65,7 +65,7 @@ export const Home = () => {
         new Chart(ctx, {
           type: "line",
           data: {
-            labels: days.map(day => day.id),
+            labels: sortedDays.map(day => day.id),
             datasets: [{
               label: "Happiness",
               data: sortedDays.map(day => day.Happy),
@@ -127,6 +127,9 @@ export const Home = () => {
             <p>Had a game: {calculateTotalTrue('Game')} / {countDays()}</p>
           </div>
         </Paper>
+        
+      </body>
+      <body>
         <Paper className="container">
           <h1 className="heading"><b>Graphs</b></h1>
           <div className="data">
@@ -134,6 +137,7 @@ export const Home = () => {
           </div>
         </Paper>
       </body>
+      
     </div>
   );
 };
