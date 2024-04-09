@@ -58,6 +58,12 @@ body.noPadding {
   font-size:calc(6.5px + .95vw);
 }
 
+body.lessPadding {
+  padding-left: 11%;
+  padding-right: 11%;
+  font-size:calc(6.5px + .95vw);
+}
+
 body.cards {
   font-size:calc(6.5px + .3vw)
 }
