@@ -65,10 +65,10 @@ export const Home = () => {
         new Chart(ctx, {
           type: "line",
           data: {
-            labels: days.map(day => day.id),
+            labels: sortedDays.map(day => day.id),
             datasets: [{
               label: "Happiness",
-              data: days.map(day => day.Happy),
+              data: sortedDays.map(day => day.Happy),
               borderColor: "rgb(75, 192, 192)",
               tension: 0.1
             }]
