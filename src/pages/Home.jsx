@@ -120,14 +120,7 @@ export const Home = () => {
       </body>
       <div className="spacer"></div>
       <body className="lessPadding">
-        <Paper className="container">
-          <h1 className="heading">
-            <b>Graphs</b>
-          </h1>
-          <div className="data">
-            <Graph days={days} />
-          </div>
-        </Paper>
+        <Graph days={days} />
       </body>
     </div>
   );
