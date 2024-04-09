@@ -90,6 +90,10 @@ export const Home = () => {
             }
           }
         });
+        chart.canvas.parentNode.style.width = '100%';
+        chart.canvas.parentNode.style.height = '100%';
+        chart.canvas.style.width = '100%';
+        chart.canvas.style.height = '100%';
       }
     }
   };
