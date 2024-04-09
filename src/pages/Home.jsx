@@ -61,6 +61,7 @@ export const Home = () => {
     if (canvasRef.current) {
       const ctx = canvasRef.current.getContext("2d");
       if (ctx) {
+        const sortedDays = [...days].sort((a, b) => a.id - b.id);
         new Chart(ctx, {
           type: "line",
           data: {
