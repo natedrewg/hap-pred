@@ -19,6 +19,7 @@ export const Home = () => {
     fetchDays();
   }, []);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (days.length > 0) {
       drawLineGraph();
