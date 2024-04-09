@@ -65,6 +65,8 @@ export const Home = () => {
       const ctx = canvasRef.current.getContext("2d");
       if (ctx) {
         const sortedDays = [...days].sort((a, b) => a.id - b.id);
+
+        // Graph for Happiness
         new Chart(ctx, {
           type: "line",
           data: {
@@ -76,6 +78,32 @@ export const Home = () => {
                 borderColor: "rgb(75, 192, 192)",
                 tension: 0.1,
               },
+            ],
+          },
+          options: {
+            scales: {
+              x: {
+                title: {
+                  display: true,
+                  text: "Day ID",
+                },
+              },
+              y: {
+                title: {
+                  display: true,
+                  text: "Happiness",
+                },
+              },
+            },
+          },
+        });
+
+        // Graph for Health
+        new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: sortedDays.map((day) => day.id),
+            datasets: [
               {
                 label: "Health",
                 data: sortedDays.map((day) => day.Healthy),
@@ -95,7 +123,7 @@ export const Home = () => {
               y: {
                 title: {
                   display: true,
-                  text: "Value",
+                  text: "Health",
                 },
               },
             },
