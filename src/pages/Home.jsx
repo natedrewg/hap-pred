@@ -14,17 +14,10 @@ const client = generateClient();
 
 export const Home = () => {
   const [days, setDays] = useState([]);
-  const canvasRef = useRef(null);
 
   useEffect(() => {
     fetchDays();
   }, []);
-
-  useEffect(() => {
-    if (days.length > 0) {
-      drawLineGraph();
-    }
-  }, [days]);
 
   const fetchDays = async () => {
     try {
@@ -59,51 +52,6 @@ export const Home = () => {
       }
     });
     return totalTrue;
-  };
-
-  const drawLineGraph = () => {
-    if (canvasRef.current) {
-      const ctx = canvasRef.current.getContext("2d");
-      if (ctx) {
-        const sortedDays = [...days].sort((a, b) => a.id - b.id);
-        new Chart(ctx, {
-          type: "line",
-          data: {
-            labels: sortedDays.map((day) => day.id),
-            datasets: [
-              {
-                label: "Happiness",
-                data: sortedDays.map((day) => day.Happy),
-                borderColor: "rgb(75, 192, 192)",
-                tension: 0.1,
-              },
-              {
-                label: "Health",
-                data: sortedDays.map((day) => day.Healthy),
-                borderColor: "rgb(255, 99, 132)",
-                tension: 0.1,
-              },
-            ],
-          },
-          options: {
-            scales: {
-              x: {
-                title: {
-                  display: true,
-                  text: "Day ID",
-                },
-              },
-              y: {
-                title: {
-                  display: true,
-                  text: "Value",
-                },
-              },
-            },
-          },
-        });
-      }
-    }
   };
 
   return (
@@ -177,8 +125,7 @@ export const Home = () => {
             <b>Graphs</b>
           </h1>
           <div className="data">
-            <canvas ref={canvasRef}></canvas>
-            <Graph />
+            <Graph days={days} />
           </div>
         </Paper>
       </body>

@@ -1,41 +1,15 @@
-import { listDays } from "../graphql/queries";
-import config from "../amplifyconfiguration.json";
-import { Amplify } from "aws-amplify";
-import { generateClient } from "aws-amplify/api";
 import { Paper } from "@mui/material";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
 
-import "./Home.css";
-
-Amplify.configure(config);
-const client = generateClient();
-
-const Graph = () => {
-  const [days, setDays] = useState([]);
+const Graph = ({ days }) => {
   const canvasRef = useRef(null);
-
-  useEffect(() => {
-    fetchDays();
-  }, []);
 
   useEffect(() => {
     if (days.length > 0) {
       drawLineGraph();
     }
   }, [days]);
-
-  const fetchDays = async () => {
-    try {
-      const result = await client.graphql({ query: listDays });
-      const allDays = result.data.listDays.items;
-
-      console.log("List of Days", allDays);
-      setDays(allDays || []);
-    } catch (error) {
-      console.log("error on fetching days", error);
-    }
-  };
 
   const drawLineGraph = () => {
     if (canvasRef.current) {
@@ -82,6 +56,16 @@ const Graph = () => {
     }
   };
 
-  return <canvas ref={canvasRef}></canvas>;
+  return (
+    <Paper className="container">
+      <h1 className="heading">
+        <b>Graphs</b>
+      </h1>
+      <div className="data">
+        <canvas ref={canvasRef}></canvas>
+      </div>
+    </Paper>
+  );
 };
+
 export default Graph;
