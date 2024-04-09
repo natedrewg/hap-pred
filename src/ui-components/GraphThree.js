@@ -2,7 +2,7 @@ import { Paper } from "@mui/material";
 import React, { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
 
-const Graph = ({ days }) => {
+const GraphThree = ({ days }) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -68,4 +68,4 @@ const Graph = ({ days }) => {
   );
 };
 
-export default Graph;
+export default GraphThree;

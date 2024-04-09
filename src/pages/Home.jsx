@@ -3,9 +3,10 @@ import config from "../amplifyconfiguration.json";
 import { Amplify } from "aws-amplify";
 import { generateClient } from "aws-amplify/api";
 import { Paper } from "@mui/material";
-import React, { useState, useEffect, useRef } from "react";
-import Chart from "chart.js/auto";
-import Graph from "../ui-components/Graph";
+import React, { useState, useEffect } from "react";
+import GraphOne from "../ui-components/GraphOne";
+import GraphTwo from "../ui-components/GraphTwo";
+import GraphThree from "../ui-components/GraphThree";
 
 import "./Home.css";
 
@@ -120,7 +121,9 @@ export const Home = () => {
       </body>
       <div className="spacer"></div>
       <body className="lessPadding">
-        <Graph days={days} />
+        <GraphOne days={days} />
+        <GraphTwo days={days} />
+        <GraphThree days={days} />
       </body>
     </div>
   );
