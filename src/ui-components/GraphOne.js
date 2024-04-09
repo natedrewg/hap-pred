@@ -52,9 +52,9 @@ const GraphOne = ({ days }) => {
 
   return (
     <Paper className="container">
-      <h1 className="heading">
-        <b>Graphs</b>
-      </h1>
+      <h2 className="heading">
+        <b>Happiness to Each Day</b>
+      </h2>
       <div className="data">
         <canvas ref={canvasRef}></canvas>
       </div>
