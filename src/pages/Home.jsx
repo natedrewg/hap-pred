@@ -61,13 +61,14 @@ export const Home = () => {
     if (canvasRef.current) {
       const ctx = canvasRef.current.getContext("2d");
       if (ctx) {
+        const sortedDays = [...days].sort((a, b) => a.id - b.id);
         new Chart(ctx, {
           type: "line",
           data: {
             labels: days.map(day => day.id),
             datasets: [{
               label: "Happiness",
-              data: days.map(day => day.Happy),
+              data: sortedDays.map(day => day.Happy),
               borderColor: "rgb(75, 192, 192)",
               tension: 0.1
             }]
@@ -97,10 +98,11 @@ export const Home = () => {
     <div className="bg-sage">
       <body className="padding">
         <div className="spacing"></div>
-        <Paper className="container">
+      <Paper className="container bg-orange-50">
           <h1 className="heading"><b>Introduction</b></h1>
           <div className="data">
-            <p>This website tracks a senior lacrosse student athlete at Eastern University named Nathan Gilbert. Below you will be able to see insights about what he did every day. The daily form tab is to add to the database. The diary tab is to show a summary of what every day was like, as well as showing the entirety of the day with a description through a modal. </p>
+            <p>This website tracks a senior lacrosse student athlete at Eastern University named Nathan Gilbert. Below you will be able to see insights about what he did everyday. The daily form tab is to add to the database. The diary tab is to show a summary of what everyday was like, as well as showing the entirety of the day with a description through a modal. </p>
+          
           </div>
         </Paper>
         <div className="spacer"></div>
@@ -118,8 +120,8 @@ export const Home = () => {
             <p>Called or hungout with Jess: {calculateTotalTrue('JessCall')} / {countDays()}</p>
             <p>Called or hungout with friends: {calculateTotalTrue('Hangout')} / {countDays()}</p>
             <p>Called or hungout with my parents: {calculateTotalTrue('Parents')} / {countDays()}</p>
-            <p>Did homework: {calculateTotalTrue('Homework')} / {countDays()}</p>
-            <p>Played video games: {calculateTotalTrue('VideoGames')} / {countDays()}</p>
+            <p>Did homework: {calculateTotalTrue('Homewok')} / {countDays()}</p>
+            <p>Played videogames: {calculateTotalTrue('VideoGames')} / {countDays()}</p>
             <p>Took a nap: {calculateTotalTrue('Nap')} / {countDays()}</p>
             <p>Had practice: {calculateTotalTrue('Practice')} / {countDays()}</p>
             <p>Had a game: {calculateTotalTrue('Game')} / {countDays()}</p>
