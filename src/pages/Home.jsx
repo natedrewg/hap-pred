@@ -3,7 +3,9 @@ import config from "../amplifyconfiguration.json";
 import { Amplify } from "aws-amplify";
 import { generateClient } from "aws-amplify/api";
 import { Paper } from "@mui/material";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import Chart from "chart.js/auto";
+
 import "./Home.css";
 
 Amplify.configure(config);
@@ -11,10 +13,17 @@ const client = generateClient();
 
 export const Home = () => {
   const [days, setDays] = useState([]);
+  const canvasRef = useRef(null);
 
   useEffect(() => {
     fetchDays();
   }, []);
+
+  useEffect(() => {
+    if (days.length > 0) {
+      drawLineGraph();
+    }
+  }, [days]);
 
   const fetchDays = async () => {
     try {
@@ -48,11 +57,47 @@ export const Home = () => {
     return totalTrue;
   };
 
+  const drawLineGraph = () => {
+    if (canvasRef.current) {
+      const ctx = canvasRef.current.getContext("2d");
+      if (ctx) {
+        new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: days.map(day => day.id),
+            datasets: [{
+              label: "Happiness",
+              data: days.map(day => day.Happy),
+              borderColor: "rgb(75, 192, 192)",
+              tension: 0.1
+            }]
+          },
+          options: {
+            scales: {
+              x: {
+                title: {
+                  display: true,
+                  text: 'Day ID'
+                }
+              },
+              y: {
+                title: {
+                  display: true,
+                  text: 'Happiness'
+                }
+              }
+            }
+          }
+        });
+      }
+    }
+  };
+
   return (
     <div className="bg-sage">
-      <body className="padding bg-orange-50">
+      <body className="padding">
         <div className="spacing"></div>
-      <Paper className="container">
+      <Paper className="container bg-orange-50">
           <h1 className="heading"><b>Introduction</b></h1>
           <div className="data">
             <p>This website tracks a senior lacrosse student athlete at Eastern University named Nathan Gilbert. Below you will be able to see insights about what he did everyday. The daily form tab is to add to the database. The diary tab is to show a summary of what everyday was like, as well as showing the entirety of the day with a description through a modal. </p>
@@ -79,6 +124,12 @@ export const Home = () => {
             <p>Took a nap: {calculateTotalTrue('Nap')} / {countDays()}</p>
             <p>Had practice: {calculateTotalTrue('Practice')} / {countDays()}</p>
             <p>Had a game: {calculateTotalTrue('Game')} / {countDays()}</p>
+          </div>
+        </Paper>
+        <Paper className="container">
+          <h1 className="heading"><b>Graphs</b></h1>
+          <div className="data">
+            <canvas ref={canvasRef}></canvas>
           </div>
         </Paper>
       </body>
