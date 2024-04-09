@@ -56,12 +56,14 @@ html {
 
 body.noPadding {
   font-size:calc(6.5px + .95vw);
+  background-color: #595f39;
 }
 
 body.lessPadding {
   padding-left: 11%;
   padding-right: 11%;
   font-size:calc(6.5px + .95vw);
+  background-color: #595f39;
 }
 
 body.cards {
