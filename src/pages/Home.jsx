@@ -5,6 +5,7 @@ import { generateClient } from "aws-amplify/api";
 import { Paper } from "@mui/material";
 import React, { useState, useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
+import Graph from "../ui-components/Graph";
 
 import "./Home.css";
 
@@ -177,6 +178,7 @@ export const Home = () => {
           </h1>
           <div className="data">
             <canvas ref={canvasRef}></canvas>
+            <Graph />
           </div>
         </Paper>
       </body>
