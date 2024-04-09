@@ -122,7 +122,9 @@ export const Home = () => {
       <div className="spacer"></div>
       <body className="lessPadding">
         <GraphOne days={days} />
+        <div className="spacerSmall"></div>
         <GraphTwo days={days} />
+        <div className="spacerSmall"></div>
         <GraphThree days={days} />
       </body>
     </div>

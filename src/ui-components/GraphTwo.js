@@ -22,12 +22,6 @@ const GraphTwo = ({ days }) => {
             labels: sortedDays.map((day) => day.id),
             datasets: [
               {
-                label: "Happiness",
-                data: sortedDays.map((day) => day.Happy),
-                borderColor: "rgb(75, 192, 192)",
-                tension: 0.1,
-              },
-              {
                 label: "Health",
                 data: sortedDays.map((day) => day.Healthy),
                 borderColor: "rgb(255, 99, 132)",
@@ -46,7 +40,7 @@ const GraphTwo = ({ days }) => {
               y: {
                 title: {
                   display: true,
-                  text: "Value",
+                  text: "Health",
                 },
               },
             },
