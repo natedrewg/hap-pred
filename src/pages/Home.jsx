@@ -96,7 +96,7 @@ export const Home = () => {
 
   return (
     <div className="bg-sage">
-      <body className="padding">
+      <body>
         <div className="spacing"></div>
         <div className="container">
           <div className="left-section">
