@@ -133,7 +133,7 @@ export const Home = () => {
             <Paper className="container">
               <h1 className="heading"><b>Graphs</b></h1>
               <div className="data">
-                <canvas ref={canvasRef} style={{ width: '100%', height: '100%' }}></canvas>
+                <canvas ref={canvasRef}></canvas>
               </div>
             </Paper>
           </div>
