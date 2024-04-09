@@ -19,7 +19,6 @@ export const Home = () => {
     fetchDays();
   }, []);
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (days.length > 0) {
       drawLineGraph();
@@ -62,14 +61,13 @@ export const Home = () => {
     if (canvasRef.current) {
       const ctx = canvasRef.current.getContext("2d");
       if (ctx) {
-        const sortedDays = [...days].sort((a, b) => a.id - b.id);
         new Chart(ctx, {
           type: "line",
           data: {
-            labels: sortedDays.map(day => day.id),
+            labels: days.map(day => day.id),
             datasets: [{
               label: "Happiness",
-              data: sortedDays.map(day => day.Happy),
+              data: days.map(day => day.Happy),
               borderColor: "rgb(75, 192, 192)",
               tension: 0.1
             }]
@@ -97,48 +95,42 @@ export const Home = () => {
 
   return (
     <div className="bg-sage">
-      <body>
+      <body className="padding">
         <div className="spacing"></div>
-        <div className="container">
-          <div className="left-section">
-            <Paper className="bg-orange-50">
-              <h1 className="heading"><b>Introduction</b></h1>
-              <div className="data">
-                <p>This website tracks a senior lacrosse student athlete at Eastern University named Nathan Gilbert. Below you will be able to see insights about what he did every day. The daily form tab is to add to the database. The diary tab is to show a summary of what everyday was like, as well as showing the entirety of the day with a description through a modal. </p>
-              </div>
-            </Paper>
-            <div className="spacer"></div>
-            <Paper>
-              <h1 className="heading"><b>Visualizations</b></h1>
-              <div className="data">
-                <h2>Averages: </h2>
-                <p>Number of Days: {countDays()}</p>
-                <p>Average Happiness: {calculateAverage('Happy')} / 6</p>
-                <p>Average Health: {calculateAverage('Healthy')} / 6</p>
-                <p>Average Sleep: {calculateAverage('Sleep')}</p>
-                <p>Average Meals: {calculateAverage('Meals')}</p>
-                <br/>
-                <h3>How many days I did certain things:</h3>
-                <p>Called or hungout with Jess: {calculateTotalTrue('JessCall')} / {countDays()}</p>
-                <p>Called or hungout with friends: {calculateTotalTrue('Hangout')} / {countDays()}</p>
-                <p>Called or hungout with my parents: {calculateTotalTrue('Parents')} / {countDays()}</p>
-                <p>Did homework: {calculateTotalTrue('Homewok')} / {countDays()}</p>
-                <p>Played video games: {calculateTotalTrue('VideoGames')} / {countDays()}</p>
-                <p>Took a nap: {calculateTotalTrue('Nap')} / {countDays()}</p>
-                <p>Had practice: {calculateTotalTrue('Practice')} / {countDays()}</p>
-                <p>Had a game: {calculateTotalTrue('Game')} / {countDays()}</p>
-              </div>
-            </Paper>
+        <Paper className="container">
+          <h1 className="heading"><b>Introduction</b></h1>
+          <div className="data">
+            <p>This website tracks a senior lacrosse student athlete at Eastern University named Nathan Gilbert. Below you will be able to see insights about what he did every day. The daily form tab is to add to the database. The diary tab is to show a summary of what every day was like, as well as showing the entirety of the day with a description through a modal. </p>
           </div>
-          <div className="right-section">
-            <Paper className="container">
-              <h1 className="heading"><b>Graphs</b></h1>
-              <div className="data">
-                <canvas ref={canvasRef}></canvas>
-              </div>
-            </Paper>
+        </Paper>
+        <div className="spacer"></div>
+        <Paper className="container">
+          <h1 className="heading"><b>Visualizations</b></h1>
+          <div className="data">
+            <h2>Averages: </h2>
+            <p>Number of Days: {countDays()}</p>
+            <p>Average Happiness: {calculateAverage('Happy')} / 6</p>
+            <p>Average Health: {calculateAverage('Healthy')} / 6</p>
+            <p>Average Sleep: {calculateAverage('Sleep')}</p>
+            <p>Average Meals: {calculateAverage('Meals')}</p>
+            <br/>
+            <h3>How many days I did certain things:</h3>
+            <p>Called or hungout with Jess: {calculateTotalTrue('JessCall')} / {countDays()}</p>
+            <p>Called or hungout with friends: {calculateTotalTrue('Hangout')} / {countDays()}</p>
+            <p>Called or hungout with my parents: {calculateTotalTrue('Parents')} / {countDays()}</p>
+            <p>Did homework: {calculateTotalTrue('Homework')} / {countDays()}</p>
+            <p>Played video games: {calculateTotalTrue('VideoGames')} / {countDays()}</p>
+            <p>Took a nap: {calculateTotalTrue('Nap')} / {countDays()}</p>
+            <p>Had practice: {calculateTotalTrue('Practice')} / {countDays()}</p>
+            <p>Had a game: {calculateTotalTrue('Game')} / {countDays()}</p>
           </div>
-        </div>
+        </Paper>
+        <Paper className="container">
+          <h1 className="heading"><b>Graphs</b></h1>
+          <div className="data">
+            <canvas ref={canvasRef}></canvas>
+          </div>
+        </Paper>
       </body>
     </div>
   );
