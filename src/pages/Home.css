@@ -1,14 +1,14 @@
 .container {
   margin: auto;
   padding: 20px;
-  background-color: #fff; 
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .heading {
   text-align: center;
-  color: #333; 
+  color: #333;
   margin-bottom: 20px;
 }
 
@@ -18,6 +18,5 @@
 
 .data p {
   margin: 5px 0;
-  color: #666; 
+  color: #666;
 }
-
