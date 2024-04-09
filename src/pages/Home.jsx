@@ -129,6 +129,7 @@ export const Home = () => {
         </Paper>
         
       </body>
+      <div className="spacer"></div>
       <body className="lessPadding">
         <Paper className="container">
           <h1 className="heading"><b>Graphs</b></h1>
