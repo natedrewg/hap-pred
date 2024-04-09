@@ -121,9 +121,6 @@ export const Home = () => {
       </body>
       <div className="spacer"></div>
       <body className="lessPadding">
-        <h1 className="heading">
-          <b>Graphs</b>
-        </h1>
         <GraphOne days={days} />
         <div className="spacerSmall"></div>
         <GraphTwo days={days} />
