@@ -90,10 +90,6 @@ export const Home = () => {
             }
           }
         });
-        chart.canvas.parentNode.style.width = '100%';
-        chart.canvas.parentNode.style.height = '100%';
-        chart.canvas.style.width = '100%';
-        chart.canvas.style.height = '100%';
       }
     }
   };
@@ -137,7 +133,7 @@ export const Home = () => {
             <Paper className="container">
               <h1 className="heading"><b>Graphs</b></h1>
               <div className="data">
-                <canvas ref={canvasRef}></canvas>
+                <canvas ref={canvasRef} style={{ width: '100%', height: '100%' }}></canvas>
               </div>
             </Paper>
           </div>
