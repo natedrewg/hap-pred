@@ -129,7 +129,7 @@ export const Home = () => {
         </Paper>
         
       </body>
-      <body>
+      <body className="noPadding">
         <Paper className="container">
           <h1 className="heading"><b>Graphs</b></h1>
           <div className="data">
