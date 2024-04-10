@@ -38,7 +38,7 @@ export const Diary = () => {
         <div className="daysList bg-orange-50">
           {sortedDays.map((day) => {
             return (
-              <Paper key={day.id} variant="outlined" elevation={2}>
+              <Paper key={day.id} variant="outlined" elevation={2} className="bg-orange-50">
                 <div className="dayCard">
                   <b>
                     <div className="dayId">

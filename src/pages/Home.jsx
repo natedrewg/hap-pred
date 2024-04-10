@@ -76,7 +76,7 @@ export const Home = () => {
           </div>
         </Paper>
         <div className="spacer"></div>
-        <Paper className="container">
+        <Paper className="container bg-orange-50">
           <h1 className="heading">
             <b>Visualizations</b>
           </h1>
