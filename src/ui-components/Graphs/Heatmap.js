@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import Plotly from "plotly.js-dist";
+import Plotly from "chart.js/auto";
 
 const Heatmap = ({ days }) => {
   const plotRef = useRef(null);
