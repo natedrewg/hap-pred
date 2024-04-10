@@ -15,8 +15,9 @@ const GraphFour = ({ days }) => {
     if (canvasRef.current) {
       const ctx = canvasRef.current.getContext("2d");
       if (ctx) {
-        const labels = days.map((day) => day.id);
-        const data = days.map((day) => day.Meals);
+        const sortedDays = [...days].sort((a, b) => a.id - b.id);
+        const labels = sortedDays.map((day) => day.id);
+        const data = sortedDays.map((day) => day.Meals);
 
         new Chart(ctx, {
           type: "line",
