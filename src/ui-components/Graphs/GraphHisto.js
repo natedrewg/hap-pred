@@ -16,7 +16,7 @@ const GraphHisto = ({ days }) => {
       const ctx = canvasRef.current.getContext("2d");
       if (ctx) {
         new Chart(ctx, {
-          type: "histogram",
+          type: "bar",
           data: {
             labels: [],
             datasets: [
