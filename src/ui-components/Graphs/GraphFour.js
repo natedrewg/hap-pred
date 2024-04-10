@@ -2,16 +2,16 @@ import { Paper } from "@mui/material";
 import React, { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
 
-const GraphBar = ({ days }) => {
+const GraphFour = ({ days }) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
     if (days.length > 0) {
-      drawBarGraph();
+      drawLineGraph();
     }
   }, [days]);
 
-  const drawBarGraph = () => {
+  const drawLineGraph = () => {
     if (canvasRef.current) {
       const ctx = canvasRef.current.getContext("2d");
       if (ctx) {
@@ -19,16 +19,16 @@ const GraphBar = ({ days }) => {
         const data = days.map((day) => day.Meals);
 
         new Chart(ctx, {
-          type: "bar",
+          type: "line",
           data: {
             labels: labels,
             datasets: [
               {
                 label: "Meals",
                 data: data,
-                backgroundColor: "rgba(255, 159, 64, 0.5)",
-                borderColor: "rgba(255, 159, 64, 1)",
-                borderWidth: 1,
+                borderColor: "rgb(75, 192, 192)",
+                tension: 0.1,
+                fill: false,
               },
             ],
           },
@@ -67,4 +67,4 @@ const GraphBar = ({ days }) => {
   );
 };
 
-export default GraphBar;
+export default GraphFour;

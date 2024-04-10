@@ -7,7 +7,8 @@ import React, { useState, useEffect } from "react";
 import GraphOne from "../ui-components/Graphs/GraphOne";
 import GraphTwo from "../ui-components/Graphs/GraphTwo";
 import GraphThree from "../ui-components/Graphs/GraphThree";
-import GraphBar from "../ui-components/Graphs/GraphBar";
+import GraphFour from "../ui-components/Graphs/GraphFour";
+import GraphHisto from "../ui-components/Graphs/GraphHisto";
 
 import "./Home.css";
 
@@ -128,7 +129,9 @@ export const Home = () => {
         <div className="spacerSmall"></div>
         <GraphThree days={days} />
         <div className="spacerSmall"></div>
-        <GraphBar days={days} />
+        <GraphFour days={days} />
+        <div className="spacerSmall"></div>
+        <GraphHisto days={days} />
       </body>
     </div>
   );
