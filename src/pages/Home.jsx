@@ -4,9 +4,10 @@ import { Amplify } from "aws-amplify";
 import { generateClient } from "aws-amplify/api";
 import { Paper } from "@mui/material";
 import React, { useState, useEffect } from "react";
-import GraphOne from "../ui-components/GraphOne";
-import GraphTwo from "../ui-components/GraphTwo";
-import GraphThree from "../ui-components/GraphThree";
+import GraphOne from "../ui-components/Graphs/GraphOne";
+import GraphTwo from "../ui-components/Graphs/GraphTwo";
+import GraphThree from "../ui-components/Graphs/GraphThree";
+import GraphBar from "../ui-components/Graphs/GraphBar";
 
 import "./Home.css";
 
@@ -126,6 +127,8 @@ export const Home = () => {
         <GraphTwo days={days} />
         <div className="spacerSmall"></div>
         <GraphThree days={days} />
+        <div className="spacerSmall"></div>
+        <GraphBar days={days} />
       </body>
     </div>
   );
