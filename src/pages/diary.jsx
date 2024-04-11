@@ -41,7 +41,7 @@ export const Diary = () => {
   return (
     <body className="padding">
       <div className="bg-sage">
-        <div className="search-bar">
+        <div className="search-bar content-center">
           <Paper className="p-3">
             <TextField
               id="outlined-basic"
