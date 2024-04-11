@@ -43,9 +43,6 @@ export const Daily = () => {
 
       <body className="noPadding">
         <div className="flow-root visible sm:visible md:invisible lg:invisible xl:invisible">
-          <div classNames="bg-sage float-center text-3xl p-4">
-            <h1>Welcome to my daily form!</h1>
-          </div>
           <div className="bg-sage justify-center pl-4 pr-4 flex">
             <DaysCreateForm />
           </div>
