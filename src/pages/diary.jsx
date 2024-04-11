@@ -38,62 +38,64 @@ export const Diary = () => {
   };
 
   return (
-    <div className="bg-sage">
-      <div className="search-bar">
-        <TextField
-          id="outlined-basic"
-          label="Search Day"
-          variant="outlined"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          onKeyPress={(e) => {
-            if (e.key === "Enter") {
-              handleSearch();
-            }
-          }}
-        />
-        <button onClick={handleSearch}>Search</button>
-      </div>
-      <div className="daysList bg-orange-50">
-        {(searchTerm ? searchResults : days).map((day) => (
-          <Paper
-            key={day.id}
+    <body className="padding">
+      <div className="bg-sage">
+        <div className="search-bar">
+          <TextField
+            id="outlined-basic"
+            label="Search Day"
             variant="outlined"
-            elevation={2}
-            className="bg-orange-50"
-          >
-            <div className="dayCard">
-              <b>
-                <div className="dayId">
-                  <p>Day: {day.id}</p>
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            onKeyPress={(e) => {
+              if (e.key === "Enter") {
+                handleSearch();
+              }
+            }}
+          />
+          <button onClick={handleSearch}>Search</button>
+        </div>
+        <div className="daysList bg-orange-50">
+          {(searchTerm ? searchResults : days).map((day) => (
+            <Paper
+              key={day.id}
+              variant="outlined"
+              elevation={2}
+              className="bg-orange-50"
+            >
+              <div className="dayCard">
+                <b>
+                  <div className="dayId">
+                    <p>Day: {day.id}</p>
+                  </div>
+                </b>
+
+                <div className="dayHappy">
+                  <p>Happy:</p>
+                  {day.Happy}
                 </div>
-              </b>
 
-              <div className="dayHappy">
-                <p>Happy:</p>
-                {day.Happy}
+                <div className="daySleep">
+                  <p>Sleep:</p>
+                  {day.Sleep}
+                </div>
+
+                <div className="dayHealthy">
+                  <p>Healthy:</p>
+                  {day.Healthy}
+                </div>
+
+                <div className="dayMeals">
+                  <p>Meals:</p>
+                  {day.Meals}
+                </div>
+
+                <Modal days={day} />
               </div>
-
-              <div className="daySleep">
-                <p>Sleep:</p>
-                {day.Sleep}
-              </div>
-
-              <div className="dayHealthy">
-                <p>Healthy:</p>
-                {day.Healthy}
-              </div>
-
-              <div className="dayMeals">
-                <p>Meals:</p>
-                {day.Meals}
-              </div>
-
-              <Modal days={day} />
-            </div>
-          </Paper>
-        ))}
+            </Paper>
+          ))}
+        </div>
       </div>
-    </div>
+    </body>
   );
 };
