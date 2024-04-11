@@ -73,7 +73,7 @@ export const Home = () => {
                     able to see insights about what he did everyday. The daily
                     form tab is to add to the database. The diary tab is to show
                     a summary of what everyday was like, as well as showing the
-                    entirety of the day with a description through a modal.{" "}
+                    entirety of the day with a description through a modal.
                   </p>
                 </div>
               </Paper>
@@ -142,7 +142,6 @@ export const Home = () => {
       <body className="noPadding">
         <div className="flow-root visible sm:visible md:invisible lg:invisible xl:invisible">
           <body>
-            <div className="spacing"></div>
             <Paper className="container bg-orange-50">
               <h1 className="heading">
                 <b>Introduction</b>

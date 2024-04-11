@@ -35,9 +35,6 @@ export const Daily = () => {
     <div className="App">
       <body className="padding showHide">
         <div className="flow-root invisible sm:invisible md:visible lg:visible xl:visible">
-          <div className="bg-sage float-center text-3xl p-4">
-            <h1>Welcome to my daily form!</h1>
-          </div>
           <div className="bg-sage justify-center pl-4 pr-4 flex">
             <DaysCreateForm />
           </div>
