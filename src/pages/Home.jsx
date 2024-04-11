@@ -58,86 +58,83 @@ export const Home = () => {
 
   return (
     <div className="bg-sage">
-      <body>
-        <div>
-          <body className="padding showHide">
-            <div className="flow-root invisible sm:invisible md:visible lg:visible xl:visible">
-              <Paper className="container bg-orange-50">
-                <h1 className="heading">
-                  <b>Introduction</b>
-                </h1>
-                <div className="data">
-                  <p>
-                    This website tracks a senior lacrosse student athlete at
-                    Eastern University named Nathan Gilbert. Below you will be
-                    able to see insights about what he did everyday. The daily
-                    form tab is to add to the database. The diary tab is to show
-                    a summary of what everyday was like, as well as showing the
-                    entirety of the day with a description through a modal.
-                  </p>
-                </div>
-              </Paper>
-              <div className="spacer"></div>
-              <Paper className="container bg-orange-50">
-                <h1 className="heading">
-                  <b>Visualizations</b>
-                </h1>
-                <div className="data">
-                  <h2>Averages: </h2>
-                  <p>Number of Days: {countDays()}</p>
-                  <p>Average Happiness: {calculateAverage("Happy")} / 6</p>
-                  <p>Average Health: {calculateAverage("Healthy")} / 6</p>
-                  <p>Average Sleep: {calculateAverage("Sleep")}</p>
-                  <p>Average Meals: {calculateAverage("Meals")}</p>
-                  <br />
-                  <h3>How many days I did certain things:</h3>
-                  <p>
-                    Called or hungout with Jess:{" "}
-                    {calculateTotalTrue("JessCall")} / {countDays()}
-                  </p>
-                  <p>
-                    Called or hungout with friends:{" "}
-                    {calculateTotalTrue("Hangout")} / {countDays()}
-                  </p>
-                  <p>
-                    Called or hungout with my parents:{" "}
-                    {calculateTotalTrue("Parents")} / {countDays()}
-                  </p>
-                  <p>
-                    Did homework: {countDays()} / {countDays()}
-                  </p>
-                  <p>
-                    Played videogames: {calculateTotalTrue("VideoGames")} /{" "}
-                    {countDays()}
-                  </p>
-                  <p>
-                    Took a nap: {calculateTotalTrue("Nap")} / {countDays()}
-                  </p>
-                  <p>
-                    Had practice: {calculateTotalTrue("Practice")} /{" "}
-                    {countDays()}
-                  </p>
-                  <p>
-                    Had a game: {calculateTotalTrue("Game")} / {countDays()}
-                  </p>
-                </div>
-              </Paper>
-            </div>
-          </body>
-          <div className="spacer"></div>
-          <body className="lessPadding showHide">
-            <div className="flow-root invisible sm:invisible md:visible lg:visible xl:visible">
-              <GraphOne days={days} />
-              <div className="spacerSmall"></div>
-              <GraphTwo days={days} />
-              <div className="spacerSmall"></div>
-              <GraphThree days={days} />
-              <div className="spacerSmall"></div>
-              <GraphFour days={days} />
-            </div>
-          </body>
-        </div>
-      </body>
+      <div>
+        <body className="padding showHide">
+          <div className="flow-root invisible sm:invisible md:visible lg:visible xl:visible">
+            <Paper className="container bg-orange-50">
+              <h1 className="heading">
+                <b>Introduction</b>
+              </h1>
+              <div className="data">
+                <p>
+                  This website tracks a senior lacrosse student athlete at
+                  Eastern University named Nathan Gilbert. Below you will be
+                  able to see insights about what he did everyday. The daily
+                  form tab is to add to the database. The diary tab is to show a
+                  summary of what everyday was like, as well as showing the
+                  entirety of the day with a description through a modal.
+                </p>
+              </div>
+            </Paper>
+            <div className="spacer"></div>
+            <Paper className="container bg-orange-50">
+              <h1 className="heading">
+                <b>Visualizations</b>
+              </h1>
+              <div className="data">
+                <h2>Averages: </h2>
+                <p>Number of Days: {countDays()}</p>
+                <p>Average Happiness: {calculateAverage("Happy")} / 6</p>
+                <p>Average Health: {calculateAverage("Healthy")} / 6</p>
+                <p>Average Sleep: {calculateAverage("Sleep")}</p>
+                <p>Average Meals: {calculateAverage("Meals")}</p>
+                <br />
+                <h3>How many days I did certain things:</h3>
+                <p>
+                  Called or hungout with Jess: {calculateTotalTrue("JessCall")}{" "}
+                  / {countDays()}
+                </p>
+                <p>
+                  Called or hungout with friends:{" "}
+                  {calculateTotalTrue("Hangout")} / {countDays()}
+                </p>
+                <p>
+                  Called or hungout with my parents:{" "}
+                  {calculateTotalTrue("Parents")} / {countDays()}
+                </p>
+                <p>
+                  Did homework: {countDays()} / {countDays()}
+                </p>
+                <p>
+                  Played videogames: {calculateTotalTrue("VideoGames")} /{" "}
+                  {countDays()}
+                </p>
+                <p>
+                  Took a nap: {calculateTotalTrue("Nap")} / {countDays()}
+                </p>
+                <p>
+                  Had practice: {calculateTotalTrue("Practice")} / {countDays()}
+                </p>
+                <p>
+                  Had a game: {calculateTotalTrue("Game")} / {countDays()}
+                </p>
+              </div>
+            </Paper>
+          </div>
+        </body>
+        <div className="spacer"></div>
+        <body className="lessPadding showHide">
+          <div className="flow-root invisible sm:invisible md:visible lg:visible xl:visible">
+            <GraphOne days={days} />
+            <div className="spacerSmall"></div>
+            <GraphTwo days={days} />
+            <div className="spacerSmall"></div>
+            <GraphThree days={days} />
+            <div className="spacerSmall"></div>
+            <GraphFour days={days} />
+          </div>
+        </body>
+      </div>
 
       <body className="noPadding">
         <div className="flow-root visible sm:visible md:invisible lg:invisible xl:invisible">
