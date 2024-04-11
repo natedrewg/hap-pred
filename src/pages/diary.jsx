@@ -46,7 +46,7 @@ export const Diary = () => {
             <TextField
               id="outlined-basic"
               className="w-full"
-              label="Search Day"
+              label="Search for a Day"
               variant="outlined"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
