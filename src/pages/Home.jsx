@@ -60,7 +60,7 @@ export const Home = () => {
     <div className="bg-sage">
       <body class="padding showHide">
         <div class="flow-root invisible sm:invisible md:visible lg:visible xl:visible">
-          <body className="padding">
+          <body>
             <div className="spacing"></div>
             <Paper className="container bg-orange-50">
               <h1 className="heading">
@@ -135,8 +135,8 @@ export const Home = () => {
         </div>
       </body>
 
-      <body class="noPadding">
-        <div class="flow-root visible sm:visible md:invisible lg:invisible xl:invisible">
+      <body className="noPadding">
+        <div className="flow-root visible sm:visible md:invisible lg:invisible xl:invisible">
           <body>
             <div className="spacing"></div>
             <Paper className="container bg-orange-50">
@@ -200,7 +200,7 @@ export const Home = () => {
             </Paper>
           </body>
           <div className="spacer"></div>
-          <body className="lessPadding">
+          <body>
             <GraphOne days={days} />
             <div className="spacerSmall"></div>
             <GraphTwo days={days} />
