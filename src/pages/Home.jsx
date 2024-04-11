@@ -58,9 +58,9 @@ export const Home = () => {
 
   return (
     <div className="bg-sage">
-      <body class="padding showHide">
-        <div class="flow-root invisible sm:invisible md:visible lg:visible xl:visible">
-          <body>
+      <body>
+        <body className="padding showHide">
+          <div className="flow-root invisible sm:invisible md:visible lg:visible xl:visible">
             <div className="spacing"></div>
             <Paper className="container bg-orange-50">
               <h1 className="heading">
@@ -121,18 +121,18 @@ export const Home = () => {
                 </p>
               </div>
             </Paper>
-          </body>
-          <div className="spacer"></div>
-          <body className="lessPadding">
-            <GraphOne days={days} />
-            <div className="spacerSmall"></div>
-            <GraphTwo days={days} />
-            <div className="spacerSmall"></div>
-            <GraphThree days={days} />
-            <div className="spacerSmall"></div>
-            <GraphFour days={days} />
-          </body>
-        </div>
+          </div>
+        </body>
+        <div className="spacer"></div>
+        <body className="lessPadding">
+          <GraphOne days={days} />
+          <div className="spacerSmall"></div>
+          <GraphTwo days={days} />
+          <div className="spacerSmall"></div>
+          <GraphThree days={days} />
+          <div className="spacerSmall"></div>
+          <GraphFour days={days} />
+        </body>
       </body>
 
       <body className="noPadding">
