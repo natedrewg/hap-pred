@@ -23,8 +23,9 @@ export const Diary = () => {
       const result = await client.graphql({ query: listDays });
       const allDays = result.data.listDays.items;
 
-      console.log("List of Days", allDays);
-      setDays(allDays || []);
+      const sortedAllDays = allDays.sort((a, b) => a.id - b.id);
+      console.log("List of Days", sortedAllDays);
+      setDays(sortedAllDays);
     } catch (error) {
       console.log("error on fetching days", error);
     }
@@ -34,14 +35,14 @@ export const Diary = () => {
     const results = days.filter((day) =>
       day.id.toString().includes(searchTerm.toLowerCase())
     );
-    setSearchResults(results.sort((a, b) => a.id - b.id));
+    setSearchResults(results);
   };
 
   return (
     <body className="padding">
       <div className="bg-sage">
         <div className="search-bar">
-          <Paper>
+          <Paper className="p-3">
             <TextField
               id="outlined-basic"
               label="Search Day"
@@ -54,7 +55,10 @@ export const Diary = () => {
                 }
               }}
             />
-            <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+            <button
+              class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+              onClick={handleSearch}
+            >
               Search
             </button>
           </Paper>
