@@ -43,21 +43,21 @@ export const Diary = () => {
         <div className="search-bar">
           <Paper>
             <TextField
-            id="outlined-basic"
-            label="Search Day"
-            variant="outlined"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            onKeyPress={(e) => {
-              if (e.key === "Enter") {
-                handleSearch();
-              }
-            }}
-          />
-          <button onClick={handleSearch}>Search</button>
-        </div>
+              id="outlined-basic"
+              label="Search Day"
+              variant="outlined"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              onKeyPress={(e) => {
+                if (e.key === "Enter") {
+                  handleSearch();
+                }
+              }}
+            />
+            <button onClick={handleSearch}>Search</button>
           </Paper>
-          
+        </div>
+
         <div className="daysList bg-orange-50">
           {(searchTerm ? searchResults : days).map((day) => (
             <Paper
