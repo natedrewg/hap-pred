@@ -41,7 +41,7 @@ export const Diary = () => {
     <body className="padding">
       <div className="bg-sage">
         <div className="search-bar">
-          <Paper className="p-2">
+          <Paper>
             <TextField
               id="outlined-basic"
               label="Search Day"
@@ -54,9 +54,8 @@ export const Diary = () => {
                 }
               }}
             />
-            <Button onClick={handleSearch}>Search</Button>
+            <button onClick={handleSearch}>Search</button>
           </Paper>
-          <div className="spacer"></div>
         </div>
 
         <div className="daysList bg-orange-50">
