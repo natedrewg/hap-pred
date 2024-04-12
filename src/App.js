@@ -24,11 +24,11 @@ export function App({ signOut, user }) {
     <div class="container mx-auto flex flex-wrap items-center justify-between">
         <h1 class="font-bold">Self-Index</h1>
         
-        <Link to="/">Home</Link>
+        <Link to="/"><u>Home</u></Link>
 
-        <Link to="/daily">Daily Form</Link>
+        <Link to="/daily"><u>Daily Form</u></Link>
 
-        <Link to="/diary">Diary</Link>
+        <Link to="/diary"><u>Diary</u></Link>
         
         <Button onClick={signOut}>Sign out</Button> 
     </div>
