@@ -8,6 +8,12 @@ Amplify.configure(config);
 
 export function Daily({ signOut, user }) {
   const allowedUser = 'NathanGilbert';
+
+  console.log('Allowed User:', allowedUser);
+  console.log('User:', user);
+  console.log('User Username:', user ? user.username : 'No User');
+
+  
   return (
     <div className="App">
       {user && user.username === allowedUser ? (
