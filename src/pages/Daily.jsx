@@ -7,7 +7,7 @@ import { withAuthenticator, Button } from '@aws-amplify/ui-react';
 Amplify.configure(config);
 
 export function Daily({ signOut, user }) {
-  const allowedUser = 'natedrewg@gmail.com';
+  const allowedUser = 'nathangilbert';
   return (
     <div className="App">
       {user && user.username === allowedUser ? (
