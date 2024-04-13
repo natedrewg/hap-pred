@@ -8,7 +8,7 @@ Amplify.configure(config);
 const client = generateClient();
 
 export const Daily = ({ user }) => {
-  const allowedUser = 'NathanGilbert';
+  const allowedUser = 'natedrewg@gmail.com';
 
   return (
     <div className="App">
