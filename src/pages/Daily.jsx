@@ -1,15 +1,13 @@
 import { DaysCreateForm } from "../ui-components";
 import config from "../amplifyconfiguration.json";
 import { Amplify } from "aws-amplify";
-import { generateClient } from "aws-amplify/api";
 import React from "react";
 
 Amplify.configure(config);
-const client = generateClient();
 
 export const Daily = ({ user }) => {
   const allowedUser = 'natedrewg@gmail.com';
-
+  console.log(user.username);
   return (
     <div className="App">
       {user && user.username === allowedUser ? (
