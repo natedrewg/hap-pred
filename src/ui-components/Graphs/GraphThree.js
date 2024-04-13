@@ -4,24 +4,19 @@ import Chart from "chart.js/auto";
 
 const GraphThree = ({ days }) => {
   const canvasRef = useRef(null);
-  const chartInstanceRef = useRef(null);
 
   useEffect(() => {
     if (days.length > 0) {
-      if (chartInstanceRef.current) {
-        // If a chart instance exists, destroy it before creating a new one
-        chartInstanceRef.current.destroy();
-      }
       drawLineGraph();
     }
-  });
+  }, [days]);
 
   const drawLineGraph = () => {
     if (canvasRef.current) {
       const ctx = canvasRef.current.getContext("2d");
       if (ctx) {
         const sortedDays = [...days].sort((a, b) => a.id - b.id);
-        chartInstanceRef.current = new Chart(ctx, {
+        new Chart(ctx, {
           type: "line",
           data: {
             labels: sortedDays.map((day) => day.id),
