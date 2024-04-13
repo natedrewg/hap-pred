@@ -12,7 +12,7 @@ export const Daily = ({ user }) => {
 
   return (
     <div className="App">
-      {user && user.username === allowedUser ? (
+      {user.username === allowedUser ? (
         <>
           <body className="padding showHide">
             <div className="flow-root invisible sm:invisible md:visible lg:visible xl:visible">
