@@ -6,12 +6,12 @@ import React from "react";
 
 Amplify.configure(config);
 
-export const Daily = ({ user }) => {
-  const allowedUser = 'natedrewg@gmail.com';
-  console.log(user.username);
+export const Daily = () => {
+  const allowedUser = '';
+
   return (
     <div className="App">
-      {user && user.username === allowedUser ? (
+
         <>
           <body className="padding showHide">
             <div className="flow-root invisible sm:invisible md:visible lg:visible xl:visible">
@@ -29,9 +29,6 @@ export const Daily = ({ user }) => {
             </div>
           </body>
         </>
-      ) : (
-        <p>You are not authorized to access this feature.</p>
-      )}
     </div>
   );
 };
