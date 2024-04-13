@@ -7,6 +7,7 @@ import { Amplify } from 'aws-amplify';
 import awsconfig from './aws-exports';
 import awsExports from './aws-exports';
 
+import { withAuthenticator, Button } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 
 import config from './amplifyconfiguration.json';
@@ -16,7 +17,8 @@ Amplify.configure(awsconfig);
 Amplify.configure(awsExports);
 
 
-export function App() {
+export function App({ signOut, user }) {
+  
   return (
   <>
   <nav class="border-gray-200 px-2 mb-10 bg-ivory p-4 pl-6 pr-6 text-2xl font-light">
@@ -29,6 +31,7 @@ export function App() {
 
         <Link to="/diary"><u>Diary</u></Link>
         
+        <Button onClick={signOut}>Sign out</Button> 
     </div>
   </nav>
     <Routes>
@@ -41,4 +44,4 @@ export function App() {
   );
 }
 
-export default App;
+export default withAuthenticator(App);

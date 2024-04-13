@@ -1,19 +1,14 @@
 import { DaysCreateForm } from "../ui-components";
 import config from "../amplifyconfiguration.json";
 import { Amplify } from "aws-amplify";
+
 import React from "react";
-import { withAuthenticator, Button } from '@aws-amplify/ui-react';
 
 Amplify.configure(config);
 
-export function Daily({ signOut, user }) {
-  const allowedUser = 'NathanGilbert';
-
-  console.log('Allowed User:', allowedUser);
-  console.log('User:', user);
-  console.log('User Username:', user ? user.username : 'No User');
-
-  
+export const Daily = ({ user }) => {
+  const allowedUser = 'natedrewg@gmail.com';
+  console.log(user.username);
   return (
     <div className="App">
       {user && user.username === allowedUser ? (
@@ -40,4 +35,3 @@ export function Daily({ signOut, user }) {
     </div>
   );
 };
-export default withAuthenticator(Daily);
