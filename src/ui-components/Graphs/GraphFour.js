@@ -4,12 +4,17 @@ import Chart from "chart.js/auto";
 
 const GraphFour = ({ days }) => {
   const canvasRef = useRef(null);
+  const chartInstanceRef = useRef(null);
 
   useEffect(() => {
     if (days.length > 0) {
+      if (chartInstanceRef.current) {
+        // If a chart instance exists, destroy it before creating a new one
+        chartInstanceRef.current.destroy();
+      }
       drawLineGraph();
     }
-  }, [days]);
+  });
 
   const drawLineGraph = () => {
     if (canvasRef.current) {
@@ -19,7 +24,7 @@ const GraphFour = ({ days }) => {
         const labels = sortedDays.map((day) => day.id);
         const data = sortedDays.map((day) => day.Meals);
 
-        new Chart(ctx, {
+        chartInstanceRef.current = new Chart(ctx, {
           type: "line",
           data: {
             labels: labels,
@@ -54,7 +59,6 @@ const GraphFour = ({ days }) => {
       }
     }
   };
-
 
   return (
     <Paper className="container">
