@@ -8,8 +8,8 @@ body.active-modal {
 
 .modal,
 .overlay {
-  width: 90vw;
-  height: 90vh;
+  width: 100vw;
+  height: 100vh;
   top: 0;
   left: 0;
   right: 0;
@@ -26,7 +26,7 @@ body.active-modal {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  line-height: 1.4;
+  line-height: 1.1;
   background: #f1f1f1;
   padding: 14px 28px;
   border-radius: 3px;
