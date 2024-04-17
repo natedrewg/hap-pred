@@ -45,7 +45,7 @@ const GraphFour = ({ days }) => {
               x: {
                 title: {
                   display: true,
-                  text: "Day ID",
+                  text: "Days",
                 },
               },
             },

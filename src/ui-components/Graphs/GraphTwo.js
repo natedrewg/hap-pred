@@ -34,7 +34,7 @@ const GraphTwo = ({ days }) => {
               x: {
                 title: {
                   display: true,
-                  text: "Day ID",
+                  text: "Days",
                 },
               },
               y: {

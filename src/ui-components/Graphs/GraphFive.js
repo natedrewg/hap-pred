@@ -2,7 +2,7 @@ import { Paper } from "@mui/material";
 import React, { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
 
-const GraphThree = ({ days }) => {
+const GraphFour = ({ days }) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -16,37 +16,36 @@ const GraphThree = ({ days }) => {
       const ctx = canvasRef.current.getContext("2d");
       if (ctx) {
         const sortedDays = [...days].sort((a, b) => a.id - b.id);
+        const labels = sortedDays.map((day) => day.id);
+        const data = sortedDays.map((day) => day.Sleep);
+
         new Chart(ctx, {
           type: "line",
           data: {
-            labels: sortedDays.map((day) => day.id),
+            labels: labels,
             datasets: [
               {
-                label: "Happiness",
-                data: sortedDays.map((day) => day.Happy),
+                label: "Sleep",
+                data: data,
                 borderColor: "rgb(75, 192, 192)",
                 tension: 0.1,
-              },
-              {
-                label: "Health",
-                data: sortedDays.map((day) => day.Healthy),
-                borderColor: "rgb(255, 99, 132)",
-                tension: 0.1,
+                fill: false,
               },
             ],
           },
           options: {
             scales: {
+              y: {
+                beginAtZero: true,
+                title: {
+                  display: true,
+                  text: "Sleep per Day",
+                },
+              },
               x: {
                 title: {
                   display: true,
                   text: "Days",
-                },
-              },
-              y: {
-                title: {
-                  display: true,
-                  text: "Value",
                 },
               },
             },
@@ -56,10 +55,11 @@ const GraphThree = ({ days }) => {
     }
   };
 
+
   return (
     <Paper className="container">
       <h2 className="heading">
-        <b>Happiness & Health to Each Day</b>
+        <b>Sleep per Day</b>
       </h2>
       <div className="data">
         <canvas ref={canvasRef}></canvas>
@@ -68,4 +68,4 @@ const GraphThree = ({ days }) => {
   );
 };
 
-export default GraphThree;
+export default GraphFive;

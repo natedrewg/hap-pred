@@ -8,6 +8,7 @@ import GraphOne from "../ui-components/Graphs/GraphOne";
 import GraphTwo from "../ui-components/Graphs/GraphTwo";
 import GraphThree from "../ui-components/Graphs/GraphThree";
 import GraphFour from "../ui-components/Graphs/GraphFour";
+import GraphFive from "../ui-components/Graphs/GraphFive";
 
 import "./Home.css";
 
@@ -132,6 +133,8 @@ export const Home = () => {
             <GraphThree days={days} />
             <div className="spacerSmall"></div>
             <GraphFour days={days} />
+            <div className="spacerSmall"></div>
+            <GraphFive days={days} />
           </div>
         </body>
       </div>
@@ -206,6 +209,8 @@ export const Home = () => {
             <GraphThree days={days} />
             <div className="spacerSmall"></div>
             <GraphFour days={days} />
+            <div className="spacerSmall"></div>
+            <GraphFive days={days} />
           </body>
         </div>
       </body>
