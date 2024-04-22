@@ -7,7 +7,6 @@ import React from "react";
 Amplify.configure(config);
 
 export const Daily = () => {
-  const allowedUser = '';
 
   return (
     <div className="App">
